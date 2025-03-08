@@ -1,6 +1,7 @@
 
 import Head from "next/head";
 import "./styles.css";
+import Header from './../sections/header/Header';
 
 export default function Home() {
   return (
@@ -12,6 +13,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <h2 className="homeCon">Barrocyte</h2>
+      <Header></Header>
+
     </>
   );
 }
