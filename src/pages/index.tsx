@@ -1,6 +1,8 @@
 
 import Head from "next/head";
 import "./styles.css";
+import "./../styles/globals.css";
+
 import Header from './../sections/header/Header';
 
 export default function Home() {
