@@ -2,6 +2,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  font-family: var(--paraFF);
 }
 
 * {
@@ -16,8 +17,29 @@ a {
 }
 
 :root {
-  --primary: #0070f3;
-  --secondary: #ff0080;
-  --background: #f0f0f0;
-  --text: #333;
+  --primary: #0F495F;
+  --primaryLight: #1a66ab;
+  --secondary: #96AE39;
+  --secondaryLight: #bfdd2f;
+
+  --textDark: #676767;
+
+  --lightBg: #fcfcfc;
+  --darkBg: #f2f2f2;
+
+  --white: #ffffff;
+  --black: #000000;
+
+  --shadowSm: 0px 0px 3px 1px #0000002e;
+
+  --headingFF: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  --paraFF: monospace, Times, serif;
+}
+
+.iBlock {
+  display: inline-block;
+}
+
+.iFlex {
+  display: inline-flex;
 }
