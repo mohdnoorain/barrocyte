@@ -1,0 +1,23 @@
+section {
+    padding: 16px 10px;
+    background-image: url('https://imgs.search.brave.com/PuxoqSRNJ1T5XBuvPg9dyL1uc6k02F71XMOrHzD1mFs/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/bmNiYXIub3JnL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDI0LzA0/L2xhd3llci1oZWxw/aW5nLWNsaWVudC5q/cGVn');
+    background-position: center right;
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+}
+
+.heroCon {
+    h1 {
+        font-size: 41px;
+        margin-top: 148px;
+        margin-bottom: 15px;
+        font-family: var(--headingFF);
+    }
+
+    p {
+        font-size: 14px;
+        max-width: 280px;
+        line-height: 18px;
+        margin-bottom: 10px;
+    }
+}
