@@ -6,7 +6,6 @@ import "./Header.css";
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -21,7 +20,6 @@ const Navbar: React.FC = () => {
     const handleClickOutside = (event: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
         setIsMobileMenuOpen(false);
-        setIsServicesOpen(false);
       }
     };
 
@@ -39,7 +37,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className={`navbar ${isScrolled ? "scrolled" : ""}`} ref={menuRef}>
-      <div className="nav-container">
+      <div className="nav-container container">
         <div className="logo">Barro.</div>
 
         {/* Mobile Menu Button */}
@@ -62,30 +60,10 @@ const Navbar: React.FC = () => {
               About
             </Link>
           </li>
-          <li className="dropdown">
-            <button
-              className="dropdown-button"
-              onClick={() => setIsServicesOpen(!isServicesOpen)}
-            >
-              Services ▼
-            </button>
-            <ul className={`dropdown-menu ${isServicesOpen ? "open" : ""}`}>
-              <li>
-                <Link href="/web-development" onClick={() => setIsMobileMenuOpen(false)}>
-                  Web Development
-                </Link>
-              </li>
-              <li>
-                <Link href="/seo" onClick={() => setIsMobileMenuOpen(false)}>
-                  SEO Optimization
-                </Link>
-              </li>
-              <li>
-                <Link href="/marketing" onClick={() => setIsMobileMenuOpen(false)}>
-                  Digital Marketing
-                </Link>
-              </li>
-            </ul>
+          <li>
+            <Link href="/services" onClick={() => setIsMobileMenuOpen(false)}>
+              Services
+            </Link>
           </li>
         </ul>
       </div>

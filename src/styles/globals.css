@@ -17,9 +17,9 @@ a {
 }
 
 :root {
-  --primary: #0F495F;
+  --primary: #0f495f;
   --primaryLight: #1a66ab;
-  --secondary: #96AE39;
+  --secondary: #96ae39;
   --secondaryLight: #bfdd2f;
 
   --textDark: #676767;
@@ -32,7 +32,8 @@ a {
 
   --shadowSm: 0px 0px 3px 1px #0000002e;
 
-  --headingFF: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  --headingFF: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   --paraFF: monospace, Times, serif;
 }
 
@@ -43,3 +44,40 @@ a {
 .iFlex {
   display: inline-flex;
 }
+
+/* Responsive Container */
+.container {
+  
+  width: 100%;
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+
+
+
