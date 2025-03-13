@@ -1,0 +1,103 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Section */
+.regulatory-section {
+    padding: 2em 0;
+    background: white;
+    color: black;
+    text-align: center;
+}
+
+
+
+/* Title */
+.regulatory-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Grid */
+.regulatory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Card */
+.regulatory-card {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    border: 1px solid #ddd;
+}
+
+.regulatory-card:hover {
+    background: #e9ecef;
+}
+
+/* CTA */
+.regulatory-cta {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.regulatory-button {
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.regulatory-button:hover {
+    background: #0056b3;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .regulatory-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .regulatory-title {
+        font-size: 28px;
+    }
+
+    .regulatory-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .regulatory-button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .regulatory-title {
+        font-size: 24px;
+    }
+
+    .regulatory-card {
+        padding: 15px;
+    }
+
+    .regulatory-button {
+        font-size: 16px;
+        padding: 10px;
+    }
+}

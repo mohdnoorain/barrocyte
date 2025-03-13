@@ -8,7 +8,7 @@
   /* Hero Section */
   .herosection {
     padding-top: 6em; /* Adjusted to clear the fixed header */
-    padding-bottom: 5em;
+    padding-bottom: 3em;
     position: relative;
     z-index: 0;
     display: flex;
