@@ -1,21 +1,3 @@
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-  font-family: var(--paraFF);
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
 :root {
   --primary: #0f495f;
   --primaryLight: #1a66ab;
@@ -35,6 +17,100 @@ a {
   --headingFF: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   --paraFF: monospace, Times, serif;
+
+  --fs-1: 40px;
+  --fs-2: 24px;
+  --fs-3: 20px;
+  --fs-4: 18px;
+  --fs-5: 16px;
+  --fs-6: 14px;
+
+  --fs-large: 16px;
+  --fs-regular: 14px;
+  --fs-small: 12px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: var(--paraFF);
+}
+
+/* heading, title typo */
+.text-1 {
+  font-size: var(--fs-1);
+  line-height: 140%;
+  font-weight: 700;
+  font-family: var(--headingFF);
+}
+
+.text-2 {
+  font-size: var(--fs-2);
+  line-height: 140%;
+  font-weight: 700;
+  font-family: var(--headingFF);
+}
+
+.text-3 {
+  font-size: var(--fs-3);
+  line-height: 140%;
+  font-weight: 700;
+  font-family: var(--headingFF);
+}
+
+.text-4 {
+  font-size: var(--fs-4);
+  line-height: 140%;
+  font-weight: 700;
+  font-family: var(--headingFF);
+}
+
+.text-5 {
+  font-size: var(--fs-5);
+  line-height: 140%;
+  font-weight: 700;
+  font-family: var(--headingFF);
+}
+
+.text-6 {
+  font-size: var(--fs-6);
+  line-height: 140%;
+  font-weight: 700;
+  font-family: var(--headingFF);
+}
+
+/* body , desc, label typo */
+.text-large {
+  font-size: var(--fs-large);
+  line-height: 130%;
+  font-weight: 400;
+  font-family: var(--paraFF);
+}
+
+.text-regular {
+  font-size: var(--fs-regular);
+  line-height: 130%;
+  font-weight: 400;
+  font-family: var(--paraFF);
+}
+
+.text-small {
+  font-size: var(--fs-small);
+  line-height: 130%;
+  font-weight: 400;
+  font-family: var(--paraFF);
 }
 
 .iBlock {
@@ -47,7 +123,7 @@ a {
 
 /* Responsive Container */
 .container {
-  
+
   width: 100%;
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
@@ -77,7 +153,3 @@ a {
     max-width: 960px;
   }
 }
-
-
-
-
