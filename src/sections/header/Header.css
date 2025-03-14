@@ -1,196 +1,115 @@
-/* Global Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Navbar Base Styles */
+.navbar {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 30px;
+  transition: all 0.4s ease-in-out;
+  z-index: 1000;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Navbar in Scrolled State */
+.navbar.scrolled {
+  top: 0px;
+  width: 100%;
+  border-radius: 0;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px 20px;
+}
+
+/* Navbar Container */
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center everything */
+}
+
+/* Logo */
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  transition: 0.3s ease;
+  margin-right: auto; /* Push logo to the left */
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+
+  align-items: center; /* Ensure vertical alignment */
+}
+
+/* Navigation Items */
+.nav-links li {
+  position: relative;
+}
+
+/* Navigation Links */
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.3s;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+/* Hover Effect */
+.nav-links a:hover {
+  color: #007bff;
+  background: rgba(0, 123, 255, 0.1);
+}
+
+/* Mobile Menu Button */
+.menu-button {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Mobile Menu */
+@media screen and (max-width: 768px) {
+  .menu-button {
+    display: block;
   }
-  
-  /* Navbar Base Styles */
-  .navbar {
-    position: fixed;
-    top: 10px;
+
+  .nav-links {
+    position: absolute;
+    top: 55px;
     left: 50%;
     transform: translateX(-50%);
-    width: 60%;
-    padding: 12px 20px;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 30px;
-    transition: all 0.4s ease-in-out;
-    z-index: 1000;
-    text-align: center;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
-  }
-  
-  /* Navbar in Scrolled State */
-  .navbar.scrolled {
-    top: 0px;
-    width: 100%;
-    border-radius: 0;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 15px 20px;
-  }
-  
-  /* Navbar Container */
-  .nav-container {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Center everything */
-  }
-  
-  /* Logo */
-  .logo {
-    font-size: 22px;
-    font-weight: bold;
-    color: #333;
-    transition: 0.3s ease;
-    margin-right: auto; /* Push logo to the left */
-  }
-  
-  /* Navigation Links */
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px; /* Increase gap for even spacing */
-    align-items: center; /* Ensure vertical alignment */
-  }
-  
-  /* Navigation Items */
-  .nav-links li {
-    position: relative;
-  }
-  
-  /* Navigation Links */
-  .nav-links a {
-    text-decoration: none;
-    color: #333;
-    font-size: 16px;
-    font-weight: 500;
-    transition: 0.3s;
-    padding: 8px 12px;
-    border-radius: 6px;
-  }
-  
-  .nav-links a:hover {
-    color: #007bff;
-    background: rgba(0, 123, 255, 0.1);
-  }
-  
-  /* Dropdown Button */
-  .dropdown {
-    display: flex;
-    align-items: center;
-    position: relative;
-  }
-  
-  .dropdown-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: none;
-    border: none;
-    font-size: 16px;
-    font-weight: 500;
-    color: #333;
-    cursor: pointer;
-    padding: 8px 12px;
-    border-radius: 6px;
-    transition: 0.3s;
-  }
-  
-  .dropdown-button:hover {
-    color: #007bff;
-    background: rgba(0, 123, 255, 0.1);
-  }
-  
-  /* Dropdown Menu */
-  .dropdown-menu {
-    position: absolute;
-    top: 40px;
-    left: 0;
-    min-width: 180px;
+    width: 85%;
     background: white;
-    padding: 10px 0;
-    border-radius: 8px;
+    padding: 15px 0;
+    border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    /* Hide initially */
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-10px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(-20px);
+    transition: transform 0.3s ease, opacity 0.3s ease;
   }
-  
-  .dropdown-menu.open {
+
+  .nav-links.open {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
   }
-  
-  .dropdown-menu li {
-    text-align: left;
-  }
-  
-  .dropdown-menu a {
-    display: block;
-    padding: 10px;
-    font-size: 15px;
-    transition: 0.3s;
-  }
-  
-  .dropdown-menu a:hover {
-    background: #007bff;
-    color: white;
-  }
-  
-  /* Mobile Menu Button */
-  .menu-button {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  /* Mobile Menu */
-  @media screen and (max-width: 768px) {
-    .menu-button {
-      display: block;
-    }
-  
-    .nav-links {
-      position: absolute;
-      top: 55px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 85%;
-      background: white;
-      padding: 15px 0;
-      border-radius: 10px;
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 12px;
-  
-      /* Hide initially */
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(-20px);
-      transition: transform 0.3s ease, opacity 0.3s ease;
-    }
-  
-    .nav-links.open {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-    }
-  
-    .dropdown-menu {
-      position: relative;
-      top: 0;
-      left: 0;
-      width: 100%;
-      box-shadow: none;
-    }
-  }
-  
+}
