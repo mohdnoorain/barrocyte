@@ -1,12 +1,7 @@
 /* Google Icons */
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
-/* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 
 /* Section */
 .regulatory-section {
