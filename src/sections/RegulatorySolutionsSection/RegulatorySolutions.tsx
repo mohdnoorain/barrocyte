@@ -29,7 +29,7 @@ export default function RegulatoryPage() {
               </div>
             ))}
           </div>
-          
+
         </div>
       </div>
     </section>
