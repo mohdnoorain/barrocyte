@@ -1,4 +1,4 @@
-import RegulatorySolutions from "@/components/RegulatorySolutions/RegulatorySolutions";
+import RegulatorySolutions from "@/sections/RegulatorySolutionsSection/RegulatorySolutions";
 import "./Main.css";
 
 export default function Main() {

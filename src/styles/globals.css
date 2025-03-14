@@ -19,11 +19,12 @@
   --paraFF: monospace, Times, serif;
 
   --fs-1: 40px;
-  --fs-2: 24px;
-  --fs-3: 20px;
-  --fs-4: 18px;
-  --fs-5: 16px;
-  --fs-6: 14px;
+  --fs-2: 28px;
+  --fs-3: 24px;
+  --fs-4: 20px;
+  --fs-5: 18px;
+  --fs-6: 16px;
+  --fs-7: 14px;
 
   --fs-large: 16px;
   --fs-regular: 14px;
@@ -123,7 +124,6 @@ body {
 
 /* Responsive Container */
 .container {
-
   width: 100%;
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
