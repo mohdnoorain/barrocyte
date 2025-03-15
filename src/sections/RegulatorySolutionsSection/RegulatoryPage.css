@@ -3,7 +3,7 @@
 /* Section */
 .regulatory-section {
   padding: 3em 0;
-  background: white;
+  background: var(--darkBg);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,6 +36,7 @@
 
 /* Card */
 .regulatory-card {
+  /* border: 1px solid blue; */
   display: flex;
   align-items: center;
   padding: 12px 20px;
@@ -46,10 +47,14 @@
   transition: 0.3s;
   position: relative;
   width: 100%;
+  cursor: pointer;
 }
 
 .regulatory-card:hover {
-  opacity: 0.9;
+  /* opacity: 0.9; */
+  scale: 1.1;
+  box-shadow: 2px 2px 4px 4px white;
+
 }
 
 /* Hexagon Shape */
@@ -146,28 +151,41 @@
 }
 
 @media (max-width: 480px) {
+  .regulatory-title {
+    font-size: var(--fs-3);
+    margin-bottom: 30px;
+  }
+
+  .regulatory-grid {
+    padding: 0;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    /* 2 columns */
+  }
+
   .regulatory-card {
-    padding: 10px 15px;
-    font-size: 14px;
+    padding: 6px 6px;
+    font-size: 11px;
+    width: 100%;
   }
 
   .hexagon {
-    width: 45px;
-    height: 45px;
+    width: 30px;
+    height: 30px;
   }
 
   .hexagon-card {
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     left: -10px;
   }
 
   .regulatory-icon {
-    font-size: 20px;
+    font-size: 14px;
   }
 
   .regulatory-text {
-    font-size: var(--fs-7);
-    margin-left: 50px;
+    font-size: 11px;
+    margin-left: 25px;
   }
 }
