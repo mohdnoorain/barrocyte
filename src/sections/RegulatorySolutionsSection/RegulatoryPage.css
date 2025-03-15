@@ -2,166 +2,156 @@
 
 /* Section */
 .regulatory-section {
-    padding: 3em 0;
-    background: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-  }
-  
-  /* Title */
-  .regulatory-title {
-    font-size: var(--fs-2);
-    font-weight: 600;
-    text-align: center;
-    margin-bottom: 50px;
-    color: #333;
-  }
-  
-  /* Grid */
+  padding: 3em 0;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Title */
+.regulatory-title {
+  font-size: var(--fs-2);
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Grid */
+.regulatory-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  /* Default: 1 column */
+  gap: 45px;
+  /* Increased gap */
+  max-width: 1200px;
+  /* Allow full stretch */
+  width: 90%;
+  /* Adjust to screen */
+  padding: 0 20px;
+}
+
+/* Card */
+.regulatory-card {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  text-align: left;
+}
+
+.regulatory-card:hover {
+  opacity: 0.9;
+}
+
+/* Hexagon Shape */
+.hexagon {
+  width: 60px;
+  height: 60px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+/* Hexagon Background (Matches Card Color) */
+.hexagon-card {
+  width: 75px;
+  height: 75px;
+  background: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: -15px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+/* Icon */
+.regulatory-icon {
+  font-size: 26px;
+  color: black;
+}
+
+/* Regulatory Text */
+.regulatory-text {
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  font-size: var(--fs-5);
+  margin-left: 60px;
+  letter-spacing: 1px;
+}
+
+/* Responsive Design */
+
+/* Large Screens (3 Columns) */
+@media (min-width: 1024px) {
   .regulatory-grid {
-    display: grid;
-    grid-template-columns: 1fr; /* Default: 1 column */
-    gap: 45px; /* Increased gap */
-    max-width: 1200px; /* Allow full stretch */
-    width: 90%; /* Adjust to screen */
-    padding: 0 20px;
-  }
-  
-  /* Card */
-  .regulatory-card {
-    display: flex;
-    align-items: center;
-    padding: 12px 20px;
-    border-radius: 10px;
-    color: white;
-    font-weight: bold;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    transition: 0.3s;
-    position: relative;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* 3 columns */
     width: 100%;
   }
-  
-  .regulatory-card:hover {
-    opacity: 0.9;
-  }
-  
-  /* Hexagon Shape */
+
   .hexagon {
-    width: 60px;
-    height: 60px;
-    background: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    width: 65px;
+    height: 65px;
   }
-  
-  /* Hexagon Background (Matches Card Color) */
+
   .hexagon-card {
-    width: 75px;
-    height: 75px;
-    background: inherit;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    left: -15px;
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    width: 80px;
+    height: 80px;
+    left: -20px;
   }
-  
-  /* Icon */
-  .regulatory-icon {
-    font-size: 26px;
-    color: black;
+}
+
+/* Tablets (2 Columns) */
+@media (max-width: 1024px) {
+  .regulatory-grid {
+    grid-template-columns: 1fr 1fr;
+    /* 2 columns */
   }
-  
-  /* Regulatory Text */
+}
+
+@media (max-width: 576px) {
   .regulatory-text {
-    font-family: "Arial", sans-serif;
-    font-weight: bold;
-    font-size: var(--fs-5);
-    margin-left: 60px;
-    letter-spacing: 1px;
+    font-size: var(--fs-small);
   }
-  
-  /* Responsive Design */
-  
-  /* Large Screens (3 Columns) */
-  @media (min-width: 1024px) {
-    .regulatory-grid {
-      grid-template-columns: 1fr 1fr 1fr; /* 3 columns */
-      width: 100%;
-    }
-  
-    .hexagon {
-      width: 65px;
-      height: 65px;
-    }
-  
-    .hexagon-card {
-      width: 80px;
-      height: 80px;
-      left: -20px;
-    }
+
+  .regulatory-title {
+    font-size: var(--fs-4);
+
   }
-  
-  /* Tablets (2 Columns) */
-  @media (max-width: 1024px) {
-    .regulatory-grid {
-      grid-template-columns: 1fr 1fr; /* 2 columns */
-    }
+
+  .regulatory-icon {
+    font-size: var(--fs-4);
   }
-  
-  /* Mobile Phones (1 Column) */
-  @media (max-width: 768px) {
-    .regulatory-grid {
-      grid-template-columns: 1fr; /* 1 column */
-      width: 100%;
-    }
-  
-    .hexagon {
-      width: 55px;
-      height: 55px;
-    }
-  
-    .hexagon-card {
-      width: 70px;
-      height: 70px;
-      left: -12px;
-    }
-  
-    .regulatory-title {
-      font-size: var(--fs-3);
-    }
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .regulatory-grid {
+    max-width: 100%;
+    grid-template-columns: 1fr 1fr;
+    /* 50% width each */
   }
-  
-  @media (max-width: 480px) {
-    .regulatory-card {
-      padding: 10px 15px;
-      font-size: 14px;
-    }
-  
-    .hexagon {
-      width: 45px;
-      height: 45px;
-    }
-  
-    .hexagon-card {
-      width: 60px;
-      height: 60px;
-      left: -10px;
-    }
-  
-    .regulatory-icon {
-      font-size: 20px;
-    }
-  
-    .regulatory-text {
-      font-size: var(--fs-7);
-      margin-left: 50px;
-    }
+}
+
+@media (max-width: 576px) {
+  .regulatory-grid {
+    grid-template-columns: 1fr;
+    /* Full width on smaller screens */
   }
-  
+}
+}
