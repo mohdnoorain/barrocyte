@@ -1,3 +1,7 @@
+.sanitaryImportPermitServiceParagraph {
+  color: var(--textDark);
+}
+
 .sanitaryImportPermitServiceContainer {
   display: flex;
   flex-wrap: wrap;
@@ -115,8 +119,6 @@
   transition: height 0.4s ease-in-out;
 }
 
-
-
 /* Responsive Design */
 @media (max-width: 768px) {
   .sanitaryImportPermitServiceTitle {
@@ -125,6 +127,9 @@
 }
 
 @media (max-width: 576px) {
+  .sanitaryImportPermitServiceParagraph {
+    font-size: var(--fs-regular);
+  }
   .sanitaryImportPermitServiceTitle {
     font-size: var(--fs-4);
   }
@@ -175,4 +180,6 @@
   height: auto;
   object-fit: cover;
   display: block;
+  margin-top: 10px;
+  border-radius: 8px;
 }

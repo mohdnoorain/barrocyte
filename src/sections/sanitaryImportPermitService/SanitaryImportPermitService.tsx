@@ -37,6 +37,28 @@ export default function SanitaryImportPermitService() {
       <div className="sanitaryImportPermitService">
         <div className="container">
           <h2 className="sanitaryImportPermitServiceTitle">
+            Sanitary Import Permit (SIP)
+          </h2>
+          <p className="sanitaryImportPermitServiceParagraph">
+            Import of meat and meat products of any kind including fresh,
+            chilled and frozen meat, tissue or organs of poultry, sheep, goat;
+            egg & egg powder; milk & milk products; bovine, ovine and caprine
+            embryos, ova or semen; and pet food products of animal origin
+            requires Sanitary Import Permit (SIP) from the Department of Animal
+            Husbandry, Dairying and Fisheries (DAHDF). Sanitary Import Permit
+            (SIP) is a certificate stating the sanitary conditions listed by the
+            Government of India for the importation of livestock and livestock
+            products. It is not a license but a document that informs exporting
+            countries to follow the sanitary conditions listed under the
+            Livestock Importation Act. Traders can import the animal and animal
+            products from the exporting country only through the seaports or
+            airports of Bangalore, Chennai, Delhi, Hyderabad, Kolkata and
+            Mumbai. We at Barrocyte assist you in getting the Sanitary Import
+            Permit (SIP) in the stipulated time manner.
+          </p>
+        </div>
+        <div className="container">
+          <h2 className="sanitaryImportPermitServiceTitle">
             Sanitary Import Permit (SIP) Guidelines
           </h2>
           <div className="accordianCard">
@@ -53,8 +75,7 @@ export default function SanitaryImportPermitService() {
             </div>
             <div className="accordianImageContainer">
               <img
-                src="https://nsiqinfotech.com/wp-content/uploads/2024/08/Salesforce-Cloud-Services-inner-image.png"
-                alt="Salesforce Cloud Services"
+                src="https://www.indiafilings.com/learn/wp-content/uploads/2019/11/Sanitary-Import-Permit.jpg"
               />
             </div>
           </div>
