@@ -5,6 +5,7 @@ import "./../styles/globals.css";
 
 import Header from './../sections/header/Header';
 import Main from "@/sections/main/Main";
+import BloodBankServive from "@/sections/bloodBankService/BloodBankServive";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       </Head>
       <Header></Header>
       <Main></Main>
+      <BloodBankServive/>
     </>
   );
 }

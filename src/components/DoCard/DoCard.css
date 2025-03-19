@@ -1,0 +1,63 @@
+/* Card Styling */
+.do-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  max-height: 400px;
+  text-align: left;
+  position: relative;
+  transition: all 0.3s ease;
+  min-height: 400px;
+  z-index: 0;
+}
+
+.do-card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* List Styling */
+.do-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow-y: auto;
+}
+
+.do-list-item {
+  font-size: 1rem;
+  color: #333;
+  margin: 0.75rem 0;
+  display: flex;
+  align-items: center;
+  
+  gap: 10px;
+}
+
+/* Checkmark Icon */
+.checkmark {
+  color: #2ecc71;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Side Label */
+.do-label {
+  position: absolute;
+  right: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(45deg, #00b894, #26de81);
+  color: white;
+  padding: 12px 15px;
+  font-weight: bold;
+  border-radius: 10px 0 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  height: 80%;
+ 
+}
