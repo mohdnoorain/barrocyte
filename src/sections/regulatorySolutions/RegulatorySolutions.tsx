@@ -1,6 +1,7 @@
-import "./RegulatoryPage.css";
+import RegulatoryCard from "@/components/regulatoryCard/RegulatoryCard";
+import "./RegulatorySolutions.css";
 
-// Data Object
+// Data Array
 const regulatorySolutions = [
   { title: "Medical Device", icon: "medical_services", color: "#0f495f" },
   { title: "Diagnostic Kits", icon: "biotech", color: "#d61b5b" },
@@ -13,7 +14,7 @@ const regulatorySolutions = [
   { title: "Sanitary Import Permit", icon: "fact_check", color: "#d61b5b" },
 ];
 
-export default function RegulatoryPage() {
+export default function RegulatorySolutions() {
   return (
     <section>
       <div className="regulatory-section">
@@ -21,20 +22,12 @@ export default function RegulatoryPage() {
           <h1 className="regulatory-title">Our Regulatory Solution</h1>
           <div className="regulatory-grid">
             {regulatorySolutions.map((solution, index) => (
-              <div
-                className="regulatory-card"
+              <RegulatoryCard
                 key={index}
-                style={{ backgroundColor: solution.color }}
-              >
-                <div className="hexagon-card">
-                  <div className="hexagon">
-                    <span className="material-icons regulatory-icon">
-                      {solution.icon}
-                    </span>
-                  </div>
-                </div>
-                <span className="regulatory-text">{solution.title}</span>
-              </div>
+                title={solution.title}
+                icon={solution.icon}
+                color={solution.color}
+              />
             ))}
           </div>
         </div>
