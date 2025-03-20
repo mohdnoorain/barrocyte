@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import "./Header.css";
 
-const Navbar: React.FC = () => {
+const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
@@ -71,4 +71,4 @@ const Navbar: React.FC = () => {
   );
 };
 
-export default Navbar;
+export default Header;
