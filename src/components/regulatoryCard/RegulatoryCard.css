@@ -1,0 +1,117 @@
+.regulatory-card {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+}
+
+.regulatory-card:hover {
+  scale: 1.1;
+  box-shadow: 2px 2px 4px 4px white;
+}
+
+.hexagon {
+  width: 60px;
+  height: 60px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.hexagon-card {
+  width: 75px;
+  height: 75px;
+  background: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: -15px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.regulatory-icon {
+  font-size: 26px;
+  color: black;
+}
+
+.regulatory-text {
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  font-size: var(--fs-5);
+  margin-left: 60px;
+  letter-spacing: 1px;
+}
+
+/* Responsive design for card  */
+
+@media (min-width: 1024px) {
+  .hexagon {
+    width: 65px;
+    height: 65px;
+  }
+
+  .hexagon-card {
+    width: 80px;
+    height: 80px;
+    left: -20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .regulatory-card {
+    padding: 10px 10px;
+    width: 100%;
+  }
+
+  .hexagon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .hexagon-card {
+    width: 60px;
+    height: 60px;
+    left: -12px;
+  }
+  .regulatory-text {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .regulatory-card {
+    padding: 6px 6px;
+    font-size: 11px;
+    width: 100%;
+  }
+
+  .hexagon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .hexagon-card {
+    width: 40px;
+    height: 40px;
+    left: -10px;
+  }
+
+  .regulatory-icon {
+    font-size: 14px;
+  }
+
+  .regulatory-text {
+    font-size: 11px;
+    margin-left: 25px;
+  }
+}

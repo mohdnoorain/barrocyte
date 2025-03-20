@@ -1,0 +1,120 @@
+.sanitaryImportPermitServiceSection {
+  padding: 3em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.sanitaryImportPermitServiceParagraph {
+  color: var(--textDark);
+  line-height: 20px;
+}
+
+.sanitaryImportPermitServiceContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
+}
+
+.sanitaryImportPermitServiceTitle {
+  font-size: var(--fs-2);
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.sanitaryImportPermitServiceGuidelinsContainer{
+   padding-top : 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.sanitaryImportPermitServiceGuidelins {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center !important;
+  background: #fff;
+  border-radius: 10px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-in-out forwards;
+  transition: all 0.3s ease-in-out;
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
+}
+
+.SipContainer,
+.ImageContainer {
+  flex: 1;
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-top: var(--bs-gutter-y);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sanitaryImportPermitServiceTitle {
+    font-size: var(--fs-3);
+  }
+}
+
+@media (max-width: 576px) {
+  .sanitaryImportPermitServiceParagraph {
+    font-size: var(--fs-regular);
+  }
+  .sanitaryImportPermitServiceTitle {
+    font-size: var(--fs-4);
+  }
+}
+
+@media (min-width: 576px) {
+  .SipContainer,
+  .ImageContainer {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .SipContainer,
+  .ImageContainer {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .SipContainer,
+  .ImageContainer {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 991px) {
+  .SipContainer,
+  .ImageContainer {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+.ImageContainer img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  margin-top: 10px;
+  border-radius: 8px;
+}
