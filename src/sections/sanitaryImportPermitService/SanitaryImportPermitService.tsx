@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./SanitaryImportPermitService.css";
-import Accordion from "@/components/Accordion";
+import Accordion from "@/components/accordion/Accordion";
 
 const accordionData = [
   {
@@ -34,7 +34,7 @@ export default function SanitaryImportPermitService() {
 
   return (
     <section>
-      <div className="sanitaryImportPermitService">
+      <div className="sanitaryImportPermitServiceSection">
         <div className="container">
           <h2 className="sanitaryImportPermitServiceTitle">
             Sanitary Import Permit (SIP)
@@ -57,26 +57,26 @@ export default function SanitaryImportPermitService() {
             Permit (SIP) in the stipulated time manner.
           </p>
         </div>
-        <div className="container">
-          <h2 className="sanitaryImportPermitServiceTitle">
-            Sanitary Import Permit (SIP) Guidelines
-          </h2>
-          <div className="accordianCard">
-            <div className="accordianInnercard">
-              {accordionData.map((item, index) => (
-                <Accordion
-                  key={index}
-                  title={item.title}
-                  content={item.content}
-                  isActive={activeIndex === index}
-                  onClick={() => toggleAccordion(index)}
-                />
-              ))}
-            </div>
-            <div className="accordianImageContainer">
-              <img
-                src="https://www.indiafilings.com/learn/wp-content/uploads/2019/11/Sanitary-Import-Permit.jpg"
-              />
+        <div className="sanitaryImportPermitServiceGuidelinsContainer">
+          <div className="container">
+            <h2 className="sanitaryImportPermitServiceTitle">
+              Sanitary Import Permit (SIP) Guidelines
+            </h2>
+            <div className="sanitaryImportPermitServiceGuidelins">
+              <div className="SipContainer">
+                {accordionData.map((item, index) => (
+                  <Accordion
+                    key={index}
+                    title={item.title}
+                    content={item.content}
+                    isActive={activeIndex === index}
+                    onClick={() => toggleAccordion(index)}
+                  />
+                ))}
+              </div>
+              <div className="ImageContainer">
+                <img src="https://www.indiafilings.com/learn/wp-content/uploads/2019/11/Sanitary-Import-Permit.jpg" />
+              </div>
             </div>
           </div>
         </div>

@@ -1,5 +1,15 @@
+.sanitaryImportPermitServiceSection {
+  padding: 3em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
 .sanitaryImportPermitServiceParagraph {
   color: var(--textDark);
+  line-height: 20px;
 }
 
 .sanitaryImportPermitServiceContainer {
@@ -14,11 +24,19 @@
   font-size: var(--fs-2);
   font-weight: 600;
   text-align: center;
-  margin: 50px 0;
+  margin-bottom: 30px;
   color: #333;
 }
 
-.accordianCard {
+.sanitaryImportPermitServiceGuidelinsContainer{
+   padding-top : 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.sanitaryImportPermitServiceGuidelins {
   display: flex;
   flex-wrap: wrap;
   align-items: center !important;
@@ -35,88 +53,13 @@
   margin-left: calc(-0.5 * var(--bs-gutter-x));
 }
 
-.accordianInnercard,
-.accordianImageContainer {
+.SipContainer,
+.ImageContainer {
   flex: 1;
   max-width: 100%;
   padding-right: calc(var(--bs-gutter-x) * 0.5);
   padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-top: var(--bs-gutter-y);
-}
-
-.accordionItem {
-  display: flex;
-  flex-direction: column;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  border-radius: 8px;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
-  margin-bottom: 5px;
-}
-
-.accordionItem:hover {
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-  transform: scale(1.02);
-}
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.accordionHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-  font-size: 18px;
-  font-weight: bold;
-  color: #1a7431;
-  background: #b7efc5;
-  border: 1px solid #ddd;
-  transition: background 0.3s;
-}
-
-.accordionItem.active .accordionHeader {
-  background: #1a7431;
-  color: white;
-}
-
-.icon {
-  font-size: 24px;
-  transition: transform 0.3s ease;
-}
-
-.accordionItem.active .icon {
-  transform: rotate(180deg);
-}
-
-.accordionContent {
-  overflow: hidden;
-  background: #6ede8a;
-  border: 1px solid #ddd;
-  box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.accordionContent ul {
-  list-style-type: disc;
-  padding-left: 20px;
-}
-
-.accordionBorder {
-  position: absolute;
-  left: 0;
-  width: 4px;
-  background: #007bff;
-  transition: height 0.4s ease-in-out;
 }
 
 /* Responsive Design */
@@ -133,49 +76,41 @@
   .sanitaryImportPermitServiceTitle {
     font-size: var(--fs-4);
   }
-
-  .accordionParagraph {
-    font-size: var(--fs-small);
-  }
-
-  .accordionHeader {
-    font-size: var(--fs-large);
-  }
 }
 
 @media (min-width: 576px) {
-  .accordianInnercard,
-  .accordianImageContainer {
+  .SipContainer,
+  .ImageContainer {
     flex: 0 0 auto;
     width: 100%;
   }
 }
 
 @media (min-width: 768px) {
-  .accordianInnercard,
-  .accordianImageContainer {
+  .SipContainer,
+  .ImageContainer {
     flex: 0 0 auto;
     width: 100%;
   }
 }
 
 @media (min-width: 992px) {
-  .accordianInnercard,
-  .accordianImageContainer {
+  .SipContainer,
+  .ImageContainer {
     flex: 0 0 50%;
     max-width: 50%;
   }
 }
 
 @media (max-width: 991px) {
-  .accordianInnercard,
-  .accordianImageContainer {
+  .SipContainer,
+  .ImageContainer {
     flex: 0 0 100%;
     max-width: 100%;
   }
 }
 
-.accordianImageContainer img {
+.ImageContainer img {
   width: 100%;
   height: auto;
   object-fit: cover;

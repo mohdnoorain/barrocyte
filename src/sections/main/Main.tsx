@@ -1,4 +1,4 @@
-import RegulatorySolutions from "@/sections/RegulatorySolutionsSection/RegulatorySolutions";
+
 import "./Main.css";
 
 export default function Main() {
@@ -37,7 +37,6 @@ export default function Main() {
           </div>
         </div>
       </div>
-      <RegulatorySolutions/>
       
     </main>
   );

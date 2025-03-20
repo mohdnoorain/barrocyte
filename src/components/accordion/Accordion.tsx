@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import "./Accordion.css";
 
 interface AccordionProps {
   title: string;
