@@ -1,6 +1,7 @@
 import React from "react";
 import "./BloodBankServive.css";
-import DoCard from "@/components/DoCard/DoCard";
+import DoRightCard from "@/components/DoCard/DoCard";
+
 export default function BloodBankServive() {
   const doItems = [
     "Write clean and modular code",
@@ -10,6 +11,7 @@ export default function BloodBankServive() {
     "Ensure mobile responsiveness",
     "Keep UI/UX simple and effective",
   ];
+  const title = "Blood Bank Services";
   const bloodBankAccordionData = [
     {
       title: "Form of Licence for Blood Bank",
@@ -43,52 +45,34 @@ export default function BloodBankServive() {
 
   return (
     <section>
-      <div className="bloodBankService">
+      <div className="bloodBankServiceSection">
         <div className="container">
           <h2 className="bloodBankServiceTitle"> Blood Bank Service</h2>
           <p className="bloodBankServiceParagrapgh">
-            Blood Transfusion Service is a vital part of the National Health
-            Service and there is no substitute for Human Blood and its
-            components. Increasing advancement in the field of Transfusion
-            Technology has necessitated to enforce stricter control over the
-            quality of Blood and its products. In most of the developed
-            countries, the blood banking system has advanced in all facets of
-            donor management, storage of blood, grouping and cross matching,
-            testing of transmissible diseases, rationale use of blood and
-            distribution. The Govt. has the full responsibility for the blood
-            programme even though, in some countries, the management of blood
-            transfusion services are delegated fully or partly to an appropriate
-            non-governmental organization (NGOs) working on a non-profit basis,
-            e.g., Red Cross Society. When a NGO is assigned this responsibility,
-            the Govt. should formally recognize it and give a clear mandate
-            formulating the national blood policy, it is important to consider
-            policy decisions enforcing appropriate regulations or necessary
-            functions of health service to ensure high quality service and safe
-            blood. In order to improve the standards of Blood and its
-            components, the Central Govt. through Drugs Controller General of
-            India, has formulated a comprehensive legislation to ensure better
-            quality control system on collection, storage, testing and
-            distribution of blood and its components. Central Govt. amended from
-            time to time the existing requirements of Blood Banks in the Drugs &
-            Cosmetics Act, 1940 and Rules thereunder to meet the latest
-            standards. Consequent to a public litigation case recently, Supreme
-            Court of India directed Central Govt. to enact a comprehensive
-            legislation on Blood Banks in collection, storage, testing and
-            distribution of blood and its components. In this context, the
-            office of Drugs Controller General of India made draft rules to
-            further amend the existing law in the Drugs & Cosmetics Act, 1940
-            and Rules thereunder. We as a Consultant, provide our clients
-            assistance with application and licensing procedures related to
-            Blood Bank.
+            Blood Transfusion Services are crucial to healthcare, with no
+            substitute for human blood. Advancements in transfusion technology
+            demand strict quality control. Many countries have well-regulated
+            blood banking systems, with some delegating management to NGOs like
+            the Red Cross. The Indian government, through the Drugs Controller
+            General, enforces stringent regulations under the Drugs & Cosmetics
+            Act, ensuring safe collection, storage, testing, and distribution.
+            Following a Supreme Court directive, amendments are being made to
+            strengthen these laws. As consultants, we assist clients in
+            obtaining blood bank licenses and regulatory approvals.
           </p>
         </div>
-      </div>
 
-      <div className="container">
-        <h2 className="bloodBankLicensingTitle">
-          Blood Bank Licensing and FSSAI Compliance Guidelines
-        </h2>
-        <DoCard items={doItems} />
+        <div className="bloodBankLicensingContainer">
+          <div className="container">
+            <h2 className="bloodBankServiceTitle">
+              Blood Bank Licensing and FSSAI Compliance Guidelines
+            </h2>
+            <div className="DoCardContainer">
+              <DoRightCard title="Blood Bank Licensing" items={doItems} />
+              <DoRightCard title="Blood Bank Licensing" items={doItems} />
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
