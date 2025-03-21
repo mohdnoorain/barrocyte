@@ -1,17 +1,24 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import "./BloodBankServive.css";
 import DoRightCard from "@/components/DoCard/DoCard";
+import Accordion from "@/components/accordion/Accordion";
 
 export default function BloodBankServive() {
-  const doItems = [
-    "Write clean and modular code",
-    "Follow accessibility standards",
-    "Optimize for performance",
-    "Use semantic HTML",
-    "Ensure mobile responsiveness",
-    "Keep UI/UX simple and effective",
-  ];
-  const title = "Blood Bank Services";
+ const doItems = {
+   title: "FSSAI Licensing & Compliance Guidance",
+   points: [
+     "FSSAI license requirements vary by business type.",
+     "Barrocyte Consultants provides checklist-based documentation support.",
+     "Assistance available for registration, renewal, and modifications.",
+     "Licenses are valid for 1-5 years and require timely renewal.",
+    
+   
+     "For expert guidance, contact barrocyte@gmail.com or +91-9266665237.",
+   ],
+ };
+
+
   const bloodBankAccordionData = [
     {
       title: "Form of Licence for Blood Bank",
@@ -29,19 +36,36 @@ export default function BloodBankServive() {
       content: `The Blood Bank licence in Form 28-C, Form 28-E, or renewed in Form 26-G or Form 26-I is valid for five years unless suspended or cancelled.  
     The validity starts from the date it is granted or renewed.`,
     },
+  ];
+
+  const accordionData = [
     {
-      title: "FSSAI Licensing and Compliance Assistance",
-      content: `Obtaining an FSSAI license is a complex process requiring various documents, depending on the business type.  
-    **Barrocyte Consultants** provides:
-    - A systematic, checklist-based documentation process.
-    - Assistance for petty food businesses in FSSAI registration.
-    - Support for modification, renewal, and duplicate license issuance.
-    - License or registration for 1-5 years, requiring renewal at least 30 days before expiry.
-    - Advisory services for compliance with FSSAI regulations.
-    Food Business Operators must inform the authority of any changes in their business before implementing them.
-    For assistance, contact Barrocyte Consultants at **barrocyte@gmail.com** or **+91-9266665237**.`,
+      title: "Mandatory Documents",
+      content: `Proforma Invoice. Packing List. Product Catalogue. Product Specification. 
+    Microbial Data Sheet. Process Flowchart. Import-Export Certificate.`,
+    },
+    {
+      title: "Application Procedure",
+      content: `The application should be made on SIP portal. Once the welcome page is opened, 
+    the applicants should apply online option and fill in the form A or B and enclose all the mandatory documents. 
+    After the submission of all the documents, the application fee of Rs.300 should be paid through the online payment gateway of the portal. 
+    Requisite documents should be uploaded on the portal. Once the application is processed and after the successful scrutiny, SIP may be granted. 
+    The Department of Animal Husbandry, Dairying and Fisheries would send an email to the registered ID of the applicant in case of any 
+    insufficient information or documents, and the applicant should rectify the error by logging into their account on SIP portal.`,
+    },
+    {
+      title: "Validity of the Permit (SIP)",
+      content: `The validity of the permit varies depending upon the livestock products and from three months to one year. 
+    The importer can carry out as many shipments as required as per the quantity permitted by the SIP within the stipulated period. 
+    The Department may extend the validity of the permit on request from the traders.`,
     },
   ];
+
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+  const toggleAccordion = (index: number) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
 
   return (
     <section>
@@ -67,9 +91,24 @@ export default function BloodBankServive() {
             <h2 className="bloodBankServiceTitle">
               Blood Bank Licensing and FSSAI Compliance Guidelines
             </h2>
-            <div className="DoCardContainer">
-              <DoRightCard title="Blood Bank Licensing" items={doItems} />
-              <DoRightCard title="Blood Bank Licensing" items={doItems} />
+            <div className="BloodBankguideLinesContainer">
+              <div className="DocardContainer">
+                <DoRightCard
+                  title="Blood Bank Licensing"
+                  items={doItems.points}
+                />
+              </div>
+              <div className="BoodBankAccordianContainer">
+                {bloodBankAccordionData.map((item, index) => (
+                  <Accordion
+                    key={index}
+                    title={item.title}
+                    content={item.content}
+                    isActive={activeIndex === index}
+                    onClick={() => toggleAccordion(index)}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>
