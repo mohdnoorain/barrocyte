@@ -7,6 +7,8 @@ import SanitaryImportPermitService from "@/sections/sanitaryImportPermitService/
 import RegulatorySolutions from "@/sections/regulatorySolutions/RegulatorySolutions";
 import Header from "@/components/header/Header";
 import BloodBankServive from "@/sections/bloodBankService/BloodBankServive";
+import DrugsLicenseServices from "@/sections/drugs/DrugsLicenseServices";
+
 
 export default function Home() {
   return (
@@ -24,6 +26,7 @@ export default function Home() {
       <Header />
       <Main></Main>
       <RegulatorySolutions />
+      <DrugsLicenseServices/>
       <BloodBankServive />
       <SanitaryImportPermitService />
     </>
