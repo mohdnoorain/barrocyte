@@ -5,19 +5,16 @@ import DoRightCard from "@/components/DoCard/DoCard";
 import Accordion from "@/components/accordion/Accordion";
 
 export default function BloodBankServive() {
- const doItems = {
-   title: "FSSAI Licensing & Compliance Guidance",
-   points: [
-     "FSSAI license requirements vary by business type.",
-     "Barrocyte Consultants provides checklist-based documentation support.",
-     "Assistance available for registration, renewal, and modifications.",
-     "Licenses are valid for 1-5 years and require timely renewal.",
-    
-   
-     "For expert guidance, contact barrocyte@gmail.com or +91-9266665237.",
-   ],
- };
-
+  const doItems = {
+    title: "FSSAI Licensing & Compliance Guidance",
+    points: [
+      "FSSAI license requirements vary by business type.",
+      "Barrocyte Consultants provides checklist-based documentation support.",
+      "Assistance available for registration, renewal, and modifications.",
+      "Licenses are valid for 1-5 years and require timely renewal.",
+      "For expert guidance, contact barrocyte@gmail.com or +91-9266665237.",
+    ],
+  };
 
   const bloodBankAccordionData = [
     {
@@ -35,29 +32,6 @@ export default function BloodBankServive() {
       title: "Validity of License",
       content: `The Blood Bank licence in Form 28-C, Form 28-E, or renewed in Form 26-G or Form 26-I is valid for five years unless suspended or cancelled.  
     The validity starts from the date it is granted or renewed.`,
-    },
-  ];
-
-  const accordionData = [
-    {
-      title: "Mandatory Documents",
-      content: `Proforma Invoice. Packing List. Product Catalogue. Product Specification. 
-    Microbial Data Sheet. Process Flowchart. Import-Export Certificate.`,
-    },
-    {
-      title: "Application Procedure",
-      content: `The application should be made on SIP portal. Once the welcome page is opened, 
-    the applicants should apply online option and fill in the form A or B and enclose all the mandatory documents. 
-    After the submission of all the documents, the application fee of Rs.300 should be paid through the online payment gateway of the portal. 
-    Requisite documents should be uploaded on the portal. Once the application is processed and after the successful scrutiny, SIP may be granted. 
-    The Department of Animal Husbandry, Dairying and Fisheries would send an email to the registered ID of the applicant in case of any 
-    insufficient information or documents, and the applicant should rectify the error by logging into their account on SIP portal.`,
-    },
-    {
-      title: "Validity of the Permit (SIP)",
-      content: `The validity of the permit varies depending upon the livestock products and from three months to one year. 
-    The importer can carry out as many shipments as required as per the quantity permitted by the SIP within the stipulated period. 
-    The Department may extend the validity of the permit on request from the traders.`,
     },
   ];
 

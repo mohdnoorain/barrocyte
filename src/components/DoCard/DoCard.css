@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* width: 100%; */
 }
 
 .do-card {
@@ -13,7 +12,6 @@
   width: 350px;
   text-align: left;
   transition: all 0.3s ease;
-  min-height: 400px;
   max-width: 550px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
@@ -65,7 +63,7 @@
 
 /* Responsive Design */
 
-/* Large Screens (Desktops & Laptops) */
+
 @media (min-width: 1200px) {
   .do-card {
     width: 360px;
@@ -76,11 +74,11 @@
   }
 }
 
-/* Tablets & Small Laptops (768px - 991px) */
+
 @media (max-width: 991px) and (min-width: 768px) {
   .do-card {
-    width: 100%; /* Increased width for better UI */
-    min-height: 370px;
+    width: 100%;
+    padding: 30px;
   }
 
   .do-label {
@@ -95,12 +93,10 @@
   }
 }
 
-/* Mobile Devices (Below 768px) */
+
 @media (max-width: 767px) {
   .do-card {
-    width: 100%;
-    min-height: 320px;
-    padding: 15px;
+    padding: 30px;
   }
 
   .do-label {
@@ -120,12 +116,11 @@
   }
 }
 
-/* Small Mobile Devices (Below 480px) */
+
 @media (max-width: 480px) {
   .do-card {
     width: 95%;
-    min-height: 300px;
-    padding: 12px;
+    padding: 25px;
   }
 
   .do-label {
