@@ -8,6 +8,7 @@ import RegulatorySolutions from "@/sections/regulatorySolutions/RegulatorySoluti
 import Header from "@/components/header/Header";
 import BloodBankServive from "@/sections/bloodBankService/BloodBankServive";
 import DrugsLicenseServices from "@/sections/drugs/DrugsLicenseServices";
+import Footer from "@/sections/footer/Footer";
 
 
 export default function Home() {
@@ -29,6 +30,7 @@ export default function Home() {
       <DrugsLicenseServices/>
       <BloodBankServive />
       <SanitaryImportPermitService />
+      <Footer/>
     </>
   );
 }
