@@ -10,6 +10,7 @@ import BloodBankServive from "@/sections/bloodBankService/BloodBankServive";
 import DrugsLicenseServices from "@/sections/drugs/DrugsLicenseServices";
 
 
+
 export default function Home() {
   return (
     <>
