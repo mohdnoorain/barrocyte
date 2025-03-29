@@ -8,7 +8,8 @@ import HowToApply from "@/components/howToApply/HowToApply";
 import DoCard from "@/components/DoCard/DoCard";
 import OfferContainer from "@/components/offerContainer/OfferContainer";
 import ValidityInfo from "@/components/validityInfo/ValidityInfo";
-import InfoCard from "@/components/InfoCard/InfoCard";
+import ImportantDocuments from "@/components/importantDocuments.tsx/ImportantDocuments";
+
 
 const tableData1 = [
   {
@@ -142,6 +143,16 @@ const validityData = {
     "The import license (Form MD 15) remains valid permanently, provided the license retention fee is paid every 5 years as per the Second Schedule. If not paid, the Central Licensing Authority may suspend or cancel it.",
 };
 
+
+const documentsData = [
+  { icon: "description", label: "Wholesale Licence" },
+  { icon: "gavel", label: "Power of Attorney" },
+  { icon: "assignment", label: "Free Sale Certificate" },
+  { icon: "inventory", label: "GHTF" },
+  { icon: "folder", label: "Device Master File" },
+  { icon: "domain", label: "Site Master File" },
+];
+
 const MedicalDevicesServices = () => {
   return (
     <section>
@@ -209,7 +220,14 @@ const MedicalDevicesServices = () => {
               title={validityData.title}
               description={validityData.description}
             />
-           
+          </div>
+        </div>
+        <div className="FormsContainer importantDocumentsContainer">
+          <div className="container">
+            <ImportantDocuments
+              title="Important Documents"
+              documents={documentsData}
+            />
           </div>
         </div>
       </div>

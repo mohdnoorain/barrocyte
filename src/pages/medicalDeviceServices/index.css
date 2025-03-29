@@ -67,6 +67,10 @@
   align-items: center;
 }
 
+.importantDocumentsContainer{
+  background-color: #f8f9fa;
+}
+
 /* responsive design  */
 
 @media (max-width: 991px) {
