@@ -60,6 +60,13 @@
   margin-top: var(--bs-gutter-y);
 }
 
+.validityInfoContainer{
+  background: #dee2e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* responsive design  */
 
 @media (max-width: 991px) {

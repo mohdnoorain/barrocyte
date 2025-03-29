@@ -7,6 +7,8 @@ import WhoCanApply from "@/components/whoCanApply/WhoCanApply";
 import HowToApply from "@/components/howToApply/HowToApply";
 import DoCard from "@/components/DoCard/DoCard";
 import OfferContainer from "@/components/offerContainer/OfferContainer";
+import ValidityInfo from "@/components/validityInfo/ValidityInfo";
+import InfoCard from "@/components/InfoCard/InfoCard";
 
 const tableData1 = [
   {
@@ -134,6 +136,11 @@ const feeData = [
   },
 ];
 
+const validityData = {
+  title: "Validity of Import License",
+  description:
+    "The import license (Form MD 15) remains valid permanently, provided the license retention fee is paid every 5 years as per the Second Schedule. If not paid, the Central Licensing Authority may suspend or cancel it.",
+};
 
 const MedicalDevicesServices = () => {
   return (
@@ -194,6 +201,15 @@ const MedicalDevicesServices = () => {
               offerData={feeData}
               headingTitle={"Medical Device Import License Fees"}
             />
+          </div>
+        </div>
+        <div className="FormsContainer validityInfoContainer">
+          <div className="container">
+            <ValidityInfo
+              title={validityData.title}
+              description={validityData.description}
+            />
+           
           </div>
         </div>
       </div>
