@@ -6,6 +6,7 @@ import Header from "@/components/header/Header";
 import WhoCanApply from "@/components/whoCanApply/WhoCanApply";
 import HowToApply from "@/components/howToApply/HowToApply";
 import DoCard from "@/components/DoCard/DoCard";
+import OfferContainer from "@/components/offerContainer/OfferContainer";
 
 const tableData1 = [
   {
@@ -107,23 +108,32 @@ const doItems = {
 const feeData = [
   {
     icon: "discount",
-    title: "One site $1000",
+    title: "Fee Involved",
     description:
-      "The import license fee for Class A medical devices other than in vitro diagnostic medical devices. Each distinct medical device cost- $50.",
+      "Medical device fees vary by risk class. Below is the fee structure for import licenses.",
+  },
+  {
+    icon: "discount",
+    title: "One site $1000",
+    description: "Class A medical devices: $50 per distinct device.",
   },
   {
     icon: "discount",
     title: "One site $2000",
-    description:
-      "The import license fee for Class B medical devices other than in vitro diagnostic medical devices. Each distinct medical device cost- $1000.",
+    description: "Class B medical devices: $1000 per distinct device.",
   },
   {
     icon: "discount",
     title: "One site $3000",
-    description:
-      "The import license fee for Class C or Class D medical devices other than in vitro diagnostic medical devices. Each distinct medical device cost- $1500.",
+    description: "Class C & D medical devices: $1500 per distinct device.",
+  },
+  {
+    icon: "discount",
+    title: "One site $3000",
+    description: "Class C & D medical devices: $1500 per distinct device.",
   },
 ];
+
 
 const MedicalDevicesServices = () => {
   return (
@@ -146,7 +156,7 @@ const MedicalDevicesServices = () => {
             procedures, ensuring a smooth and compliant process.
           </p>
         </div>
-        <div className="medicalDeviceLicensingFormsContainer">
+        <div className="FormsContainer">
           <div className="container">
             <h2 className="MedicalDevicesServicesTitle">
               Medical Device Licensing Forms
@@ -162,7 +172,7 @@ const MedicalDevicesServices = () => {
             </div>
           </div>
         </div>
-        <div className="medicalDeviceLicensingFormsContainer">
+        <div className="FormsContainer">
           <div className="container">
             <div className="licensingFormContainer">
               <div className="tableContainer">
@@ -178,31 +188,12 @@ const MedicalDevicesServices = () => {
             </div>
           </div>
         </div>
-        <div className="medicalDeviceLicensingFormsContainer">
+        <div className="FormsContainer licenseFeesContainer">
           <div className="container">
-            <div className="medicalDeviceLicenseFeesContainer">
-              <p className="chooseUs">WHY CHOOSE US </p>
-              <h2 className="headingLicenseFees">
-                Medical Device Import License Fees
-              </h2>
-              <div className="feeContainer">
-                {feeData.map((item, index) => (
-                  <div key={index} className="offerContainer">
-                    <div className="iconContainer">
-                      <span className="material-icons offerIcon">
-                        {item.icon}
-                      </span>
-                    </div>
-                    <div className="bothcontainer">
-                      <div className="offerTitleContainer">
-                        <span>{item.title}</span>
-                      </div>
-                      <div className="offerParagraph">{item.description}</div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <OfferContainer
+              offerData={feeData}
+              headingTitle={"Medical Device Import License Fees"}
+            />
           </div>
         </div>
       </div>

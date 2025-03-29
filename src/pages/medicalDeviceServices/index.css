@@ -21,13 +21,17 @@
   line-height: 20px;
 }
 
-.medicalDeviceLicensingFormsContainer {
-  padding-top: 3em;
+.FormsContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 100%;
+}
+
+.licenseFeesContainer {
+  background-color: #f8f9fa;
+  padding-top: 3em;
 }
 
 .licensingFormContainer {
@@ -55,57 +59,24 @@
   margin-top: var(--bs-gutter-y);
 }
 
-.chooseUs {
-  /* color: white; */
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  text-align: center;
-  margin-bottom: 1em;
-}
-
-.headingLicenseFees {
-  font-size: var(--fs-2);
-  font-weight: 700;
-  text-align: center;
-}
-
-.feeContainer {
-  display: flex;
-  flex-direction: row;
-  text-align: start;
-  align-items: flex-start;
-  gap: 20px;
-  margin-top: 30px;
-}
-.offerContainer {
-  display: flex;
-  align-items: flex-start;
-  text-align: start;
-  padding-top: 1em;
-  margin-bottom: 20px;
-  gap: 10px;
-}
-
-.offerIcon {
-  font-size: 21px;
-  padding: 15px;
-  background-color: rgb(238, 240, 220);
-  border-radius: 50%;
-  margin-bottom: 20px;
-}
-
-.offerTitleContainer {
-  font-size: var(--fs-large);
-  margin-bottom: 10px;
-  font-weight: 700;
-}
-
-.offerParagraph {
-  line-height: 1.6;
-  font-size: var(--fs-small);
-}
-
 /* responsive design  */
+
+@media (max-width: 991px) {
+  .tableContainer {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .licensingFormContainer {
+    gap: 30px;
+  }
+}
+
+@media (min-width: 992px) {
+  .tableContainer {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
 
 @media (min-width: 768px) {
   .tableContainer {
@@ -137,21 +108,5 @@
 
   .MedicalDevicesServicesParagrapgh {
     font-size: var(--fs-regular);
-  }
-}
-@media (min-width: 992px) {
-  .tableContainer {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-}
-
-@media (max-width: 991px) {
-  .tableContainer {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-  .licensingFormContainer {
-    gap: 30px;
   }
 }
