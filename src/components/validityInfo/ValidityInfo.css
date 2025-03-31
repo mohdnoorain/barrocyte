@@ -5,11 +5,11 @@
   align-items: center;
   justify-content: center;
   border-radius: 8px;
-  text-align: center;
+  text-align:center;
   margin-bottom: 20px;
 }
 .innerContainer {
-  max-width: 800px;
+  max-width: 900px;
 }
 .validityTitle {
   font-size: var(--fs-2);

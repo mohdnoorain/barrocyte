@@ -34,9 +34,16 @@
   background-color: #f8f9fa;
   padding-top: 3em;
 }
+.manufacturerImageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
 
 .licensingFormContainer {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   align-items: center !important;
   background: #fff;
@@ -64,7 +71,7 @@
   width: 100%;
   max-width: 600px; /* Ensures it doesn’t stretch too much */
   height: auto;
-  min-height: 650px; /* Ensures it is visible */
+  min-height: 550px; /* Ensures it is visible */
   background-image: url("./../../../public/medical-devices-chart.png");
   background-position: center;
   background-size: contain; /* Ensures full image is visible */
@@ -90,6 +97,63 @@
   color: var(--textDark);
 }
 
+.bigNotesContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.bigNotes {
+  width: 48%;
+  padding: 30px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+
+
+.bigNotesHeading {
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: var(--fs-5);
+  font-weight: 700;
+  color: #343a40;
+}
+
+.bigNotesParagraph {
+  line-height: 1.4;
+  font-size: var(--fs-regular);
+  max-height: 150px; /* Default height */
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+  color: #495057;
+}
+
+.bigNotesParagraph.expanded {
+    max-height: 1000px; /* Expand smoothly */
+}
+
+.readMoreButton {
+  display: block;
+  margin: 20px auto 0;
+  background-color: var(--primaryLight);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.readMoreButton:hover {
+  background-color: var(--primary);
+}
+
 /* responsive design  */
 
 @media (max-width: 991px) {
@@ -99,6 +163,9 @@
   }
   .licensingFormContainer {
     gap: 30px;
+  }
+  .bigNotes {
+    width: 100%;
   }
 }
 
@@ -126,7 +193,7 @@
 
   .imgContainer {
     max-width: 90%;
-    min-height: 600px;
+    min-height: 450px;
   }
 }
 
@@ -150,6 +217,12 @@
   }
   .imgContainer {
     max-width: 100%;
-    min-height: 400px;
+    min-height: 300px;
+  }
+  .bigNotesHeading {
+    font-size: var(--fs-7);
+  }
+  .bigNotesParagraph {
+    font-size: var(--fs-small);
   }
 }

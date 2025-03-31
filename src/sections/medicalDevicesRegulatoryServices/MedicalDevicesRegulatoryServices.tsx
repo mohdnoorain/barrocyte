@@ -3,11 +3,10 @@ import "./MedicalDevicesRegulatoryServices.css";
 import "@/styles/globals.css";
 import TableComponent from "@/components/tableComponent/TableComponent";
 import Header from "@/components/header/Header";
-import WhoCanApply from "@/components/whoCanApply/WhoCanApply";
-import DoCard from "@/components/DoCard/DoCard";
 import OfferContainer from "@/components/offerContainer/OfferContainer";
 import ValidityInfo from "@/components/validityInfo/ValidityInfo";
 import ImportantDocuments from "@/components/importantDocuments.tsx/ImportantDocuments";
+import HowToApply from "@/components/howToApply/HowToApply";
 const MedicalDevicesRegulatoryServices = () => {
   const tableData1 = [
     {
@@ -81,31 +80,6 @@ const MedicalDevicesRegulatoryServices = () => {
     },
   ];
 
-  const data = {
-    title: "Who Can Apply?",
-    content:
-      "An authorized Indian agent must be appointed for the same. This agent must have a license to manufacture (for sale or distribution) or wholesale License FORM 20B & FORM 21B (sale or distribution) as per the CDSCO guidelines.",
-    highlights: [
-      "Agent must have a manufacturing or wholesale license",
-      "Must follow CDSCO guidelines",
-      "Application is done via Sugam online portal",
-    ],
-  };
-
-  const doItems = {
-    title: "FSSAI Licensing & Compliance Guidance",
-    points: [
-      "Evaluate if the product needs MDR 2017 registration",
-      "Check classification (Class A, B, C, & D) based on risk",
-      "Prepare documents as per MD 14 checklist",
-      "Appoint an authorized agent",
-      "Generate application online",
-      "Approval and submission by the agent",
-      "Follow-up with regulatory authority & handle queries",
-      "Receive Medical Device Import Approval",
-    ],
-  };
-
   const feeData = [
     {
       icon: "discount",
@@ -141,6 +115,11 @@ const MedicalDevicesRegulatoryServices = () => {
       "The import license (Form MD 15) remains valid permanently, provided the license retention fee is paid every 5 years as per the Second Schedule. If not paid, the Central Licensing Authority may suspend or cancel it.",
   };
 
+  const whoCanApplyData = {
+    title: "Who Can Apply ?",
+    description:
+      "An authorized Indian agent must be appointed for the same. This agent must have a license to manufacture (for sale or distribution) or wholesale License FORM 20B & FORM 21 B (sale or distribution) as per the CDSCO guidelines. The agent will make an application to get the grant of medical devices import license by applying through the Sugam online portal.",
+  };
   const documentsData = [
     { icon: "description", label: "Wholesale Licence" },
     { icon: "gavel", label: "Power of Attorney" },
@@ -148,6 +127,41 @@ const MedicalDevicesRegulatoryServices = () => {
     { icon: "inventory", label: "GHTF" },
     { icon: "folder", label: "Device Master File" },
     { icon: "domain", label: "Site Master File" },
+  ];
+
+  const steps = [
+    {
+      icon: "./icons/evaluate-purple.png",
+      text: "Evaluation of the product, if it requires registration under MDR 2017 (Regulated/Non-Regulated).",
+    },
+    {
+      icon: "/icons/check-purple.png",
+      text: "If required, evaluation of classification (Class A, B, C, & D) based on the product risk category.",
+    },
+    {
+      icon: "/icons/docs-purple.png",
+      text: "Preparation of documents as per the MD 14 checklist.",
+    },
+    {
+      icon: "/icons/appoint-purple.png",
+      text: "Appoint an authorized agent.",
+    },
+    {
+      icon: "/icons/regiter-purple.png",
+      text: "Online generation of application.",
+    },
+    {
+      icon: "/icons/check-mark-purple.png",
+      text: "Approval/confirmation of the draft application by the authorized agent and submission.",
+    },
+    {
+      icon: "/icons/order-purple.png",
+      text: "Follow-up with the regulatory authority and query management if any.",
+    },
+    {
+      icon: "/icons/approved-purple.png",
+      text: "Medical Device Import Approval in India is received.",
+    },
   ];
 
   return (
@@ -203,7 +217,7 @@ const MedicalDevicesRegulatoryServices = () => {
                   Monitors whereas high risk devices include pacemakers, heart
                   valves and others. The devices are further classified as
                   surgical or non-surgical devices based upon their invasive
-                  therapy. 
+                  therapy.
                 </p>
               </div>
               <div className="imageBox">
@@ -228,20 +242,18 @@ const MedicalDevicesRegulatoryServices = () => {
             </div>
           </div>
         </div>
-        <div className="FormsContainer">
+
+        <div className="FormsContainer validityInfoContainer">
           <div className="container">
-            <div className="licensingFormContainer">
-              <div className="tableContainer">
-                <WhoCanApply
-                  title={data.title}
-                  content={data.content}
-                  highlights={data.highlights}
-                />
-              </div>
-              <div className="tableContainer">
-                <DoCard title="How To Apply ?" items={doItems.points} />
-              </div>
-            </div>
+            <ValidityInfo
+              title={whoCanApplyData.title}
+              description={whoCanApplyData.description}
+            />
+          </div>
+        </div>
+        <div className="FormsContainer howToApply">
+          <div className="container">
+            <HowToApply steps={steps} />
           </div>
         </div>
         <div className="FormsContainer licenseFeesContainer">

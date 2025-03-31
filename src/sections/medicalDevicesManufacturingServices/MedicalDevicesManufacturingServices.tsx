@@ -2,26 +2,12 @@ import React, { useState } from "react";
 import "./MedicalDevicesManufacturingServices.css";
 import "@/styles/globals.css";
 import Header from "@/components/header/Header";
-import WhoCanApply from "@/components/whoCanApply/WhoCanApply";
-import DoCard from "@/components/DoCard/DoCard";
 import OfferContainer from "@/components/offerContainer/OfferContainer";
 import ValidityInfo from "@/components/validityInfo/ValidityInfo";
 import ImportantDocuments from "@/components/importantDocuments.tsx/ImportantDocuments";
 import Accordion from "@/components/accordion/Accordion";
+import HowToApply from "@/components/howToApply/HowToApply";
 const MedicalDevicesManufacturingServices = () => {
-
-
-  const data = {
-    title: "Who Can Apply?",
-    content:
-      "An authorized Indian agent must be appointed for the same. This agent must have a license to manufacture (for sale or distribution) or wholesale License FORM 20B & FORM 21B (sale or distribution) as per the CDSCO guidelines.",
-    highlights: [
-      "Agent must have a manufacturing or wholesale license",
-      "Must follow CDSCO guidelines",
-      "Application is done via Sugam online portal",
-    ],
-  };
-
   const doItems = {
     title: "FSSAI Licensing & Compliance Guidance",
     points: [
@@ -45,39 +31,30 @@ const MedicalDevicesManufacturingServices = () => {
     },
     {
       icon: "discount",
-      title: "One site $1000",
-      description: "Class A medical devices: $50 per distinct device.",
+      title: "One site Rs5000",
+      description:
+        "Class A & B: Manufacturing license fee – ₹5,000/site, ₹100/product.",
     },
     {
       icon: "discount",
-      title: "One site $2000",
-      description: "Class B medical devices: $1000 per distinct device.",
-    },
-    {
-      icon: "discount",
-      title: "One site $3000",
-      description: "Class C & D medical devices: $1500 per distinct device.",
-    },
-    {
-      icon: "discount",
-      title: "One site $3000",
-      description: "Class C & D medical devices: $1500 per distinct device.",
+      title: "One site Rs5000",
+      description:
+        "Class C & D: Manufacturing license fee – ₹50,000/site, ₹1,000/product",
     },
   ];
 
   const validityData = {
     title: "Validity of Import License",
     description:
-      "The import license (Form MD 15) remains valid permanently, provided the license retention fee is paid every 5 years as per the Second Schedule. If not paid, the Central Licensing Authority may suspend or cancel it.",
+      "The manufacturing license issued on Form MD 5 or Form MD 9  remains valid in perpetuity i.e., permanently, as long as the payment of license retention fee is done from time to time, as specified in the Second Schedule. The license retention should be paid each time before completion of the period of 5 years from the date of issue of the license unless it is suspended or cancelled by the State Licensing Authority or Central Licensing Authority.",
   };
 
   const documentsData = [
-    { icon: "description", label: "Wholesale Licence" },
-    { icon: "gavel", label: "Power of Attorney" },
-    { icon: "assignment", label: "Free Sale Certificate" },
-    { icon: "inventory", label: "GHTF" },
-    { icon: "folder", label: "Device Master File" },
-    { icon: "domain", label: "Site Master File" },
+    { icon: "fact_check", label: "Quality Management System Plan" },
+    { icon: "menu_book", label: "Quality Manual" },
+    { icon: "rule", label: "SOP’s" },
+    { icon: "category", label: "Device Master File" },
+    { icon: "apartment", label: "Layout Plan" },
   ];
 
   const accordionData = [
@@ -155,11 +132,49 @@ const MedicalDevicesManufacturingServices = () => {
     },
   ];
 
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const steps = [
+    {
+      icon: "./icons/evaluate-purple.png",
+      text: "Preparation of documents as per MDR 2017",
+    },
+    {
+      icon: "/icons/check-purple.png",
+      text: "Online generation of application.",
+    },
+    {
+      icon: "/icons/docs-purple.png",
+      text: "Online Submission at Sugam",
+    },
+    {
+      icon: "/icons/appoint-purple.png",
+      text: "Audit of Plant by Notified Body (Class A & Class B)",
+    },
+    {
+      icon: "/icons/regiter-purple.png",
+      text: "Inspection of Plant by CDSCO (Class C & D)",
+    },
+    {
+      icon: "/icons/check-mark-purple.png",
+      text: "Follow-up with regulatory authority and Query management if any",
+    },
+    {
+      icon: "/icons/order-purple.png",
+      text: "Medical Device Import Approval in India is received",
+    },
+    {
+      icon: "/icons/approved-purple.png",
+      text: "Medical Device Import Approval in India is received.",
+    },
+  ];
 
-  const toggleAccordion = (index: number) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
+
+  
+const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+
+
+const toggleExpand = (index: number) => {
+  setExpandedIndex(expandedIndex === index ? null : index);
+};
 
   return (
     <section>
@@ -191,37 +206,44 @@ const MedicalDevicesManufacturingServices = () => {
             </h2>
 
             <div className="licensingFormContainer">
-              <div className="tableContainer">
-                {accordionData.map((item, index) => (
-                  <Accordion
-                    key={index}
-                    title={item.title}
-                    content={item.content}
-                    isActive={activeIndex === index}
-                    onClick={() => toggleAccordion(index)}
-                  />
-                ))}
-              </div>
-              <div className="tableContainer">
-                <div className="imgContainer"></div>
-              </div>
+              <div className="imgContainer"></div>
             </div>
           </div>
         </div>
+
         <div className="FormsContainer">
           <div className="container">
-            <div className="licensingFormContainer">
-              <div className="tableContainer">
-                <WhoCanApply
-                  title={data.title}
-                  content={data.content}
-                  highlights={data.highlights}
-                />
-              </div>
-              <div className="tableContainer">
-                <DoCard title="How To Apply ?" items={doItems.points} />
-              </div>
+            <h2 className="MedicalDevicesServicesTitle">
+              Medical Device Licensing Forms
+            </h2>
+            <div className="bigNotesContainer">
+              {accordionData.map((item, index) => (
+                <div className="bigNotes" key={index}>
+                  <div className="bigNotesHeading">{item.title}</div>
+                  <p
+                    className={`bigNotesParagraph ${
+                      expandedIndex === index ? "expanded" : ""
+                    }`}
+                  >
+                    {expandedIndex === index
+                      ? item.content
+                      : item.content.slice(0, 500) + "..."}
+                  </p>
+                  <button
+                    className="readMoreButton"
+                    onClick={() => toggleExpand(index)}
+                  >
+                    {expandedIndex === index ? "Read Less" : "Read More"}
+                  </button>
+                </div>
+              ))}
             </div>
+          </div>
+        </div>
+
+        <div className="FormsContainer howToApply">
+          <div className="container">
+            <HowToApply steps={steps} />
           </div>
         </div>
         <div className="FormsContainer licenseFeesContainer">
