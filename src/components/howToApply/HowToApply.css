@@ -1,56 +1,101 @@
-.how-to-apply {
-  background-color: #f8f9fa;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 20px auto;
-  width: 90%;
-  max-width: 800px;
-}
-
-.section-title {
-  font-size: 24px;
-  font-weight: bold;
-  color: #0056b3;
+/* Main Container */
+.howToApply {
   text-align: center;
-  margin-bottom: 15px;
+  padding: 0 20px 20px 20px;
 }
 
-.steps-list {
-  list-style: none;
-  padding: 0;
-}
-
-.step-item {
-  font-size: 16px;
+.howToApply h2 {
+  font-size: var(--fs-2);
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
   color: #333;
+}
+
+.headingParagraph {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.HowToApplyParagraph {
+  font-size: 16px;
+  color: #555;
+  text-align: left;
+}
+
+/* Steps Container */
+.stepsContainer {
   display: flex;
+  justify-content: center;
+  flex-direction: row;
   align-items: center;
-  background: rgba(0, 123, 255, 0.1);
-  padding: 10px;
-  border-radius: 5px;
-  margin-bottom: 8px;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-.step-icon {
-  font-size: 20px;
-  color: #007bff;
-  margin-right: 10px;
+/* Individual Step */
+.stepCard {
+  display: flex;
+  width: 45%;
+  align-items: center;
+  gap: 15px;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-  .how-to-apply {
-    padding: 15px;
+.stepCard:hover {
+  transform: translateY(-5px);
+}
+
+/* Step Icon */
+.stepIcon {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .stepsContainer {
+    flex-direction: column;
   }
-  .section-title {
-    font-size: 20px;
+  .stepCard {
+    width: 100%;
   }
-  .step-item {
-    font-size: 14px;
-    padding: 8px;
+}
+
+@media (max-width: 768px) {
+  .stepIcon {
+    width: 40px;
+    height: 40px;
   }
-  .step-icon {
-    font-size: 18px;
+  .howToApply h2 {
+    font-size: var(--fs-3);
+  }
+  .HowToApplyParagraph{
+    font-size: var(--fs-regular);
+  }
+}
+
+@media (max-width: 480px) {
+  .stepCard {
+    flex-direction: row;
+    text-align: center;
+  }
+  .howToApply h2 {
+    font-size: var(--fs-4);
+  }
+  .stepIcon {
+    width: 35px;
+    height: 35px;
+  }
+  .headingParagraph {
+   font-size: var(--fs-regular);
+  }
+  .HowToApplyParagraph{
+    font-size: var(--fs-small);
   }
 }

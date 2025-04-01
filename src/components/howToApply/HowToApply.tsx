@@ -1,24 +1,31 @@
 import React from "react";
 import "./HowToApply.css";
-
-interface HowToApplyProps {
-  title: string;
-  steps: string[];
+interface Step {
+  icon: string;
+  text: string;
 }
 
-const HowToApply: React.FC<HowToApplyProps> = ({ title, steps }) => {
+interface HowToApplyProps {
+  steps: Step[];
+}
+
+const HowToApply: React.FC<HowToApplyProps> = ({ steps }) => {
   return (
-    <section className="how-to-apply">
-      <h2 className="section-title">{title}</h2>
-      <ul className="steps-list">
+    <div className="howToApply">
+      <h2>How To Apply?</h2>
+      <p className="headingParagraph">
+        As per the Medical Device Rule 2017, the process of approval from CDSCO
+        is as follows:
+      </p>
+      <div className="stepsContainer">
         {steps.map((step, index) => (
-          <li key={index} className="step-item">
-            <span className="step-icon material-icons">check_circle</span>
-            {step}
-          </li>
+          <div key={index} className="stepCard">
+            <img src={step.icon} alt="Step Icon" className="stepIcon" />
+            <p className="HowToApplyParagraph">{step.text}</p>
+          </div>
         ))}
-      </ul>
-    </section>
+      </div>
+    </div>
   );
 };
 
