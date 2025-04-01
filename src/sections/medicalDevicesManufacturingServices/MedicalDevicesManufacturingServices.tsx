@@ -202,10 +202,10 @@ const toggleExpand = (index: number) => {
         <div className="FormsContainer">
           <div className="container">
             <h2 className="MedicalDevicesServicesTitle">
-              Medical Device Licensing Forms
+              Classification of Medical Device
             </h2>
 
-            <div className="licensingFormContainer">
+            <div className="imagesFormContainer">
               <div className="imgContainer"></div>
             </div>
           </div>
@@ -214,7 +214,7 @@ const toggleExpand = (index: number) => {
         <div className="FormsContainer">
           <div className="container">
             <h2 className="MedicalDevicesServicesTitle">
-              Medical Device Licensing Forms
+              Manufacturing License for Medical Devices from SLA/CLAA
             </h2>
             <div className="bigNotesContainer">
               {accordionData.map((item, index) => (
@@ -269,16 +269,6 @@ const toggleExpand = (index: number) => {
               documents={documentsData}
             />
           </div>
-        </div>
-        <div className="FormsContainer TimeLineContainer">
-          <div className="MedicalDevicesServicesTitle">
-            Form MD 15 Processing Timeline
-          </div>
-
-          <p className="TimeLineParagrapgh">
-            The Government Timeline for Import License for Medical Device is 6-9
-            months.
-          </p>
         </div>
       </div>
     </section>

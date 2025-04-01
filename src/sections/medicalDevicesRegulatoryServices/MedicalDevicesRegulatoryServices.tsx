@@ -232,7 +232,7 @@ const MedicalDevicesRegulatoryServices = () => {
               Medical Device Licensing Forms
             </h2>
 
-            <div className="licensingFormContainer">
+            <div className="tableFormContainer">
               <div className="tableContainer">
                 <TableComponent data={tableData1} />
               </div>
