@@ -8,10 +8,11 @@ import MedicalDevicesManufacturingServices from "@/sections/medicalDevicesManufa
 
 const MedicalDevicesServices = () => {
   return (
-    <div >
+    <div>
       <MedicalDevicesRegulatoryServices />
-      <hr />
-      <MedicalDevicesManufacturingServices/>
+      <hr className="Divider" />
+  
+      <MedicalDevicesManufacturingServices />
     </div>
   );
 };
