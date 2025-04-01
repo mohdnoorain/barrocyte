@@ -1,0 +1,218 @@
+.DiagnostickitsServices {
+  padding: 3em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.DiagnostickitsServicesTitle {
+  font-size: var(--fs-2);
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.DiagnostickitsServicesParagraph {
+  color: var(--textDark);
+  line-height: 1.6 ;
+}
+
+.FormsContainer {
+  padding-top: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.licenseFeesContainer {
+  background-color: #f8f9fa;
+  padding-top: 3em;
+}
+.manufacturerImageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+
+
+.tableContainer {
+  flex: 1;
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-top: var(--bs-gutter-y);
+}
+.imagesFormContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imgContainer {
+  width: 100%;
+  max-width: 600px; /* Ensures it doesn’t stretch too much */
+  height: auto;
+  min-height: 550px; /* Ensures it is visible */
+  background-image: url("./../../../public/diadnostic-kit-chart.png");
+  background-position: center;
+  background-size: contain; /* Ensures full image is visible */
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+.validityInfoContainer {
+  background: #dee2e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.importantDocumentsContainer {
+  background-color: #f8f9fa;
+}
+
+.TimeLineParagrapgh {
+  text-align: center;
+  color: var(--textDark);
+}
+
+.bigNotesContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.bigNotes {
+  width: 48%;
+  padding: 30px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+
+
+.bigNotesHeading {
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: var(--fs-5);
+  font-weight: 700;
+  color: #343a40;
+}
+
+.bigNotesParagraph {
+  line-height: 1.4;
+  font-size: var(--fs-regular);
+  max-height: 150px; /* Default height */
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+  color: #495057;
+}
+
+.bigNotesParagraph.expanded {
+    max-height: 1000px; /* Expand smoothly */
+}
+
+.readMoreButton {
+  display: block;
+  margin: 20px auto 0;
+  background-color: var(--primaryLight);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.readMoreButton:hover {
+  background-color: var(--primary);
+}
+
+/* responsive design  */
+
+@media (max-width: 991px) {
+  .tableContainer {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .licensingFormContainer {
+    gap: 30px;
+  }
+  .bigNotes {
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .tableContainer {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .tableContainer {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .DiagnostickitsServicesTitle {
+    font-size: var(--fs-3);
+  }
+  .licensingFormContainer {
+    gap: 20px;
+  }
+
+  .imgContainer {
+    max-width: 90%;
+    min-height: 450px;
+  }
+}
+
+@media (min-width: 576px) {
+  .tableContainer {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .DiagnostickitsServicesTitle {
+    font-size: var(--fs-4);
+  }
+
+  .DiagnostickitsServicesParagraph {
+    font-size: var(--fs-small);
+  }
+  .TimeLineParagrapgh {
+    font-size: var(--fs-regular);
+  }
+  .imgContainer {
+    max-width: 100%;
+    min-height: 300px;
+  }
+  .bigNotesHeading {
+    font-size: var(--fs-7);
+  }
+  .bigNotesParagraph {
+    font-size: var(--fs-small);
+  }
+}

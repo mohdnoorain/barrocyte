@@ -5,22 +5,9 @@ import Header from "@/components/header/Header";
 import OfferContainer from "@/components/offerContainer/OfferContainer";
 import ValidityInfo from "@/components/validityInfo/ValidityInfo";
 import ImportantDocuments from "@/components/importantDocuments.tsx/ImportantDocuments";
-import Accordion from "@/components/accordion/Accordion";
 import HowToApply from "@/components/howToApply/HowToApply";
 const MedicalDevicesManufacturingServices = () => {
-  const doItems = {
-    title: "FSSAI Licensing & Compliance Guidance",
-    points: [
-      "Evaluate if the product needs MDR 2017 registration",
-      "Check classification (Class A, B, C, & D) based on risk",
-      "Prepare documents as per MD 14 checklist",
-      "Appoint an authorized agent",
-      "Generate application online",
-      "Approval and submission by the agent",
-      "Follow-up with regulatory authority & handle queries",
-      "Receive Medical Device Import Approval",
-    ],
-  };
+  
 
   const feeData = [
     {

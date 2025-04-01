@@ -10,7 +10,7 @@ const footerData = {
   ],
   services: [
     { href: "/medicalDeviceServices", label: "Medical Device Service" },
-    { href: "/diagnosticeKitsServices", label: "Diagnostic Kits" },
+    { href: "/diagnosticKitsServices", label: "Diagnostic Kits" },
     { href: "/cosmeticsService", label: "Cosmetics Service" },
     { href: "/drugsService", label: "Drugs Service" },
     { href: "/", label: "Blood Banks Service" },
