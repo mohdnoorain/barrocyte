@@ -1,7 +1,7 @@
 import RegulatoryCard from "@/components/regulatoryCard/RegulatoryCard";
 import "./RegulatorySolutions.css";
 
-
+// hell
 const regulatorySolutions = [
   {
     title: "Medical Device",
