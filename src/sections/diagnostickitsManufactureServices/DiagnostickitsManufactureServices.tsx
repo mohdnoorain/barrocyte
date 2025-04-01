@@ -7,40 +7,7 @@ import ValidityInfo from "@/components/validityInfo/ValidityInfo";
 import ImportantDocuments from "@/components/importantDocuments.tsx/ImportantDocuments";
 import HowToApply from "@/components/howToApply/HowToApply";
 const DiagnostickitsManufactureServices = () => {
-  const feeData = [
-    {
-      icon: "discount",
-      title: "Fee Involved",
-      description:
-        "Medical device fees vary by risk class. Below is the fee structure for import licenses.",
-    },
-    {
-      icon: "discount",
-      title: "One site Rs5000",
-      description:
-        "Class A & B: Manufacturing license fee – ₹5,000/site, ₹100/product.",
-    },
-    {
-      icon: "discount",
-      title: "One site Rs5000",
-      description:
-        "Class C & D: Manufacturing license fee – ₹50,000/site, ₹1,000/product",
-    },
-  ];
-
-  const validityData = {
-    title: "Validity of Import License",
-    description:
-      "The manufacturing license issued on Form MD 5 or Form MD 9  remains valid in perpetuity i.e., permanently, as long as the payment of license retention fee is done from time to time, as specified in the Second Schedule. The license retention should be paid each time before completion of the period of 5 years from the date of issue of the license unless it is suspended or cancelled by the State Licensing Authority or Central Licensing Authority.",
-  };
-
-  const documentsData = [
-    { icon: "fact_check", label: "Quality Management System Plan" },
-    { icon: "menu_book", label: "Quality Manual" },
-    { icon: "rule", label: "SOP’s" },
-    { icon: "category", label: "Device Master File" },
-    { icon: "apartment", label: "Layout Plan" },
-  ];
+  
 
   const accordionData = [
     {
