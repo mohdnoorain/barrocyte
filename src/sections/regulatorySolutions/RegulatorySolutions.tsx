@@ -1,7 +1,7 @@
 import RegulatoryCard from "@/components/regulatoryCard/RegulatoryCard";
 import "./RegulatorySolutions.css";
 
-// Data Array
+
 const regulatorySolutions = [
   {
     title: "Medical Device",
@@ -13,7 +13,7 @@ const regulatorySolutions = [
     title: "Diagnostic Kits",
     icon: "biotech",
     color: "#d61b5b",
-    link: "/diagnostic-kits",
+    link: "/diagnosticKitsServices",
   },
   { title: "Cosmetics", icon: "spa", color: "#f5b800", link: "/cosmetics" },
   { title: "Drugs", icon: "science", color: "#4a4a4a", link: "/drugs" },

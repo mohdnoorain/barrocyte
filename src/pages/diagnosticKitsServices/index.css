@@ -1,0 +1,23 @@
+.Divider {
+  width: 80%; 
+  height: 2px; 
+  background: linear-gradient(to right, #b0b0b0, #e0e0e0); 
+  margin: 20px auto; 
+  border-radius: 5px; /* Smooth edges */
+}
+
+
+@media (max-width: 768px) {
+  .Divider {
+    width: 90%; 
+    height: 1.5px; 
+  }
+}
+
+
+@media (max-width: 480px) {
+  .Divider {
+    width: 80%; 
+    height: 1px; 
+  }
+}
