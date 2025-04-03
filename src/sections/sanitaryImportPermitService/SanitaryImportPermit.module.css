@@ -28,24 +28,20 @@
   color: #333;
 }
 
-.sanitaryImportPermitServiceGuidelinsContainer{
-   padding-top : 3em;
+.sanitaryImportPermitServiceGuidelinesContainer {
+  padding-top: 3em;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 100%;
 }
-.sanitaryImportPermitServiceGuidelins {
+.sanitaryImportPermitServiceGuidelines {
   display: flex;
   flex-wrap: wrap;
   align-items: center !important;
   background: #fff;
   border-radius: 10px;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.6s ease-in-out forwards;
-  transition: all 0.3s ease-in-out;
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
   margin-top: calc(-1 * var(--bs-gutter-y));

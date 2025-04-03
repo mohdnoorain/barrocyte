@@ -1,4 +1,4 @@
-.bloodBankServiceSection {
+.drugsLicenseServiceSection {
   padding: 3em 0;
   display: flex;
   justify-content: center;
@@ -7,20 +7,19 @@
   width: 100%;
 }
 
-.bloodBankServiceTitle {
+.drugsLicenseServiceTitle {
   font-size: var(--fs-2);
   font-weight: 600;
   text-align: center;
   margin-bottom: 30px;
   color: #333;
 }
-
-.bloodBankServiceParagrapgh {
+.drugsLicenseServiceParagraph {
   color: var(--textDark);
   line-height: 20px;
 }
 
-.bloodBankLicensingContainer {
+.drugsType{
   padding-top: 3em;
   display: flex;
   justify-content: center;
@@ -29,16 +28,12 @@
   width: 100%;
 }
 
-.BloodBankguideLinesContainer {
+.drugsInnnercontainer {
   display: flex;
   flex-wrap: wrap;
   align-items: center !important;
   background: #fff;
   border-radius: 10px;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.6s ease-in-out forwards;
-  transition: all 0.3s ease-in-out;
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
   margin-top: calc(-1 * var(--bs-gutter-y));
@@ -46,65 +41,66 @@
   margin-left: calc(-0.5 * var(--bs-gutter-x));
 }
 
-.DocardContainer,
-.BoodBankAccordianContainer {
+.drugsTypeContainer,
+.drugsAccordionContainer {
   flex: 1;
   max-width: 100%;
   padding-right: calc(var(--bs-gutter-x) * 0.5);
   padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-top: var(--bs-gutter-y);
 }
+/* Responsive Design */
 
 @media (min-width: 768px) {
-  .DocardContainer,
-  .BoodBankAccordianContainer {
+  .drugsTypeContainer,
+  .drugsAccordionContainer {
     flex: 0 0 auto;
     width: 100%;
   }
 }
 
 @media (max-width: 768px) {
-  .bloodBankServiceTitle {
+  .drugsLicenseServiceTitle {
     font-size: var(--fs-3);
   }
-  .BloodBankguideLinesContainer {
+  .drugsInnnercontainer {
     gap: 20px;
   }
 }
 
 @media (min-width: 576px) {
-  .DocardContainer,
-  .BoodBankAccordianContainer {
+  .drugsTypeContainer,
+  .drugsAccordionContainer {
     flex: 0 0 auto;
     width: 100%;
   }
 }
 
 @media (max-width: 576px) {
-  .bloodBankServiceTitle {
+  .drugsLicenseServiceTitle {
     font-size: var(--fs-4);
   }
-
-  .bloodBankServiceParagrapgh {
+  .drugsLicenseServiceParagraph {
     font-size: var(--fs-regular);
   }
 }
 
+
 @media (min-width: 992px) {
-  .DocardContainer,
-  .BoodBankAccordianContainer {
+  .drugsTypeContainer,
+  .drugsAccordionContainer {
     flex: 0 0 50%;
     max-width: 50%;
   }
 }
 
 @media (max-width: 991px) {
-  .DocardContainer,
-  .BoodBankAccordianContainer {
+  .drugsTypeContainer,
+  .drugsAccordionContainer {
     flex: 0 0 100%;
     max-width: 100%;
   }
-  .BloodBankguideLinesContainer {
+  .drugsInnnercontainer {
     gap: 30px;
   }
 }

@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import "./BloodBankServive.css";
+import styles from "./BloodBankService.module.css";
 import DoRightCard from "@/components/DoCard/DoCard";
 import Accordion from "@/components/accordion/Accordion";
 
@@ -43,10 +43,10 @@ export default function BloodBankServive() {
 
   return (
     <section>
-      <div className="bloodBankServiceSection">
+      <div className={styles.bloodBankServiceSection}>
         <div className="container">
-          <h2 className="bloodBankServiceTitle"> Blood Bank Service</h2>
-          <p className="bloodBankServiceParagrapgh">
+          <h2 className={styles.bloodBankServiceTitle}> Blood Bank Service</h2>
+          <p className={styles.bloodBankServiceParagrapgh}>
             Blood Transfusion Services are crucial to healthcare, with no
             substitute for human blood. Advancements in transfusion technology
             demand strict quality control. Many countries have well-regulated
@@ -60,19 +60,19 @@ export default function BloodBankServive() {
           </p>
         </div>
 
-        <div className="bloodBankLicensingContainer">
+        <div className={styles.bloodBankLicensingContainer}>
           <div className="container">
-            <h2 className="bloodBankServiceTitle">
+            <h2 className={styles.bloodBankServiceTitle}>
               Blood Bank Licensing and FSSAI Compliance Guidelines
             </h2>
-            <div className="BloodBankguideLinesContainer">
-              <div className="DocardContainer">
+            <div className={styles.BloodBankguideLinesContainer}>
+              <div className={styles.DocardContainer}>
                 <DoRightCard
                   title="Blood Bank Licensing"
                   items={doItems.points}
                 />
               </div>
-              <div className="BoodBankAccordianContainer">
+              <div className={styles.BoodBankAccordianContainer}>
                 {bloodBankAccordionData.map((item, index) => (
                   <Accordion
                     key={index}

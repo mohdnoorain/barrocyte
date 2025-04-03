@@ -1,5 +1,5 @@
 import React from "react";
-import "./TableStyles.css";
+import styles from "./TableComponent.module.css"; // Import CSS Module
 
 interface TableRow {
   applicant: string;
@@ -14,8 +14,8 @@ interface TableProps {
 
 const TableComponent: React.FC<TableProps> = ({ data }) => {
   return (
-    <div className="table-container">
-      <table className="license-table">
+    <div className={styles.tableContainer}>
+      <table className={styles.licenseTable}>
         <thead>
           <tr>
             <th>Applicant</th>
@@ -27,8 +27,8 @@ const TableComponent: React.FC<TableProps> = ({ data }) => {
         <tbody>
           {data.map((row, index) => (
             <tr key={index}>
-              <td>{row.applicant }</td>
-              <td>{row.riskClass }</td>
+              <td>{row.applicant}</td>
+              <td>{row.riskClass}</td>
               <td>{row.type}</td>
               <td>
                 {row.forms.map((form, i) => (

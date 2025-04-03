@@ -1,5 +1,5 @@
 import React from "react";
-import "./MedicalDevicesRegulatoryServices.css";
+import styles from "./MedicalDevicesServicesSection.module.css";
 import "@/styles/globals.css";
 import TableComponent from "@/components/tableComponent/TableComponent";
 import Header from "@/components/header/Header";
@@ -166,13 +166,13 @@ const MedicalDevicesRegulatoryServices = () => {
 
   return (
     <section>
-      <div className="MedicalDevicesServicesSection">
+      <div className={styles.MedicalDevicesServicesSection}>
         <div className="container">
           <Header />
-          <h2 className="MedicalDevicesServicesTitle">
+          <h2 className={styles.MedicalDevicesServicesTitle}>
             Medical Device Regulatory Service
           </h2>
-          <p className="MedicalDevicesServicesParagrapgh">
+          <p className={styles.MedicalDevicesServicesParagrapgh}>
             Medical devices are regulated by the Indian Government, categorized
             into A, B, C, and D classes based on risk, with licensing governed
             by central and state authorities.
@@ -184,66 +184,70 @@ const MedicalDevicesRegulatoryServices = () => {
             procedures, ensuring a smooth and compliant process.
           </p>
         </div>
-        <div className="FormsContainer">
+
+        <div className={styles.FormsContainer}>
           <div className="container">
-            <div className="imageSection">
-              <div className="imageBox">
-                <div className="imageWrapper imageOne"></div>
+            <div className={styles.imageSection}>
+              <div className={styles.imageBox}>
+                <div
+                  className={`${styles.imageWrapper} ${styles.imageOne}`}
+                ></div>
               </div>
-              <div className="tableContainer">
-                <h3 className="imageTitle">NEW DEVICE- FIRST TIME IN INDIA</h3>
-                <p className="imageParagraph">
+              <div className={styles.tableContainer}>
+                <h3 className={styles.imageTitle}>
+                  NEW DEVICE- FIRST TIME IN INDIA
+                </h3>
+                <p className={styles.imageParagraph}>
                   As per government rules, a medical device which itself or its
                   predicate hasn’t yet been included in the medical devices list
                   of CDSCO (Central Drugs Standard Control Organization) is
-                  considered a new medical device. Moreover, already registered
-                  devices vying to apply for new claims with respect to
-                  different implementation factors will also be treated as new
-                  devices.
+                  considered a new medical device...
                 </p>
               </div>
             </div>
           </div>
         </div>
-        <div className="FormsContainer">
+
+        <div className={styles.FormsContainer}>
           <div className="container">
-            <div className="imageSection">
-              <div className="tableContainer">
-                <h3 className="imageTitle">MEDICAL DEVICE CLASSIFICATION</h3>
-                <p className="imageParagraph">
-                  Medical device has been classified into A, B, C and D
-                  categories depending upon the risk involved increases from A
-                  to D. Low risk devices like Thermometers and Blood Pressure
-                  Monitors whereas high risk devices include pacemakers, heart
-                  valves and others. The devices are further classified as
-                  surgical or non-surgical devices based upon their invasive
-                  therapy.
+            <div className={styles.imageSection}>
+              <div className={styles.tableContainer}>
+                <h3 className={styles.imageTitle}>
+                  MEDICAL DEVICE CLASSIFICATION
+                </h3>
+                <p className={styles.imageParagraph}>
+                  Medical device has been classified into A, B, C, and D
+                  categories...
                 </p>
               </div>
-              <div className="imageBox">
-                <div className="imageWrapper imageTwo"></div>
+              <div className={styles.imageBox}>
+                <div
+                  className={`${styles.imageWrapper} ${styles.imageTwo}`}
+                ></div>
               </div>
             </div>
           </div>
         </div>
-        <div className="FormsContainer ">
+
+        <div className={styles.FormsContainer}>
           <div className="container">
-            <h2 className="MedicalDevicesServicesTitle">
+            <h2 className={styles.MedicalDevicesServicesTitle}>
               Medical Device Licensing Forms
             </h2>
-
-            <div className="tableFormContainer">
-              <div className="tableContainer">
+            <div className={styles.tableFormContainer}>
+              <div className={styles.tableContainer}>
                 <TableComponent data={tableData1} />
               </div>
-              <div className="tableContainer">
+              <div className={styles.tableContainer}>
                 <TableComponent data={tableData2} />
               </div>
             </div>
           </div>
         </div>
 
-        <div className="FormsContainer validityInfoContainer">
+        <div
+          className={`${styles.FormsContainer} ${styles.validityInfoContainer}`}
+        >
           <div className="container">
             <ValidityInfo
               title={whoCanApplyData.title}
@@ -251,12 +255,16 @@ const MedicalDevicesRegulatoryServices = () => {
             />
           </div>
         </div>
-        <div className="FormsContainer howToApply">
+
+        <div className={`${styles.FormsContainer} ${styles.howToApply}`}>
           <div className="container">
             <HowToApply steps={steps} />
           </div>
         </div>
-        <div className="FormsContainer licenseFeesContainer">
+
+        <div
+          className={`${styles.FormsContainer} ${styles.licenseFeesContainer}`}
+        >
           <div className="container">
             <OfferContainer
               offerData={feeData}
@@ -264,7 +272,10 @@ const MedicalDevicesRegulatoryServices = () => {
             />
           </div>
         </div>
-        <div className="FormsContainer validityInfoContainer">
+
+        <div
+          className={`${styles.FormsContainer} ${styles.validityInfoContainer}`}
+        >
           <div className="container">
             <ValidityInfo
               title={validityData.title}
@@ -272,7 +283,10 @@ const MedicalDevicesRegulatoryServices = () => {
             />
           </div>
         </div>
-        <div className="FormsContainer importantDocumentsContainer">
+
+        <div
+          className={`${styles.FormsContainer} ${styles.importantDocumentsContainer}`}
+        >
           <div className="container">
             <ImportantDocuments
               title="Important Documents"
@@ -280,15 +294,17 @@ const MedicalDevicesRegulatoryServices = () => {
             />
           </div>
         </div>
-        <div className="FormsContainer TimeLineContainer">
-          <div className="MedicalDevicesServicesTitle">
-            Form MD 15 Processing Timeline
-          </div>
 
-          <p className="TimeLineParagrapgh">
-            The Government Timeline for Import License for Medical Device is 6-9
-            months.
-          </p>
+        <div className={`${styles.FormsContainer} ${styles.TimeLineContainer}`}>
+          <div className="container">
+            <div className={styles.MedicalDevicesServicesTitle}>
+              Form MD 15 Processing Timeline
+            </div>
+            <p className={styles.TimeLineParagrapgh}>
+              The Government Timeline for Import License for Medical Device is
+              6-9 months.
+            </p>
+          </div>
         </div>
       </div>
     </section>

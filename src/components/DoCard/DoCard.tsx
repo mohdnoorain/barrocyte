@@ -1,5 +1,5 @@
 import React from "react";
-import "./DoCard.css";
+import styles from "./DoCard.module.css";
 
 interface DoRightCardProps {
   title: string;
@@ -8,14 +8,14 @@ interface DoRightCardProps {
 
 const DoCard: React.FC<DoRightCardProps> = ({ title, items }) => {
   return (
-    <div className="doingcard">
-      <div className="do-card">
+    <div className={styles.doingcard}>
+      <div className={styles.doCard}>
         {/* List Section */}
-        <ul className="do-list">
+        <ul className={styles.doList}>
           {items.map((item, index) => (
-            <li key={index} className="do-list-item">
-              <span className="checkmark">
-                <span className="material-icons blood-icon">water_drop</span>
+            <li key={index} className={styles.doListItem}>
+              <span className={styles.checkmark}>
+                <span className={`material-icons ${styles.bloodIcon}`}>water_drop</span>
               </span>
               {item}
             </li>
@@ -23,7 +23,7 @@ const DoCard: React.FC<DoRightCardProps> = ({ title, items }) => {
         </ul>
 
         {/* Label Section */}
-        <div className="do-label">
+        <div className={styles.doLabel}>
           <span>{title}</span>
         </div>
       </div>

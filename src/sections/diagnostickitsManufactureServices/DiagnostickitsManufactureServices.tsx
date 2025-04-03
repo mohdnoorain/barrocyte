@@ -1,11 +1,8 @@
 import React, { useState } from "react";
-import "./DiagnostickitsManufactureServices.css";
+import styles from "./DiagnostickitsManufactureServices.module.css";
 import "@/styles/globals.css";
 import Header from "@/components/header/Header";
-import OfferContainer from "@/components/offerContainer/OfferContainer";
-import ValidityInfo from "@/components/validityInfo/ValidityInfo";
-import ImportantDocuments from "@/components/importantDocuments.tsx/ImportantDocuments";
-import HowToApply from "@/components/howToApply/HowToApply";
+
 const DiagnostickitsManufactureServices = () => {
   
 
@@ -106,50 +103,40 @@ The Central Licensing Authority will grant the test license in Form MD-13 or rej
 
   return (
     <section>
-      <div className="DiagnostickitsServices">
+      <div className={styles.DiagnostickitsServices}>
         <div className="container">
           <Header />
-          <h2 className="DiagnostickitsServicesTitle">
+          <h2 className={styles.DiagnostickitsServicesTitle}>
             Diagnostic Kits Manufacturing Service
           </h2>
-          <p className="DiagnostickitsServicesParagraph">
+          <p className={styles.DiagnostickitsServicesParagraph}>
             New Medical Device Rules, 2017 have defined distinct provisions to
-            obtain permission for manufacturing of diagnostic kits in India.
-            Different diagnostic kits have been classified under different
-            categories based upon their use, complexity and the risk involved.
-            Applications for Class A and Class B diagnostic kits are reviewed
-            and granted permission by the State Licensing Authorities. Whereas
-            applications for Class C and Class D medical devices are reviewed
-            and granted license by the Central Licensing Authority. This
-            difference is obviously due to the depth and scale of review
-            involved for different classes of diagnostic kits. CDSCO has also
-            defined different fees for different classes of diagnostic kits.
+            obtain permission for manufacturing of diagnostic kits in India...
           </p>
         </div>
-        <div className="FormsContainer">
+        <div className={styles.FormsContainer}>
           <div className="container">
-            <h2 className="DiagnostickitsServicesTitle">
+            <h2 className={styles.DiagnostickitsServicesTitle}>
               Classification of Diagnostic Kits
             </h2>
-
-            <div className="imagesFormContainer">
-              <div className="imgContainer"></div>
+            <div className={styles.imagesFormContainer}>
+              <div className={styles.imgContainer}></div>
             </div>
           </div>
         </div>
 
-        <div className="FormsContainer">
+        <div className={styles.FormsContainer}>
           <div className="container">
-            <h2 className="DiagnostickitsServicesTitle">
+            <h2 className={styles.DiagnostickitsServicesTitle}>
               Manufacturing License for IVD Kits from SLA/CLAA
             </h2>
-            <div className="bigNotesContainer">
+            <div className={styles.bigNotesContainer}>
               {accordionData.map((item, index) => (
-                <div className="bigNotes" key={index}>
-                  <div className="bigNotesHeading">{item.title}</div>
+                <div className={styles.bigNotes} key={index}>
+                  <div className={styles.bigNotesHeading}>{item.title}</div>
                   <p
-                    className={`bigNotesParagraph ${
-                      expandedIndex === index ? "expanded" : ""
+                    className={`${styles.bigNotesParagraph} ${
+                      expandedIndex === index ? styles.expanded : ""
                     }`}
                   >
                     {expandedIndex === index
@@ -157,7 +144,7 @@ The Central Licensing Authority will grant the test license in Form MD-13 or rej
                       : item.content.slice(0, 500) + "..."}
                   </p>
                   <button
-                    className="readMoreButton"
+                    className={styles.readMoreButton}
                     onClick={() => toggleExpand(index)}
                   >
                     {expandedIndex === index ? "Read Less" : "Read More"}

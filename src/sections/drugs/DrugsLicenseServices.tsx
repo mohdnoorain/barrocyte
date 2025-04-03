@@ -1,5 +1,5 @@
 import LicenseTable from "@/components/LicenseTable/LicenseTable";
-import "./DrugsLicenseServices.css";
+import styles from "./DrugsLicenseServices.module.css"; // Import module CSS
 import React, { useState } from "react";
 import Accordion from "@/components/accordion/Accordion";
 const DrugsLicenseServices: React.FC = () => {
@@ -47,10 +47,10 @@ const DrugsLicenseServices: React.FC = () => {
   };
   return (
     <section>
-      <div className="drugsLicenseServiceSection">
+      <div className={styles.drugsLicenseServiceSection}>
         <div className="container">
-          <h2 className="drugsLicenseServiceTitle"> Drugs Service</h2>
-          <p className="drugsLicenseServiceParagraph">
+          <h2 className={styles.drugsLicenseServiceTitle}>Drugs Service</h2>
+          <p className={styles.drugsLicenseServiceParagraph}>
             Ensuring fair and equal access to medicines is a primary government
             concern, but selling drugs requires strict licensing. To regulate
             this, the government enforces stringent rules for granting drug
@@ -66,13 +66,13 @@ const DrugsLicenseServices: React.FC = () => {
             gelatine capsules.
           </p>
         </div>
-        <div className="drugsType">
+        <div className={styles.drugsType}>
           <div className="container">
-            <h2 className="drugsLicenseServiceTitle">
+            <h2 className={styles.drugsLicenseServiceTitle}>
               Drug License Requirements, Process & Categories
             </h2>
-            <div className="drugsInnnercontainer">
-              <div className="drugsAccordionContainer">
+            <div className={styles.drugsInnnercontainer}>
+              <div className={styles.drugsAccordionContainer}>
                 {drugLicenseAccordionData.map((item, index) => (
                   <Accordion
                     key={index}
@@ -83,7 +83,7 @@ const DrugsLicenseServices: React.FC = () => {
                   />
                 ))}
               </div>
-              <div className="drugsTypeContainer">
+              <div className={styles.drugsTypeContainer}>
                 <LicenseTable />
               </div>
             </div>

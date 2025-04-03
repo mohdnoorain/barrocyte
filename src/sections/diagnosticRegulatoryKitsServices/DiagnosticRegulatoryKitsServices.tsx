@@ -1,5 +1,5 @@
 import React from "react";
-import "./DiagnosticRegulatoryKitsServices.css";
+import styles from "./DiagnosticRegulatoryKits.module.css";
 import TableComponent from "@/components/tableComponent/TableComponent";
 import Header from "@/components/header/Header";
 import OfferContainer from "@/components/offerContainer/OfferContainer";
@@ -141,13 +141,15 @@ const DiagnosticRegulatoryKitsServices = () => {
   return (
     <>
       <section>
-        <div className="diagnosticRegulatoryKitsServicesSection">
+        <div className={styles.diagnosticRegulatoryKitsServicesSection}>
           <div className="container">
+            {" "}
+            {/* Global class remains */}
             <Header />
-            <h2 className="diagnosticRegulatoryKitsServicesTitle">
+            <h2 className={styles.diagnosticRegulatoryKitsServicesTitle}>
               Diagnostic Kits Regulatory Service
             </h2>
-            <p className="diagnosticRegulatoryKitsServicesParagrapgh">
+            <p className={styles.diagnosticRegulatoryKitsServicesParagrapgh}>
               Diagnostic Kits are essential in medical science, forming the
               basis of tests, surgeries, and experiments. To regulate their use,
               the Indian government introduced the New Medical Devices Rules,
@@ -155,23 +157,26 @@ const DiagnosticRegulatoryKitsServices = () => {
               diagnostic kits, whether In-vitro or In-vivo, require licensing
               for manufacturing, sale, and use in India.
               <br />
-              These kitsare classified into four categories based on complexity
+              These kits are classified into four categories based on complexity
               and risk, with licenses issued by Central and State authorities as
               per their classification.
             </p>
           </div>
-          <div className="FormsContainer">
+
+          <div className={styles.FormsContainer}>
             <div className="container">
-              <div className="imageSection">
-                <div className="imageBox">
-                  <div className="imageWrapper imageOne"></div>
+              <div className={styles.imageSection}>
+                <div className={styles.imageBox}>
+                  <div
+                    className={`${styles.imageWrapper} ${styles.imageOne}`}
+                  ></div>
                 </div>
-                <div className="tableContainer">
-                  <h3 className="imageTitle">
+                <div className={styles.tableContainer}>
+                  <h3 className={styles.imageTitle}>
                     NEW IN-VITRO DIAGNOSTIC DEVICE – INDIA'S FIRST-TIME
                     REGULATIONS
                   </h3>
-                  <p className="imageParagraph">
+                  <p className={styles.imageParagraph}>
                     Any In-Vitro Diagnostic Device which does not have a
                     predicate or similar device in the Indian market is
                     considered to be a New In-Vitro Diagnostic Device. Such
@@ -182,42 +187,44 @@ const DiagnosticRegulatoryKitsServices = () => {
               </div>
             </div>
           </div>
-          <div className="FormsContainer">
+
+          <div className={styles.FormsContainer}>
             <div className="container">
-              <div className="imageSection">
-                <div className="tableContainer">
-                  <h3 className="imageTitle">
+              <div className={styles.imageSection}>
+                <div className={styles.tableContainer}>
+                  <h3 className={styles.imageTitle}>
                     CLASSIFICATION OF DIAGNOSTIC KITS
                   </h3>
-                  <p className="imageParagraph">
+                  <p className={styles.imageParagraph}>
                     Based on New Medical Rules, the classification of the
                     diagnostic kits takes into consideration factors like the
                     involved risk, medical condition being diagnosed,
                     self-testing or near patient testing. Diagnostic kits used
                     for serious medical conditions like HIV or Cancer are
                     classified as high-risk devices and hence placed under Class
-                    D. Other simple kits like glucose testing strips, and
-                    sphygmomanometers are placed under Class A & B
+                    D. Other simple kits like glucose testing strips and
+                    sphygmomanometers are placed under Class A & B.
                   </p>
                 </div>
-                <div className="imageBox">
-                  <div className="imageWrapper imageTwo"></div>
+                <div className={styles.imageBox}>
+                  <div
+                    className={`${styles.imageWrapper} ${styles.imageTwo}`}
+                  ></div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="FormsContainer ">
-            <div className="container">
-              
 
-              <div className="tableFormContainer">
-                <div className="tableContainer">
-                  <h3 className="imageTitle">Forms for Application</h3>
+          <div className={styles.FormsContainer}>
+            <div className="container">
+              <div className={styles.tableFormContainer}>
+                <div className={styles.tableContainer}>
+                  <h3 className={styles.imageTitle}>Forms for Application</h3>
                   <TableComponent data={tableData1} />
                 </div>
-                <div className="tableContainer">
-                  <h3 className="imageTitle">For Importers</h3>
-                  <p className="imageParagraph">
+                <div className={styles.tableContainer}>
+                  <h3 className={styles.imageTitle}>For Importers</h3>
+                  <p className={styles.imageParagraph}>
                     India’s rapid economic growth has led to a surge in demand
                     for medical equipment. The new medical rules classify all
                     diagnostic kits, including previously unclassified ones. The
@@ -225,10 +232,11 @@ const DiagnosticRegulatoryKitsServices = () => {
                     procedure, allowing multiple importers for a single kit,
                     though each must file a separate application.
                   </p>
-
-                  <div className="processContainer">
-                    <h3 className="imageTitle">Import License Process</h3>
-                    <div className="importLicenseProcess">
+                  <div className={styles.processContainer}>
+                    <h3 className={styles.imageTitle}>
+                      Import License Process
+                    </h3>
+                    <div className={styles.importLicenseProcess}>
                       {importLicenseSteps.map((step, index) => (
                         <LicenseProcessStep
                           key={index}
@@ -243,20 +251,28 @@ const DiagnosticRegulatoryKitsServices = () => {
             </div>
           </div>
 
-          <div className="FormsContainer backgroundColorHowToApply">
+          <div
+            className={`${styles.FormsContainer} ${styles.backgroundColorHowToApply}`}
+          >
             <div className="container">
               <HowToApply steps={steps} />
             </div>
           </div>
-          <div className="FormsContainer licenseFeesContainer">
+
+          <div
+            className={`${styles.FormsContainer} ${styles.licenseFeesContainer}`}
+          >
             <div className="container">
               <OfferContainer
                 offerData={feeData}
-                headingTitle={"Medical Device Import License Fees"}
+                headingTitle="Medical Device Import License Fees"
               />
             </div>
           </div>
-          <div className="FormsContainer importantDocumentsContainer">
+
+          <div
+            className={`${styles.FormsContainer} ${styles.importantDocumentsContainer}`}
+          >
             <div className="container">
               <ImportantDocuments
                 title="Important Documents"
@@ -264,12 +280,14 @@ const DiagnosticRegulatoryKitsServices = () => {
               />
             </div>
           </div>
-          <div className="FormsContainer TimeLineContainer">
-            <div className="diagnosticRegulatoryKitsServicesTitle">
-              Timeline to Obtain Form MD-15 from CDSCO
-            </div>
 
-            <p className="TimeLineParagrapgh">
+          <div
+            className={`${styles.FormsContainer} ${styles.TimeLineContainer}`}
+          >
+            <h3 className={styles.diagnosticRegulatoryKitsServicesTitle}>
+              Timeline to Obtain Form MD-15 from CDSCO
+            </h3>
+            <p className={styles.TimeLineParagrapgh}>
               The Government Timeline for Import License Form 15 for in-vitro
               Diagnostic kits is 6-9 months.
             </p>
