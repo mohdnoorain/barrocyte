@@ -1,5 +1,5 @@
 import React from "react";
-import "./RegulatoryCard.css";
+import styles from "./RegulatoryCard.module.css"; // Import CSS Module
 import Link from "next/link";
 
 interface RegulatoryCardProps {
@@ -16,15 +16,20 @@ const RegulatoryCard: React.FC<RegulatoryCardProps> = ({
   link,
 }) => {
   return (
-    <div className="regulatory-gird">
+    <div className={styles.regulatoryGrid}>
       <Link href={link}>
-        <div className="regulatory-card" style={{ backgroundColor: color }}>
-          <div className="hexagon-card">
-            <div className="hexagon">
-              <span className="material-icons regulatory-icon">{icon}</span>
+        <div
+          className={styles.regulatoryCard}
+          style={{ backgroundColor: color }}
+        >
+          <div className={styles.hexagonCard}>
+            <div className={styles.hexagon}>
+              <span className={`material-icons ${styles.regulatoryIcon}`}>
+                {icon}
+              </span>
             </div>
           </div>
-          <span className="regulatory-text">{title}</span>
+          <span className={styles.regulatoryText}>{title}</span>
         </div>
       </Link>
     </div>

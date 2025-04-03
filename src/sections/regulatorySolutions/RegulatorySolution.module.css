@@ -1,4 +1,4 @@
-.regulatory-section {
+.regulatorySection {
   padding: 3em 0;
   background: var(--darkBg);
   display: flex;
@@ -8,7 +8,7 @@
   width: 100%;
 }
 
-.regulatory-title {
+.regulatoryTitle {
   font-size: var(--fs-2);
   font-weight: 600;
   text-align: center;
@@ -16,7 +16,7 @@
   color: #333;
 }
 
-.regulatory-grid {
+.regulatoryGrid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 45px;
@@ -25,38 +25,37 @@
   padding: 0 20px;
 }
 
-
 @media (min-width: 1024px) {
-  .regulatory-grid {
+  .regulatoryGrid {
     grid-template-columns: 1fr 1fr 1fr;
     width: 100%;
   }
 }
 
 @media (max-width: 1024px) {
-  .regulatory-grid {
+  .regulatoryGrid {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media (max-width: 768px) {
-  .regulatory-grid {
+  .regulatoryGrid {
     grid-template-columns: 1fr 1fr;
     width: 100%;
   }
 
-  .regulatory-title {
+  .regulatoryTitle {
     font-size: var(--fs-3);
   }
 }
 
 @media (max-width: 480px) {
-  .regulatory-title {
+  .regulatoryTitle {
     font-size: var(--fs-3);
     margin-bottom: 30px;
   }
 
-  .regulatory-grid {
+  .regulatoryGrid {
     padding: 0;
     grid-template-columns: 1fr 1fr;
     gap: 25px;

@@ -1,4 +1,4 @@
-.regulatory-card {
+.regulatoryCard {
   display: flex;
   align-items: center;
   padding: 12px 20px;
@@ -12,7 +12,7 @@
   cursor: pointer;
 }
 
-.regulatory-card:hover {
+.regulatoryCard:hover {
   scale: 1.1;
   box-shadow: 2px 2px 4px 4px white;
 }
@@ -27,7 +27,7 @@
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
-.hexagon-card {
+.hexagonCard {
   width: 75px;
   height: 75px;
   background: inherit;
@@ -39,12 +39,12 @@
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
-.regulatory-icon {
+.regulatoryIcon {
   font-size: 26px;
   color: black;
 }
 
-.regulatory-text {
+.regulatoryText {
   font-family: "Arial", sans-serif;
   font-weight: bold;
   font-size: var(--fs-5);
@@ -60,7 +60,7 @@
     height: 65px;
   }
 
-  .hexagon-card {
+  .hexagonCard {
     width: 80px;
     height: 80px;
     left: -20px;
@@ -68,7 +68,7 @@
 }
 
 @media (max-width: 768px) {
-  .regulatory-card {
+  .regulatoryCard {
     padding: 10px 10px;
     width: 100%;
   }
@@ -78,18 +78,18 @@
     height: 40px;
   }
 
-  .hexagon-card {
+  .hexagonCard {
     width: 60px;
     height: 60px;
     left: -12px;
   }
-  .regulatory-text {
+  .regulatoryText {
     font-size: 13px;
   }
 }
 
 @media (max-width: 480px) {
-  .regulatory-card {
+  .regulatoryCard {
     padding: 6px 6px;
     font-size: 11px;
     width: 100%;
@@ -100,17 +100,17 @@
     height: 30px;
   }
 
-  .hexagon-card {
+  .hexagonCard {
     width: 40px;
     height: 40px;
     left: -10px;
   }
 
-  .regulatory-icon {
+  .regulatoryIcon {
     font-size: 14px;
   }
 
-  .regulatory-text {
+  .regulatoryText {
     font-size: 11px;
     margin-left: 25px;
   }

@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect } from "react";
-import "./OurService.css";
+import styles from "./OurServices.module.css";
 import Link from "next/link";
 
 const servicesData = [
@@ -120,31 +120,35 @@ export default function OurService() {
 
   return (
     <section>
-      <div className="ourSection">
-        <div className="container">
-          <div className="ourSectionTitle">Our Services</div>
-          <div className="ourSectionCard">
+      <div className={styles.ourSection}>
+        <div className={styles.container}>
+          <div className={styles.ourSectionTitle}>Our Services</div>
+          <div className={styles.ourSectionCard}>
             {servicesData.map((service, index) => (
-              <div className="cardContainer" key={index}>
-                <div className="innerCardContainer">
-                  <div className="iconContainer">
+              <div className={styles.cardContainer} key={index}>
+                <div className={styles.innerCardContainer}>
+                  <div className={styles.iconContainer}>
                     <img src={service.icon} alt={service.title} />
                   </div>
-                  <h3 className="cardTitle">{service.title}</h3>
-                  <div className="cardDetails">{service.details}</div>
-                  <ul className="cardPoints">
+                  <h3 className={styles.cardTitle}>{service.title}</h3>
+                  <div className={styles.cardDetails}>{service.details}</div>
+                  <ul className={styles.cardPoints}>
                     {service.cardPoints.map((point, idx) => (
                       <li key={idx}>
-                        <span className="material-icons cardPointsIcon">
+                        <span
+                          className={`material-icons ${styles.cardPointsIcon}`}
+                        >
                           {service.cardPointsIcon}
                         </span>
                         {point}
                       </li>
                     ))}
                   </ul>
-                  <Link href={service.url} className="readMore">
+                  <Link href={service.url} className={styles.readMore}>
                     Read more
-                    <span className="material-icons readmoreIcon">arrow_forward</span>
+                    <span className={`material-icons ${styles.readmoreIcon}`}>
+                      arrow_forward
+                    </span>
                   </Link>
                 </div>
               </div>

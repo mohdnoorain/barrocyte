@@ -1,5 +1,5 @@
 import Link from "next/link";
-import "./Footer.css";
+import styles from "./Footer.module.css"; // Import module CSS
 
 const footerData = {
   quickLinks: [
@@ -23,17 +23,17 @@ const footerData = {
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className={styles.footer}>
       <div className="container">
-        <div className="footer-container">
+        <div className={styles.footerContainer}>
           {/* Brand Section */}
-          <div className="footer-section">
-            <h2 className="footer-title">Barr.</h2>
+          <div className={styles.footerSection}>
+            <h2 className={styles.footerTitle}>Barr.</h2>
             <p>Your trusted partner for licensing & compliance services.</p>
           </div>
 
           {/* Quick Links */}
-          <div className="footer-section">
+          <div className={styles.footerSection}>
             <h3>Quick Links</h3>
             <ul>
               {footerData.quickLinks.map((link, index) => (
@@ -45,7 +45,7 @@ const Footer = () => {
           </div>
 
           {/* Our Services */}
-          <div className="footer-section">
+          <div className={styles.footerSection}>
             <h3>Our Services</h3>
             <ul>
               {footerData.services.map((service, index) => (
@@ -57,7 +57,7 @@ const Footer = () => {
           </div>
 
           {/* Contact Information */}
-          <div className="footer-section">
+          <div className={styles.footerSection}>
             <h3>Contact Us</h3>
             <p>
               Email: <a href="mailto:info@barr.com">info@barr.com</a>
@@ -68,7 +68,7 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom Section */}
-        <div className="footer-bottom">
+        <div className={styles.footerBottom}>
           <p>&copy; {new Date().getFullYear()} Barr. All Rights Reserved.</p>
         </div>
       </div>

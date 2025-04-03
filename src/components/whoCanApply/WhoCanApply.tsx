@@ -1,5 +1,5 @@
 import React from "react";
-import "./WhoCanApply.css"; 
+import styles from "./WhoCanApply.module.css"; // Import Module CSS
 
 interface WhoCanApplyProps {
   title: string;
@@ -13,10 +13,10 @@ const WhoCanApply: React.FC<WhoCanApplyProps> = ({
   highlights,
 }) => {
   return (
-    <section className="who-can-apply">
-      <h2 className="section-title">{title}</h2>
-      <p className="content">{content}</p>
-      <ul className="highlights">
+    <section className={styles.whoCanApply}>
+      <h2 className={styles.sectionTitle}>{title}</h2>
+      <p className={styles.content}>{content}</p>
+      <ul className={styles.highlights}>
         {highlights.map((point, index) => (
           <li key={index}>{point}</li>
         ))}

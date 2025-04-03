@@ -1,6 +1,6 @@
 import React from "react";
-// import { licenseData, LicenseData } from "./data";
-import "./LicenseTable.css"; // Import CSS file in the same folder
+import styles from "./LicenseTable.module.css"; // Import CSS Module
+
 export interface LicenseData {
   category: string;
   saleType: string;
@@ -85,8 +85,8 @@ export const licenseData: LicenseData[] = [
 
 const LicenseTable: React.FC = () => {
   return (
-    <div className="table-container">
-      <table className="license-table">
+    <div className={styles.tableContainer}>
+      <table className={styles.licenseTable}>
         <thead>
           <tr>
             <th>Category</th>

@@ -1,5 +1,5 @@
 import React from "react";
-import "./DrugRegulatoryServices.css";
+import styles from "./DrugRegulatoryServices.module.css";
 import ApplicationFormsTable from "@/components/applicationFormsTable/ApplicationFormsTable";
 
 const DrugRegulatoryServices = () => {
@@ -135,52 +135,59 @@ const DrugRegulatoryServices = () => {
   ];
   return (
     <section>
-      <div className="drugRegulatoryServicesSection">
-        <div className="FormsContainer">
+      <div className={styles.drugRegulatoryServicesSection}>
+        <div className={styles.FormsContainer}>
           <div className="container">
-            <h2 className="drugRegulatoryServicesTitle">
-              Drug regulatory Services
+            {" "}
+            {/* Global class remains */}
+            <h2 className={styles.drugRegulatoryServicesTitle}>
+              Drug Regulatory Services
             </h2>
-            <div className="imageSection">
-              <div className="imageBox">
-                <div className="imageWrapper imageOne"></div>
+            <div className={styles.imageSection}>
+              <div className={styles.imageBox}>
+                <div
+                  className={`${styles.imageWrapper} ${styles.imageOne}`}
+                ></div>
               </div>
-              <div className="tableContainer">
-                <h3 className="imageTitle">FOR MANUFACTURER</h3>
-                <p className="imageParagraph">
+              <div className={styles.tableContainer}>
+                <h3 className={styles.imageTitle}>FOR MANUFACTURER</h3>
+                <p className={styles.imageParagraph}>
                   At Barrocyte Consultants, we help manufacturers overcome the
                   barriers in preparing strong regulatory strategies and
                   unambiguous dossiers for filing applications for various drug
                   products approval. Experts from our team represent our clients
                   at the SEC meetings to obtain unanimous approvals and
-                  permissions. Our constant guidance, thorough follow up and
+                  permissions. Our constant guidance, thorough follow-up, and
                   other services like clinical trial management, medical
-                  writing, etc. enable our client to obtain successful
-                  approval/permission smoothly and apply for licenses.
+                  writing, etc., enable our clients to obtain successful
+                  approvals/permissions smoothly and apply for licenses.
                 </p>
               </div>
             </div>
           </div>
         </div>
-        <div className="FormsContainer">
+
+        <div className={styles.FormsContainer}>
           <div className="container">
-            <div className="imageSection">
-              <div className="tableContainer">
-                <h3 className="imageTitle">Forms of Licences to Sell Drugs</h3>
-                <p className="imageParagraph">
-                  A licence to sell, stock, exhibit, or offer for sale or
+            <div className={styles.imageSection}>
+              <div className={styles.tableContainer}>
+                <h3 className={styles.imageTitle}>
+                  Forms of Licenses to Sell Drugs
+                </h3>
+                <p className={styles.imageParagraph}>
+                  A license to sell, stock, exhibit, or offer for sale or
                   distribute drugs other than those specified in Schedules C, C
-                  (1), and X, and by retail on restricted licence or by
+                  (1), and X, and by retail on a restricted license or by
                   wholesale, shall be issued in Form 20, Form 20-A, or Form
                   20-B, as the case may be.
-                  <br />A licence to sell, stock, exhibit, or offer for sale or
+                  <br />A license to sell, stock, exhibit, or offer for sale or
                   distribute drugs specified in Schedule C and C (1) (excluding
-                  those in Schedule X), by retail on restricted licence or by
+                  those in Schedule X), by retail on a restricted license or by
                   wholesale, shall be issued in Form 21, Form 21-A, or Form
                   21-B, as the case may be.
                 </p>
               </div>
-              <div className="tableContainer">
+              <div className={styles.tableContainer}>
                 <ApplicationFormsTable />
               </div>
             </div>

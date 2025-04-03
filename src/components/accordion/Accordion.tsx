@@ -1,5 +1,5 @@
 import React from "react";
-import "./Accordion.css";
+import styles from "./Accordion.module.css";
 
 interface AccordionProps {
   title: string;
@@ -16,17 +16,17 @@ const Accordion: React.FC<AccordionProps> = ({
 }) => {
   return (
     <div
-      className={`accordionItem ${isActive ? "active" : ""}`}
+      className={`${styles.accordionItem} ${isActive ? styles.active : ""}`}
       onClick={onClick}
     >
-      <div className="accordionHeader">
+      <div className={styles.accordionHeader}>
         <span>{title}</span>
-        <span className="icon material-icons">
+        <span className={`material-icons ${styles.icon}`}>
           {isActive ? "remove" : "expand_more"}
         </span>
       </div>
       <div
-        className="accordionContent"
+        className={styles.accordionContent}
         style={{
           maxHeight: isActive ? "500px" : "0",
           padding: isActive ? "10px 15px" : "0 15px",
@@ -34,7 +34,7 @@ const Accordion: React.FC<AccordionProps> = ({
         }}
       >
         {content.split(". ").map((sentence, i) => (
-          <p key={i} className="accordionParagraph">
+          <p key={i} className={styles.accordionParagraph}>
             {sentence}.
           </p>
         ))}

@@ -1,5 +1,6 @@
 import React from "react";
-import "./LicenseProcessStep.css";
+import styles from "./LicenseProcessStep.module.css";
+
 interface LicenseProcessStepProps {
   icon: string;
   text: string;
@@ -10,13 +11,13 @@ const LicenseProcessStep: React.FC<LicenseProcessStepProps> = ({
   text,
 }) => {
   return (
-    <div className="LicenseProcessContainer">
+    <div className={styles.LicenseProcessContainer}>
       <img
         src={`/icons/${icon}`}
         alt="Process Icon"
-        className="LicenseProcessImages"
+        className={styles.LicenseProcessImages}
       />
-      <p className="processParagraph">{text}</p>
+      <p className={styles.processParagraph}>{text}</p>
     </div>
   );
 };

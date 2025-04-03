@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./SanitaryImportPermitService.css";
+import styles from "./SanitaryImportPermit.module.css"; 
 import Accordion from "@/components/accordion/Accordion";
 
 const accordionData = [
@@ -34,12 +34,12 @@ export default function SanitaryImportPermitService() {
 
   return (
     <section>
-      <div className="sanitaryImportPermitServiceSection">
+      <div className={styles.sanitaryImportPermitServiceSection}>
         <div className="container">
-          <h2 className="sanitaryImportPermitServiceTitle">
+          <h2 className={styles.sanitaryImportPermitServiceTitle}>
             Sanitary Import Permit (SIP)
           </h2>
-          <p className="sanitaryImportPermitServiceParagraph">
+          <p className={styles.sanitaryImportPermitServiceParagraph}>
             Import of meat and meat products of any kind including fresh,
             chilled and frozen meat, tissue or organs of poultry, sheep, goat;
             egg & egg powder; milk & milk products; bovine, ovine and caprine
@@ -57,13 +57,13 @@ export default function SanitaryImportPermitService() {
             Permit (SIP) in the stipulated time manner.
           </p>
         </div>
-        <div className="sanitaryImportPermitServiceGuidelinsContainer">
+        <div className={styles.sanitaryImportPermitServiceGuidelinesContainer}>
           <div className="container">
-            <h2 className="sanitaryImportPermitServiceTitle">
+            <h2 className={styles.sanitaryImportPermitServiceTitle}>
               Sanitary Import Permit (SIP) Guidelines
             </h2>
-            <div className="sanitaryImportPermitServiceGuidelins">
-              <div className="SipContainer">
+            <div className={styles.sanitaryImportPermitServiceGuidelines}>
+              <div className={styles.SipContainer}>
                 {accordionData.map((item, index) => (
                   <Accordion
                     key={index}
@@ -74,8 +74,11 @@ export default function SanitaryImportPermitService() {
                   />
                 ))}
               </div>
-              <div className="ImageContainer">
-                <img src="https://www.indiafilings.com/learn/wp-content/uploads/2019/11/Sanitary-Import-Permit.jpg" />
+              <div className={styles.ImageContainer}>
+                <img
+                  src="https://www.indiafilings.com/learn/wp-content/uploads/2019/11/Sanitary-Import-Permit.jpg"
+                  alt="Sanitary Import Permit"
+                />
               </div>
             </div>
           </div>

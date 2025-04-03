@@ -1,5 +1,5 @@
 import React from "react";
-import "./ApplicationFormsTable.css";
+import styles from "./ApplicationFormsTable.module.css";
 
 export interface LicenseData {
   SrNO: string;
@@ -11,7 +11,7 @@ export interface LicenseData {
 const tableHeadings: { key: keyof LicenseData; label: string }[] = [
   { key: "SrNO", label: "SR. NO" },
   { key: "FormNO", label: "Form NO" },
-  { key: "purpose", label: "purpose" },
+  { key: "purpose", label: "Purpose" },
 ];
 
 const applicationForms = [
@@ -79,10 +79,10 @@ const applicationForms = [
 
 const ApplicationFormsTable: React.FC = () => {
   return (
-    <div className="table-container">
-      <h2 className="table-title">List of Application Forms</h2>
-      <div className="table-wrapper">
-        <table className="styled-table">
+    <div className={styles.tableContainer}>
+      <h2 className={styles.tableTitle}>List of Application Forms</h2>
+      <div className={styles.tableWrapper}>
+        <table className={styles.styledTable}>
           <thead>
             <tr>
               {tableHeadings.map((heading) => (

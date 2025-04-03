@@ -1,5 +1,6 @@
 import React from "react";
-import "./OfferContainer.css";
+import styles from "./OfferContainer.module.css"; // Import CSS Module
+
 interface OfferItem {
   icon: string;
   title: string;
@@ -11,22 +12,27 @@ interface OfferContainerProps {
   offerData: OfferItem[];
 }
 
-const OfferContainer: React.FC<OfferContainerProps> = ({ offerData , headingTitle}) => {
+const OfferContainer: React.FC<OfferContainerProps> = ({
+  offerData,
+  headingTitle,
+}) => {
   return (
-    <div className="medicalDeviceLicenseFeesContainer">
-      <p className="chooseUs">WHY CHOOSE US </p>
-      <h2 className="headingLicenseFees">{headingTitle}</h2>
-      <div className="feeContainer">
+    <div className={styles.medicalDeviceLicenseFeesContainer}>
+      <p className={styles.chooseUs}>WHY CHOOSE US</p>
+      <h2 className={styles.headingLicenseFees}>{headingTitle}</h2>
+      <div className={styles.feeContainer}>
         {offerData.map((item, index) => (
-          <div key={index} className="offerContainer">
-            <div className="iconContainer">
-              <span className="material-icons offerIcon">{item.icon}</span>
+          <div key={index} className={styles.offerContainer}>
+            <div className={styles.iconContainer}>
+              <span className={`material-icons ${styles.offerIcon}`}>
+                {item.icon}
+              </span>
             </div>
-            <div className="bothcontainer">
-              <div className="offerTitleContainer">
+            <div className={styles.bothcontainer}>
+              <div className={styles.offerTitleContainer}>
                 <span>{item.title}</span>
               </div>
-              <div className="offerParagraph">{item.description}</div>
+              <div className={styles.offerParagraph}>{item.description}</div>
             </div>
           </div>
         ))}

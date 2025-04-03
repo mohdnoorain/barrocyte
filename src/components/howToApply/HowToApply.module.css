@@ -17,7 +17,7 @@
   margin-bottom: 20px;
 }
 
-.HowToApplyParagraph {
+.paragraph {
   font-size: 16px;
   color: #555;
   text-align: left;
@@ -75,7 +75,7 @@
   .howToApply h2 {
     font-size: var(--fs-3);
   }
-  .HowToApplyParagraph{
+  .paragraph{
     font-size: var(--fs-regular);
   }
 }
@@ -95,7 +95,7 @@
   .headingParagraph {
    font-size: var(--fs-regular);
   }
-  .HowToApplyParagraph{
+  .paragraph{
     font-size: var(--fs-small);
   }
 }
