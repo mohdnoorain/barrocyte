@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import styles from "./DiagnostickitsManufactureServices.module.css";
-import "@/styles/globals.css";
 import Header from "@/components/header/Header";
 
 const DiagnostickitsManufactureServices = () => {
-  
+
 
   const accordionData = [
     {
@@ -135,9 +134,8 @@ The Central Licensing Authority will grant the test license in Form MD-13 or rej
                 <div className={styles.bigNotes} key={index}>
                   <div className={styles.bigNotesHeading}>{item.title}</div>
                   <p
-                    className={`${styles.bigNotesParagraph} ${
-                      expandedIndex === index ? styles.expanded : ""
-                    }`}
+                    className={`${styles.bigNotesParagraph} ${expandedIndex === index ? styles.expanded : ""
+                      }`}
                   >
                     {expandedIndex === index
                       ? item.content

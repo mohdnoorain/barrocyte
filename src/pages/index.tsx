@@ -1,7 +1,4 @@
 import Head from "next/head";
-import "./styles.css";
-import "./../styles/globals.css";
-
 import Main from "@/sections/main/Main";
 import SanitaryImportPermitService from "@/sections/sanitaryImportPermitService/SanitaryImportPermitService";
 import RegulatorySolutions from "@/sections/regulatorySolutions/RegulatorySolutions";
@@ -24,14 +21,15 @@ export default function Home() {
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
         />
+        <link rel="stylesheet" href="./globals.css" />
       </Head>
       <Header />
       <Main></Main>
       <RegulatorySolutions />
-      <DrugsLicenseServices/>
+      <DrugsLicenseServices />
       <BloodBankServive />
       <SanitaryImportPermitService />
-      <Footer/>
+      <Footer />
     </>
   );
 }

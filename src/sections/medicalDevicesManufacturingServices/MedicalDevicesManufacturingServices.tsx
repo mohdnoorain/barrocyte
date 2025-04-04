@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import styles from "./MedicalDevicesServicesSection.module.css";
-import "@/styles/globals.css";
 import Header from "@/components/header/Header";
 import OfferContainer from "@/components/offerContainer/OfferContainer";
 import ValidityInfo from "@/components/validityInfo/ValidityInfo";
 import ImportantDocuments from "@/components/importantDocuments.tsx/ImportantDocuments";
 import HowToApply from "@/components/howToApply/HowToApply";
 const MedicalDevicesManufacturingServices = () => {
-  
+
 
   const feeData = [
     {
@@ -155,13 +154,13 @@ const MedicalDevicesManufacturingServices = () => {
   ];
 
 
-  
-const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
 
-const toggleExpand = (index: number) => {
-  setExpandedIndex(expandedIndex === index ? null : index);
-};
+  const toggleExpand = (index: number) => {
+    setExpandedIndex(expandedIndex === index ? null : index);
+  };
 
   return (
     <section>
@@ -208,9 +207,8 @@ const toggleExpand = (index: number) => {
                 <div className={styles.bigNotes} key={index}>
                   <div className={styles.bigNotesHeading}>{item.title}</div>
                   <p
-                    className={`${styles.bigNotesParagraph} ${
-                      expandedIndex === index ? styles.expanded : ""
-                    }`}
+                    className={`${styles.bigNotesParagraph} ${expandedIndex === index ? styles.expanded : ""
+                      }`}
                   >
                     {expandedIndex === index
                       ? item.content
