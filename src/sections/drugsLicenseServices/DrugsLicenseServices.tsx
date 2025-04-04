@@ -49,7 +49,9 @@ const DrugsLicenseServices: React.FC = () => {
     <section>
       <div className={styles.drugsLicenseServiceSection}>
         <div className="container">
-          <h2 className={styles.drugsLicenseServiceTitle}>Drugs Service</h2>
+          <h2 className={styles.drugsLicenseServiceTitle}>
+            Drugs License Service
+          </h2>
           <p className={styles.drugsLicenseServiceParagraph}>
             Ensuring fair and equal access to medicines is a primary government
             concern, but selling drugs requires strict licensing. To regulate

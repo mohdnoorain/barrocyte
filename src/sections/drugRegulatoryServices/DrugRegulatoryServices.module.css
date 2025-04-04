@@ -5,7 +5,8 @@
   align-items: center;
   flex-direction: column;
   width: 100%;
-  margin-top: 40px;
+  /* margin-top: 40px; */
+  background-color: #edf2fb;
 }
 
 .drugRegulatoryServicesTitle {
@@ -28,6 +29,14 @@
   align-items: center;
   flex-direction: column;
   width: 100%;
+}
+
+.typeManufacturer{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
 }
 
 .backgroundColorHowToApply{
@@ -69,6 +78,7 @@
 
 .imageTitle {
   font-size: var(--fs-5);
+  color: var(--primary);
   text-align: center;
   margin-bottom: 20px;
   font-weight: 700;

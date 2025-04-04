@@ -7,7 +7,7 @@ import SanitaryImportPermitService from "@/sections/sanitaryImportPermitService/
 import RegulatorySolutions from "@/sections/regulatorySolutions/RegulatorySolutions";
 import Header from "@/components/header/Header";
 import BloodBankServive from "@/sections/bloodBankService/BloodBankServive";
-import DrugsLicenseServices from "@/sections/drugs/DrugsLicenseServices";
+import DrugsLicenseServices from "@/sections/drugsLicenseServices/DrugsLicenseServices";
 import Footer from "@/sections/footer/Footer";
 
 
