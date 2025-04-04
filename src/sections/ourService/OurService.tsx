@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import styles from "./OurSection.module.css";
 
 interface Service {
-  title: string;
+  title?: string;
   details: string;
   cardPointsIcon: string;
 }

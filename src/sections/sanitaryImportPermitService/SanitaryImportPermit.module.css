@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color : #eee4e1;
   width: 100%;
 }
 
@@ -40,7 +41,6 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center !important;
-  background: #fff;
   border-radius: 10px;
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;

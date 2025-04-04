@@ -1,46 +1,39 @@
 "use client";
 import React, { useState } from "react";
 import styles from "./BloodBankService.module.css";
-import DoRightCard from "@/components/DoCard/DoCard";
-import Accordion from "@/components/accordion/Accordion";
+import ValidityInfo from "@/components/validityInfo/ValidityInfo";
+import DoPargraph from "@/components/doPargraph/DoPargraph";
+import DoCard from "@/components/DoCard/DoCard";
 
 export default function BloodBankServive() {
-  const doItems = {
-    title: "FSSAI Licensing & Compliance Guidance",
-    points: [
-      "FSSAI license requirements vary by business type.",
-      "Barrocyte Consultants provides checklist-based documentation support.",
-      "Assistance available for registration, renewal, and modifications.",
-      "Licenses are valid for 1-5 years and require timely renewal.",
-      "For expert guidance, contact barrocyte@gmail.com or +91-9266665237.",
-    ],
-  };
+ const doItems = {
+   title: "Blood Bank License Application Essentials",
+   points: [
+     "Duly filled Form 27C signed by the competent authority.",
+     "Requisite fee payment proof.",
+     "Layout and key plan of the Blood Bank premises with proper section labeling.",
+     "Attested certificates of qualification and appointment letters for Medical Officer, Nurses, and Technicians.",
+     "List of essential machinery and lab equipment with specifications.",
+     "Standard Operating Procedures (SOPs) signed by an authorized medical officer.",
+     "Draft specimen labels for human blood and its components.",
+     "Undertaking to not draw blood from paid/professional donors.",
+     "Undertaking stating that the Blood Bank will not use paid or professional donors.",
+     "No Objection Certificate (NOC) from Pollution Control Board.",
+     "NOC from Pollution Control Board and Fire Services.",
+   ],
+ };
 
-  const bloodBankAccordionData = [
-    {
-      title: "Form of Licence for Blood Bank",
-      content: `A licence for the operation of a Blood Bank or for processing whole Human Blood for components 
-    and manufacture of blood products shall be issued in Form 28-C, Form 28-E, Form 26-G, or Form 26-I.  
-    Before issuance, the following conditions must be met:
-    - The Blood Bank operation must be supervised by at least one full-time Medical Officer with:
-      - Postgraduate degree in Medicine (M.D. in Pathology/Transfusion Medicines), or
-      - M.B.B.S. with a Diploma in Pathology or Transfusion Medicines with knowledge of blood group serology, methodology, and medical principles, or
-      - M.B.B.S. with at least one year of Blood Bank experience and expertise in blood group serology and methodology.
-    The degree or diploma must be from a university recognized by the Central Government.`,
-    },
-    {
-      title: "Validity of License",
-      content: `The Blood Bank licence in Form 28-C, Form 28-E, or renewed in Form 26-G or Form 26-I is valid for five years unless suspended or cancelled.  
+
+  const validityData = {
+    title: "Validity of License",
+    description: `The Blood Bank licence in Form 28-C, Form 28-E, or renewed in Form 26-G or Form 26-I is valid for five years unless suspended or cancelled.  
     The validity starts from the date it is granted or renewed.`,
-    },
-  ];
-
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
-
-  const toggleAccordion = (index: number) => {
-    setActiveIndex(activeIndex === index ? null : index);
   };
-
+  const formLicenseData = {
+    title: "Form of Licence for Blood Bank",
+    content:
+      "A licence for the operation of a Blood Bank or processing whole Human Blood for components shall be issued in Form 28-C, 28-E, 26-G, or 26-I, depending on the specific operation. Before granting such a licence, specific conditions must be fulfilled by the applicant. The functioning of the Blood Bank must be under the active direction and supervision of qualified technical personnel. This includes a full-time Medical Officer with one of the following qualifications:\n\n• A Postgraduate degree in Medicine such as M.D. in Pathology or Transfusion Medicine.\n• An MBBS degree along with a Diploma in Pathology or Transfusion Medicine, with sufficient knowledge in blood group serology and blood procurement principles. An MBBS degree with one year of experience in a Blood Bank during regular service, also demonstrating adequate knowledge and experience in serology and component preparation. The degree or diploma must be from a university recognized by the Central Government.",
+  };
   return (
     <section>
       <div className={styles.bloodBankServiceSection}>
@@ -67,23 +60,27 @@ export default function BloodBankServive() {
             </h2>
             <div className={styles.BloodBankguideLinesContainer}>
               <div className={styles.DocardContainer}>
-                <DoRightCard
-                  title="Blood Bank Licensing"
+                <DoCard
+                  title={doItems.title}
                   items={doItems.points}
                 />
               </div>
               <div className={styles.BoodBankAccordianContainer}>
-                {bloodBankAccordionData.map((item, index) => (
-                  <Accordion
-                    key={index}
-                    title={item.title}
-                    content={item.content}
-                    isActive={activeIndex === index}
-                    onClick={() => toggleAccordion(index)}
-                  />
-                ))}
+                <DoPargraph
+                  title={formLicenseData.title}
+                  content={formLicenseData.content}
+                />
               </div>
             </div>
+          </div>
+        </div>
+        <div className={styles.bloodBankLicensingContainer}>
+          <div className="container">
+            <ValidityInfo
+              title={validityData.title}
+              description={validityData.description}
+              titleColor="#c30011"
+            />
           </div>
         </div>
       </div>

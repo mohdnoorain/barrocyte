@@ -33,7 +33,7 @@ const regulatorySolutions = [
     title: "Legal Metrology",
     icon: "gavel",
     color: "#4a4a4a",
-    link: "/legal-metrology",
+    link: "/legalMetrologyServices",
   },
   {
     title: "Custom Clearance",
