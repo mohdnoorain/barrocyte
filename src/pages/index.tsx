@@ -9,6 +9,7 @@ import Header from "@/components/header/Header";
 import BloodBankServive from "@/sections/bloodBankService/BloodBankServive";
 import DrugsLicenseServices from "@/sections/drugsLicenseServices/DrugsLicenseServices";
 import Footer from "@/sections/footer/Footer";
+import TestimonialSlider from "@/sections/testimonials/TestimonialSlider";
 import CustomClearanceServices from "@/sections/customClearanceServices/CustomClearanceServices";
 
 export default function Home() {
@@ -31,6 +32,7 @@ export default function Home() {
       <BloodBankServive />
       <SanitaryImportPermitService />
       <CustomClearanceServices />
+      <TestimonialSlider/>
       <Footer />
     </>
   );

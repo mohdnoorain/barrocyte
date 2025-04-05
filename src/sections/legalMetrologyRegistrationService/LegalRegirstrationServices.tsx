@@ -1,8 +1,85 @@
 import React, { useState } from "react";
 import styles from "./LegalRegirstrationServices.module.css";
-
 import Accordion from "@/components/accordion/Accordion";
 const LegalRegirstrationServices = () => {
+  const tableData1 = [
+    {
+      applicant: "Importer",
+      riskClass: "A, B, C, D",
+      type: "Importer License",
+      forms: ["Application: MD-14", "Permission: MD-15"],
+    },
+    {
+      applicant: "Manufacturer",
+      riskClass: "A, B",
+      type: "Manufacturing License",
+      forms: ["Application: MD-3", "Permission: MD-5"],
+    },
+    {
+      applicant: "",
+      riskClass: "",
+      type: "Loan License",
+      forms: ["Application: MD-4", "Permission: MD-6"],
+    },
+    {
+      applicant: "",
+      riskClass: "C, D",
+      type: "Manufacturing License",
+      forms: ["Application: MD-7", "Permission: MD-9"],
+    },
+    {
+      applicant: "",
+      riskClass: "",
+      type: "Loan License",
+      forms: ["Application: MD-8", "Permission: MD-10"],
+    },
+    {
+      applicant: "Importer",
+      riskClass: "A, B, C, D",
+      type: "Clinical Performance Evaluation",
+      forms: ["Application: MD-24", "Permission: MD-25"],
+    },
+    {
+      applicant: "Manufacturer",
+      riskClass: "A, B, C, D",
+      type: "Clinical Performance Evaluation",
+      forms: ["Application: MD-24", "Permission: MD-25"],
+    },
+    {
+      applicant: "Importer (New In-Vitro Device)",
+      riskClass: "A, B, C, D",
+      type: "Import License",
+      forms: ["Application: MD-28", "Permission: MD-29"],
+    },
+    {
+      applicant: "Manufacturer (New In-Vitro Device)",
+      riskClass: "A, B, C, D",
+      type: "Manufacturing License",
+      forms: ["Application: MD-28", "Permission: MD-29"],
+    },
+  ];
+
+  const feeData = [
+    {
+      icon: "discount",
+      title: "Fee Involved",
+      description:
+        "In-Vitro Diagnostic Kits are classified by risk to ensure safety, with specific import license fees",
+    },
+    {
+      icon: "discount",
+      title: "One site $1000",
+      description:
+        "Import license fee for Class A/B In-Vitro Diagnostic Kits: $10 per kit.",
+    },
+    {
+      icon: "discount",
+      title: "One site $3000",
+      description:
+        "Import license fee for Class C/D In-Vitro Diagnostic Kits: $500 per kit.",
+    },
+  ];
+    
   const accordionData = [
     {
       title: "Registration of Companies",
