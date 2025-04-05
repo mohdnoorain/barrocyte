@@ -1,12 +1,5 @@
 import React, { useState } from "react";
 import styles from "./LegalRegirstrationServices.module.css";
-import TableComponent from "@/components/tableComponent/TableComponent";
-
-import OfferContainer from "@/components/offerContainer/OfferContainer";
-
-import ImportantDocuments from "@/components/importantDocuments.tsx/ImportantDocuments";
-import HowToApply from "@/components/howToApply/HowToApply";
-import LicenseProcessStep from "@/components/licenseProcessStep/LicenseProcessStep";
 import Accordion from "@/components/accordion/Accordion";
 const LegalRegirstrationServices = () => {
   const tableData1 = [
@@ -87,58 +80,9 @@ const LegalRegirstrationServices = () => {
     },
   ];
 
-  const documentsData = [
-    { icon: "description", label: "Wholesale Licence" },
-    { icon: "gavel", label: "Power of Attorney" },
-    { icon: "assignment", label: "Free Sale Certificate from GHTF" },
-    { icon: "folder", label: "Device Master File " },
-    { icon: "domain", label: "Site Master File" },
-  ];
 
-  const steps = [
-    {
-      icon: "/icons/evaluate-purple.png",
-      text: "Evaluation of the product, if it requires registration under MDR 2017 (Regulated/Non-Regulated).",
-    },
-    {
-      icon: "/icons/check-purple.png",
-      text: "If requires registration, evaluation of classification (Class A, B, C, D) based on the product risk category.",
-    },
-    {
-      icon: "/icons/docs-purple.png",
-      text: "Mandatory document requirement: sharing the list and reviewing its adequacy.",
-    },
-    {
-      icon: "/icons/appoint-purple.png",
-      text: "Appoint an authorized agent.",
-    },
-    {
-      icon: "/icons/regiter-purple.png",
-      text: "Online generation of application.",
-    },
-    {
-      icon: "/icons/check-mark-purple.png",
-      text: "Approval/confirmation of draft application by the authorized agent and submission.",
-    },
-    {
-      icon: "/icons/order-purple.png",
-      text: "Follow-up with the regulatory authority and query management if any.",
-    },
-    {
-      icon: "/icons/approved-purple.png",
-      text: "Final approval.",
-    },
-  ];
 
-  const importLicenseSteps = [
-    { icon: "user-circle-right.png", text: "Classification of Medical" },
-    {
-      icon: "note-circle-right.png",
-      text: "Documents as per Checklist",
-    },
-    { icon: "certificate-circle.png", text: "Application Filing" },
-    { icon: "certificate-circle.png", text: "Import LicenseDevice " },
-  ];
+  
 
   const accordionData = [
     {

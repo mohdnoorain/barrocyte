@@ -9,6 +9,8 @@ import Header from "@/components/header/Header";
 import BloodBankServive from "@/sections/bloodBankService/BloodBankServive";
 import DrugsLicenseServices from "@/sections/drugsLicenseServices/DrugsLicenseServices";
 import Footer from "@/sections/footer/Footer";
+import TestimonialSlider from "@/sections/testimonials/TestimonialSlider";
+
 
 
 
@@ -31,6 +33,7 @@ export default function Home() {
       <DrugsLicenseServices/>
       <BloodBankServive />
       <SanitaryImportPermitService />
+      <TestimonialSlider/>
       <Footer/>
     </>
   );
