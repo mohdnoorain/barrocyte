@@ -79,11 +79,7 @@ const LegalRegirstrationServices = () => {
         "Import license fee for Class C/D In-Vitro Diagnostic Kits: $500 per kit.",
     },
   ];
-
-
-
-  
-
+    
   const accordionData = [
     {
       title: "Registration of Companies",

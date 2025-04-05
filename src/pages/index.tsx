@@ -10,9 +10,7 @@ import BloodBankServive from "@/sections/bloodBankService/BloodBankServive";
 import DrugsLicenseServices from "@/sections/drugsLicenseServices/DrugsLicenseServices";
 import Footer from "@/sections/footer/Footer";
 import TestimonialSlider from "@/sections/testimonials/TestimonialSlider";
-
-
-
+import CustomClearanceServices from "@/sections/customClearanceServices/CustomClearanceServices";
 
 export default function Home() {
   return (
@@ -30,11 +28,12 @@ export default function Home() {
       <Header />
       <Main></Main>
       <RegulatorySolutions />
-      <DrugsLicenseServices/>
+      <DrugsLicenseServices />
       <BloodBankServive />
       <SanitaryImportPermitService />
+      <CustomClearanceServices />
       <TestimonialSlider/>
-      <Footer/>
+      <Footer />
     </>
   );
 }
