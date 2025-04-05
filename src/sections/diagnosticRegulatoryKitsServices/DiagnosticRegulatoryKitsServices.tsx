@@ -1,9 +1,7 @@
 import React from "react";
 import styles from "./DiagnosticRegulatoryKits.module.css";
 import TableComponent from "@/components/tableComponent/TableComponent";
-import Header from "@/components/header/Header";
 import OfferContainer from "@/components/offerContainer/OfferContainer";
-import ValidityInfo from "@/components/validityInfo/ValidityInfo";
 import ImportantDocuments from "@/components/importantDocuments.tsx/ImportantDocuments";
 import HowToApply from "@/components/howToApply/HowToApply";
 import LicenseProcessStep from "@/components/licenseProcessStep/LicenseProcessStep";
@@ -142,26 +140,42 @@ const DiagnosticRegulatoryKitsServices = () => {
     <>
       <section>
         <div className={styles.diagnosticRegulatoryKitsServicesSection}>
-          <div className="container">
-            <h2 className={styles.diagnosticRegulatoryKitsServicesTitle}>
-              Diagnostic Kits Regulatory Service
-            </h2>
-            <p className={styles.diagnosticRegulatoryKitsServicesParagrapgh}>
-              Diagnostic Kits are essential in medical science, forming the
-              basis of tests, surgeries, and experiments. To regulate their use,
-              the Indian government introduced the New Medical Devices Rules,
-              2017, effective from January 1, 2018. Under these rules, all
-              diagnostic kits, whether In-vitro or In-vivo, require licensing
-              for manufacturing, sale, and use in India.
-              <br />
-              These kits are classified into four categories based on complexity
-              and risk, with licenses issued by Central and State authorities as
-              per their classification.
-            </p>
-          </div>
-
           <div className={styles.FormsContainer}>
             <div className="container">
+              <div className={styles.imageSection}>
+                <div className={styles.tableContainer}>
+                  <div className="animate__animated animate__bounce">
+                    <h3 className={styles.mainTitle}>
+                      Diagnostic Kits Regulatory
+                    </h3>
+                  </div>
+
+                  <p className={styles.imageParagraph}>
+                    At <b>Barrocyte Consultants</b>, we help manufacturers
+                    overcome the barriers in preparing strong regulatory
+                    strategies and unambiguous dossiers for filing applications
+                    for various drug products approval. Experts from our team
+                    represent our clients at the SEC meetings to obtain
+                    unanimous approvals and permissions. Our constant guidance,
+                    thorough follow up and other services like clinical trial
+                    management, medical writing, etc. enable our client to
+                    obtain successful approval/permission smoothly and apply for
+                    licenses
+                  </p>
+                </div>
+                <div className={styles.imageBox}>
+                  <div
+                    className={`${styles.imageWrapper} ${styles.image3}`}
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className={styles.FormsContainer}>
+            <div className="container">
+              <h2 className={styles.diagnosticRegulatoryKitsServicesTitle}>
+                Diagnostic Kits Regulatory Service
+              </h2>
               <div className={styles.imageSection}>
                 <div className={styles.imageBox}>
                   <div
