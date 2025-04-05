@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import styles from "./SanitaryImportPermit.module.css"; 
+import styles from "./SanitaryImportPermit.module.css";
 import Accordion from "@/components/accordion/Accordion";
+import ValidityInfo from "@/components/validityInfo/ValidityInfo";
 
 const accordionData = [
   {
@@ -17,13 +18,14 @@ const accordionData = [
     The Department of Animal Husbandry, Dairying and Fisheries would send an email to the registered ID of the applicant in case of any 
     insufficient information or documents, and the applicant should rectify the error by logging into their account on SIP portal.`,
   },
-  {
-    title: "Validity of the Permit (SIP)",
-    content: `The validity of the permit varies depending upon the livestock products and from three months to one year. 
+];
+
+const validityData = {
+  title: "Validity of the Permit (SIP)",
+  content: `The validity of the permit varies depending upon the livestock products and from three months to one year. 
     The importer can carry out as many shipments as required as per the quantity permitted by the SIP within the stipulated period. 
     The Department may extend the validity of the permit on request from the traders.`,
-  },
-];
+};
 
 export default function SanitaryImportPermitService() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -81,6 +83,13 @@ export default function SanitaryImportPermitService() {
                 />
               </div>
             </div>
+          </div>
+        </div>
+        <div
+          className={styles.sanitaryImportPermitServiceGuidelinesContainer}
+        >
+          <div className="container">
+            <ValidityInfo title={validityData.title} description={validityData.content}/>
           </div>
         </div>
       </div>

@@ -5,6 +5,7 @@
   align-items: center;
   flex-direction: column;
   width: 100%;
+  background-color: #edf2fb;
 }
 
 .drugsLicenseServiceTitle {
@@ -32,7 +33,6 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center !important;
-  background: #fff;
   border-radius: 10px;
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;

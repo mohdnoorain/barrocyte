@@ -86,26 +86,28 @@ export const licenseData: LicenseData[] = [
 const LicenseTable: React.FC = () => {
   return (
     <div className={styles.tableContainer}>
-      <table className={styles.licenseTable}>
-        <thead>
-          <tr>
-            <th>Category</th>
-            <th>Sale Type</th>
-            <th>Application Form</th>
-            <th>License Form</th>
-          </tr>
-        </thead>
-        <tbody>
-          {licenseData.map((item: LicenseData, index: number) => (
-            <tr key={index}>
-              <td>{item.category}</td>
-              <td>{item.saleType}</td>
-              <td>{item.applicationForm}</td>
-              <td>{item.licenseForm}</td>
+      <div className={styles.tableWrapper}>
+        <table className={styles.styledTable}>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Sale Type</th>
+              <th>Application Form</th>
+              <th>License Form</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {licenseData.map((item: LicenseData, index: number) => (
+              <tr key={index}>
+                <td>{item.category}</td>
+                <td>{item.saleType}</td>
+                <td>{item.applicationForm}</td>
+                <td>{item.licenseForm}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };

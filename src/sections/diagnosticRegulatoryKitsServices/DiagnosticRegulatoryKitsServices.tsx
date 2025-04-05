@@ -143,9 +143,6 @@ const DiagnosticRegulatoryKitsServices = () => {
       <section>
         <div className={styles.diagnosticRegulatoryKitsServicesSection}>
           <div className="container">
-            {" "}
-            {/* Global class remains */}
-            <Header />
             <h2 className={styles.diagnosticRegulatoryKitsServicesTitle}>
               Diagnostic Kits Regulatory Service
             </h2>

@@ -1,4 +1,4 @@
-.drugRegulatoryServicesSection {
+.LegalRegirstrationServicesSection {
   padding: 3em 0;
   display: flex;
   justify-content: center;
@@ -9,17 +9,18 @@
   background-color: #edf2fb;
 }
 
-.drugRegulatoryServicesTitle {
+.LegalRegirstrationServicesTitle {
   font-size: var(--fs-2);
   font-weight: 600;
   text-align: center;
   margin-bottom: 30px;
-  color: #333;
+ 
+  color: var(--primary);
 }
 
-.drugRegulatoryServicesParagraph {
+.LegalRegirstrationServicesParagrapgh {
   color: var(--textDark);
-  line-height: 20px;
+   line-height: 1.6;
 }
 
 .FormsContainer {
@@ -31,17 +32,7 @@
   width: 100%;
 }
 
-.typeManufacturer{
-  width: 70%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 
-}
-
-.backgroundColorHowToApply{
-    background-color: #f8f9fa;
-}
 
 .licenseFeesContainer {
   background-color: #f8f9fa;
@@ -78,15 +69,16 @@
 
 .imageTitle {
   font-size: var(--fs-5);
-  color: var(--primary);
   text-align: center;
   margin-bottom: 20px;
   font-weight: 700;
+  color: var(--secondary);
 }
 .imageParagraph {
   text-align: left;
   line-height: 1.4;
   color: var(--textDark);
+  font-size: var(--fs-regular);
 }
 
 .imageSection {
@@ -99,8 +91,7 @@
 
 .imageBox {
   flex: 1;
-  min-width: 550px;
-  max-width: 500px;
+  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -112,6 +103,9 @@
 .imageWrapper {
   width: 100%;
   height: 300px;
+  min-width: 400px;
+  max-width: 500px;
+  border-radius: 25px;
   background-position: center;
   background-size: contain; /* Ensure full image visibility */
   background-repeat: no-repeat;
@@ -120,16 +114,44 @@
 
 /* Assign Background Images */
 .imageOne {
-  background-image: url("./../../../public/for-manufacturer-leaf.png");
+  background-image: url("./../../../public/barrocyte-importer.png");
 }
 
 .imageTwo {
   background-image: url("./../../../public/new-diagnostic-kit.png"); /* Change this to your second image */
 }
-
-.howToApply {
-  background-color: #f8f9fa;
+.image3{
+   background-image: url("./../../../public/license-manufacturer.png");
 }
+.image4{
+   background-image: url("./../../../public/licesnse-dealer.png");
+}
+.image5{
+   background-image: url("./../../../public/model-approval-process.png");
+}
+.imagesFormContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgContainer {
+  width: 100%;
+  max-width: 400px; /* Ensures it doesn’t stretch too much */
+  /* height: auto; */
+  min-height: 400px; 
+  background-image: url("./../../../public/legal-metrology.png");
+  background-position: center;
+  background-size: contain; /* Ensures full image is visible */
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -139,9 +161,7 @@
   .imageBox {
     min-width: 450px;
   }
-  .imageWrapper {
-    height: 250px;
-  }
+ 
 }
 
 @media (max-width: 480px) {
@@ -202,6 +222,10 @@
   .imageBox {
     min-width: 430px;
   }
+  .imgContainer {
+    max-width: 90%;
+    min-height: 400px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -212,7 +236,7 @@
 }
 
 @media (max-width: 768px) {
-  .drugRegulatoryServicesTitle {
+  .LegalRegirstrationServicesTitle {
     font-size: var(--fs-3);
   }
   .licensingFormContainer {
@@ -228,14 +252,21 @@
 }
 
 @media (max-width: 576px) {
-  .drugRegulatoryServicesTitle {
+  .LegalRegirstrationServicesTitle {
     font-size: var(--fs-4);
   }
 
-  .drugRegulatoryServicesParagraph {
+  .LegalRegirstrationServicesParagrapgh {
     font-size: var(--fs-small);
   }
   .TimeLineParagrapgh {
     font-size: var(--fs-regular);
+  }
+  .imgContainer {
+    max-width: 100%;
+    min-height: 200px;
+  }
+  .imageWrapper {
+  min-width: 300px;
   }
 }

@@ -1,129 +1,97 @@
 .tableContainer {
   width: 100%;
-  overflow-x: auto; /* Enable horizontal scrolling */
+  max-width: 900px;
+  margin: 20px auto;
   padding: 20px;
-  max-height: 500px; /* Limit height for vertical scrolling */
-  overflow-y: auto;
-  border-radius: 8px;
-  background: #fff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  position: relative;
+  text-align: center;
 }
 
-/* Table Styling */
-.licenseTable {
-  width: 100%;
-  color: var(--textDark);
-  border-collapse: collapse;
-  font-size: 14px;
-  background-color: #fff;
-  position: relative;
-}
-
-/* Table Header - Floating Effect */
-.licenseTable thead {
-  position: sticky;
-  top: -20px;
-  z-index: 40;
-  background: #ced4da;
-}
-
-/* Header Styling */
-.licenseTable th {
+.tableTitle {
+  color: #0f4c81; /* Blue shade */
+  font-size: 24px;
+  margin-bottom: 15px;
   font-weight: bold;
-  text-transform: uppercase;
-  padding: 14px;
-  text-align: left;
-  transition: 0.3s;
-  background-clip: padding-box;
 }
 
-/* Sliding Bottom Border */
-.licenseTable th::after {
-  content: "";
-  display: block;
+.tableWrapper {
+  max-height: 500px; /* Set max height to allow scrolling */
+  overflow-y: auto; /* Enable vertical scrolling */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+
+  /* Scrollbar Styling */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(128, 128, 128, 0.5) rgba(200, 200, 200, 0.2);
+}
+
+/* Webkit Scrollbar (Chrome, Edge, Safari) */
+.tableWrapper::-webkit-scrollbar {
+  width: 8px; /* Scrollbar width */
+}
+
+.tableWrapper::-webkit-scrollbar-track {
+  background: linear-gradient(to bottom, #e0e0e0, #c0c0c0); /* Gray gradient */
+  border-radius: 4px;
+}
+
+.tableWrapper::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #b0b0b0, #808080); /* Darker gray gradient */
+  border-radius: 4px;
+}
+
+.tableWrapper::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #808080, #505050); /* Darker on hover */
+}
+
+.styledTable {
   width: 100%;
-  height: 3px;
-  background: #ffcc00;
-  transform: scaleX(0);
-  transition: transform 0.3s ease-in-out;
+  border-collapse: collapse;
+  background: #f9f9f9;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.licenseTable th:hover::after {
-  transform: scaleX(1);
+.styledTable thead {
+  background: #0f4c81;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
-/* Table Body */
-.licenseTable td {
-  padding: 12px 16px;
-  border-bottom: 1px solid #ddd;
+.styledTable th, .styledTable td {
+  padding: 12px;
   text-align: left;
-  transition: 0.3s;
+  font-size: 12px;
+  border-bottom: 1px solid #ddd;
 }
 
-/* Striped Rows */
-.licenseTable tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
+.styledTable th {
+  font-weight: bold;
 }
 
-/* Hover Effect with Glow */
-.licenseTable tbody tr:hover {
-  background: rgba(0, 123, 255, 0.1);
-  box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.3);
-  transition: 0.3s ease-in-out;
+.styledTable tbody tr:nth-child(even) {
+  background: #e8f0fe;
 }
 
-/* Scrollbar Styling */
-.tableContainer::-webkit-scrollbar {
-  height: 8px;
-  width: 8px;
-}
-
-.tableContainer::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 10px;
-}
-
-.tableContainer::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #b0b0b0, #e0e0e0); 
-  border-radius: 10px;
+.styledTable tbody tr:hover {
+  background: #cce5ff;
 }
 
 /* Responsive Design */
-@media (max-width: 1200px) {
-  .licenseTable {
-    font-size: 12px;
-  }
-  .licenseTable th,
-  .licenseTable td {
+@media (max-width: 768px) {
+  .styledTable th, .styledTable td {
     padding: 10px;
-  }
-}
-
-@media (max-width: 767px) {
-  .tableContainer {
-    padding: 10px;
-    max-height: 400px;
-  }
-  .licenseTable {
-    font-size: 12px;
-  }
-  .licenseTable th,
-  .licenseTable td {
-    padding: 8px;
+    font-size: 14px;
   }
 }
 
 @media (max-width: 480px) {
-  .tableContainer {
-    padding: 5px;
-    max-height: 300px;
+  .tableTitle {
+    font-size: 20px;
   }
-  .licenseTable {
-    font-size: 9px;
-  }
-  .licenseTable th,
-  .licenseTable td {
-    padding: 6px;
+  
+  .styledTable th, .styledTable td {
+    font-size: 10px;
+    padding: 8px;
   }
 }
