@@ -63,6 +63,7 @@ export default function BloodBankServive() {
                 <DoCard
                   title={doItems.title}
                   items={doItems.points}
+                  icon="water_drop"
                 />
               </div>
               <div className={styles.BoodBankAccordianContainer}>
