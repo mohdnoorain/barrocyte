@@ -1,6 +1,4 @@
 import Head from "next/head";
-import "./styles.css";
-import "./../styles/globals.css";
 
 import Main from "@/sections/main/Main";
 import SanitaryImportPermitService from "@/sections/sanitaryImportPermitService/SanitaryImportPermitService";
@@ -32,7 +30,7 @@ export default function Home() {
       <BloodBankServive />
       <SanitaryImportPermitService />
       <CustomClearanceServices />
-      <TestimonialSlider/>
+      <TestimonialSlider />
       <Footer />
     </>
   );

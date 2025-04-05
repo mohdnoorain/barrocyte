@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./MedicalDevicesServicesSection.module.css";
-import "@/styles/globals.css";
 import TableComponent from "@/components/tableComponent/TableComponent";
 import Header from "@/components/header/Header";
 import OfferContainer from "@/components/offerContainer/OfferContainer";

@@ -1,5 +1,4 @@
 import React from "react";
-import "@/styles/globals.css";
 import styles from "./index.module.css"; // Import Module CSS
 import MedicalDevicesRegulatoryServices from "@/sections/medicalDevicesRegulatoryServices/MedicalDevicesRegulatoryServices";
 import MedicalDevicesManufacturingServices from "@/sections/medicalDevicesManufacturingServices/MedicalDevicesManufacturingServices";
