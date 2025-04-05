@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import "./Header.css";
+import styles from "./Header.module.css";
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -36,20 +36,27 @@ const Header: React.FC = () => {
   }, []);
 
   return (
-    <nav className={`navbar ${isScrolled ? "scrolled" : ""}`} ref={menuRef}>
-      <div className="nav-container container">
-        <div className="logo">Barro.</div>
+    <nav
+      className={`${styles.navbar} ${isScrolled ? styles.scrolled : ""}`}
+      ref={menuRef}
+    >
+      <div className={`${styles["nav-container"]} container`}>
+        <div className={styles.logo}>Barro.</div>
 
         {/* Mobile Menu Button */}
         <button
-          className="menu-button"
+          className={styles["menu-button"]}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? "✖" : "☰"}
         </button>
 
         {/* Navigation Links */}
-        <ul className={`nav-links ${isMobileMenuOpen ? "open" : ""}`}>
+        <ul
+          className={`${styles["nav-links"]} ${
+            isMobileMenuOpen ? styles.open : ""
+          }`}
+        >
           <li>
             <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>
               Home

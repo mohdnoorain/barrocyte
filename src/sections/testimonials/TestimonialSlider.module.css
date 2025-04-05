@@ -1,0 +1,112 @@
+.testimonialSection {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.title {
+  font-size: 2rem;
+  color: var(--secondary);
+  margin-bottom: 10px;
+}
+
+.subtext {
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.slider {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px 0;
+  cursor: grab;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  background: #f9f9f9;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 0 10px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
+.userImage img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.quote {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+  margin: 10px 0;
+}
+
+.quoteIcon {
+  font-size: 1.5rem;
+  color: var(--secondary);
+}
+
+.name {
+  color: var(--secondaryLight);
+  font-weight: bold;
+  margin: 10px 0 5px;
+}
+
+.role {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .card {
+    min-width: 46%;
+    max-width: 47%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card {
+    min-width: 30%;
+    max-width: 30%;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    min-width: 60%;
+    max-width: 47%;
+  }
+  .quote {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    min-width: 90%;
+    max-width: 47%;
+  }
+  .quote {
+    font-size: 12px;
+  }
+  .userImage img {
+    width: 50px;
+    height: 50px;
+  }
+}

@@ -1,45 +1,56 @@
-.doingcard {
+.doingCard {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: -1;
+  animation: fadeIn 0.8s ease-in-out;
 }
 
-.do-card {
+.doCard {
   background: #fff;
   padding: 20px;
   border-radius: 15px;
   position: relative;
-  width: 350px;
   text-align: left;
   transition: all 0.3s ease;
-  max-width: 550px;
+
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.do-list {
+.doCard:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.doList {
   list-style: none;
   padding: 0;
   margin: 0;
   overflow-y: auto;
-  
 }
 
-.do-list-item {
+.doListItem {
   font-size: var(--fs-large);
   color: #333;
   margin: 0.75rem 0;
-  display: flex;
-  align-items: center;
+  line-height: 1.4;
   gap: 10px;
 }
 
-.checkmark {
+.checkMark {
   color: #ee1c15;
   font-weight: bold;
   font-size: 1.2rem;
 }
 
-.do-label {
+.bloodIcon {
+  color: #ee1c15;
+  font-size: 1.5rem;
+}
+
+/* Fixed doLabel Positioning */
+.doLabel {
   position: absolute;
   right: -50px;
   top: 50%;
@@ -58,79 +69,106 @@
   align-items: center;
   writing-mode: vertical-rl;
   height: 80%;
-  z-index: -1;
+  z-index: 0; /* Ensures visibility */
 }
 
-/* Responsive Design */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
+/* Slide-in for label */
+@keyframes slideInRight {
+  from {
+    transform: translateY(-50%) translateX(80px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(-50%) translateX(0);
+    opacity: 1;
+  }
+}
 
+/* Responsive Fixes */
 @media (min-width: 1200px) {
-  .do-card {
-    width: 360px;
+  .doLabel {
+    right: -50px;
+    height: 85%;
   }
-
-  .do-label {
-    right: -40px;
+  .doCard {
+    max-width: 480px;
   }
 }
-
 
 @media (max-width: 991px) and (min-width: 768px) {
-  .do-card {
+  .doCard {
     width: 100%;
     padding: 30px;
   }
 
-  .do-label {
-    right: -35px;
+  .doLabel {
+    right: -40px;
     font-size: var(--fs-regular);
     padding: 12px;
     height: 75%;
   }
 
-  .do-list-item {
+  .doListItem {
     font-size: var(--fs-regular);
   }
 }
 
-
 @media (max-width: 767px) {
-  .do-card {
+  .doCard {
     padding: 30px;
+    width: 90%;
   }
 
-  .do-label {
-    right: -30px;
+  .doLabel {
+    right: -35px;
     font-size: var(--fs-small);
     padding: 10px;
     height: 70%;
   }
 
-  .checkmark {
+  .checkMark {
     font-size: 1rem;
   }
 
-  .do-list-item {
+  .bloodIcon {
+    font-size: 1.2rem;
+  }
+
+  .doListItem {
     font-size: var(--fs-regular);
     margin: 0.5rem 0;
   }
 }
 
-
 @media (max-width: 480px) {
-  .do-card {
+  .doCard {
     width: 95%;
     padding: 25px;
   }
 
-  .do-label {
-    right: -25px;
+  .doLabel {
+    right: -30px;
     font-size: var(--fs-small);
     padding: 8px;
-    height: 60%;
+    height: 65%;
   }
 
-  .do-list-item {
+  .bloodIcon {
+    font-size: 1rem;
+  }
+
+  .doListItem {
     font-size: var(--fs-small);
     margin: 0.4rem 0;
   }

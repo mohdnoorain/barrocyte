@@ -1,13 +1,12 @@
 import React, { useState } from "react";
-import "./MedicalDevicesManufacturingServices.css";
-import "@/styles/globals.css";
+import styles from "./MedicalDevicesServicesSection.module.css";
 import Header from "@/components/header/Header";
 import OfferContainer from "@/components/offerContainer/OfferContainer";
 import ValidityInfo from "@/components/validityInfo/ValidityInfo";
 import ImportantDocuments from "@/components/importantDocuments.tsx/ImportantDocuments";
 import HowToApply from "@/components/howToApply/HowToApply";
 const MedicalDevicesManufacturingServices = () => {
-  
+
 
   const feeData = [
     {
@@ -155,23 +154,23 @@ const MedicalDevicesManufacturingServices = () => {
   ];
 
 
-  
-const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
 
-const toggleExpand = (index: number) => {
-  setExpandedIndex(expandedIndex === index ? null : index);
-};
+  const toggleExpand = (index: number) => {
+    setExpandedIndex(expandedIndex === index ? null : index);
+  };
 
   return (
     <section>
-      <div className="MedicalDevicesServicesSection">
+      <div className={styles.MedicalDevicesServicesSection}>
         <div className="container">
           <Header />
-          <h2 className="MedicalDevicesServicesTitle">
+          <h2 className={styles.MedicalDevicesServicesTitle}>
             Medical Device Manufacturing Service
           </h2>
-          <p className="MedicalDevicesServicesParagrapgh">
+          <p className={styles.MedicalDevicesServicesParagrapgh}>
             New regulations for manufacturing medical devices in India
             categorize devices into four classes: A, B, C, and D. Licensing
             authorities vary based on risk classification—Class A & B (low to
@@ -186,38 +185,37 @@ const toggleExpand = (index: number) => {
             licensing process and ensure compliance.
           </p>
         </div>
-        <div className="FormsContainer">
+
+        <div className={styles.FormsContainer}>
           <div className="container">
-            <h2 className="MedicalDevicesServicesTitle">
+            <h2 className={styles.MedicalDevicesServicesTitle}>
               Classification of Medical Device
             </h2>
-
-            <div className="imagesFormContainer">
-              <div className="imgContainer"></div>
+            <div className={styles.imagesFormContainer}>
+              <div className={styles.imgContainer}></div>
             </div>
           </div>
         </div>
 
-        <div className="FormsContainer">
+        <div className={styles.FormsContainer}>
           <div className="container">
-            <h2 className="MedicalDevicesServicesTitle">
+            <h2 className={styles.MedicalDevicesServicesTitle}>
               Manufacturing License for Medical Devices from SLA/CLAA
             </h2>
-            <div className="bigNotesContainer">
+            <div className={styles.bigNotesContainer}>
               {accordionData.map((item, index) => (
-                <div className="bigNotes" key={index}>
-                  <div className="bigNotesHeading">{item.title}</div>
+                <div className={styles.bigNotes} key={index}>
+                  <div className={styles.bigNotesHeading}>{item.title}</div>
                   <p
-                    className={`bigNotesParagraph ${
-                      expandedIndex === index ? "expanded" : ""
-                    }`}
+                    className={`${styles.bigNotesParagraph} ${expandedIndex === index ? styles.expanded : ""
+                      }`}
                   >
                     {expandedIndex === index
                       ? item.content
                       : item.content.slice(0, 500) + "..."}
                   </p>
                   <button
-                    className="readMoreButton"
+                    className={styles.readMoreButton}
                     onClick={() => toggleExpand(index)}
                   >
                     {expandedIndex === index ? "Read Less" : "Read More"}
@@ -228,12 +226,15 @@ const toggleExpand = (index: number) => {
           </div>
         </div>
 
-        <div className="FormsContainer howToApply">
+        <div className={`${styles.FormsContainer} ${styles.howToApply}`}>
           <div className="container">
             <HowToApply steps={steps} />
           </div>
         </div>
-        <div className="FormsContainer licenseFeesContainer">
+
+        <div
+          className={`${styles.FormsContainer} ${styles.licenseFeesContainer}`}
+        >
           <div className="container">
             <OfferContainer
               offerData={feeData}
@@ -241,7 +242,10 @@ const toggleExpand = (index: number) => {
             />
           </div>
         </div>
-        <div className="FormsContainer validityInfoContainer">
+
+        <div
+          className={`${styles.FormsContainer} ${styles.validityInfoContainer}`}
+        >
           <div className="container">
             <ValidityInfo
               title={validityData.title}
@@ -249,7 +253,10 @@ const toggleExpand = (index: number) => {
             />
           </div>
         </div>
-        <div className="FormsContainer importantDocumentsContainer">
+
+        <div
+          className={`${styles.FormsContainer} ${styles.importantDocumentsContainer}`}
+        >
           <div className="container">
             <ImportantDocuments
               title="Important Documents"

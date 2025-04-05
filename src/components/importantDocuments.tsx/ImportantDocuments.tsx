@@ -1,5 +1,5 @@
 import React from "react";
-import "./ImportantDocuments.css";
+import styles from "./ImportantDocuments.module.css";
 
 interface DocumentItem {
   icon: string;
@@ -16,13 +16,15 @@ const ImportantDocuments: React.FC<ImportantDocumentsProps> = ({
   documents,
 }) => {
   return (
-    <div className="documentsContainer">
-      <h2 className="documentsTitle">{title}</h2>
-      <div className="documentsGrid">
+    <div className={styles.documentsContainer}>
+      <h2 className={styles.documentsTitle}>{title}</h2>
+      <div className={styles.documentsGrid}>
         {documents.map((doc, index) => (
-          <div key={index} className="documentCard">
-            <span className="material-icons documentIcon">{doc.icon}</span>
-            <p className="documentLabel">{doc.label}</p>
+          <div key={index} className={styles.documentCard}>
+            <span className={`material-icons ${styles.documentIcon}`}>
+              {doc.icon}
+            </span>
+            <p className={styles.documentLabel}>{doc.label}</p>
           </div>
         ))}
       </div>

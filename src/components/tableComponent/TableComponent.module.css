@@ -1,4 +1,4 @@
-.table-container {
+.tableContainer {
   width: 100%;
   overflow-x: auto; /* Enable horizontal scrolling */
   padding: 20px;
@@ -11,7 +11,7 @@
 }
 
 /* Table Styling */
-.license-table {
+.licenseTable {
   width: 100%;
   color: var(--textDark);
   border-collapse: collapse;
@@ -21,7 +21,7 @@
 }
 
 /* Table Header - Floating Effect */
-.license-table thead {
+.licenseTable thead {
   position: sticky;
   top: -20px;
   z-index: 40;
@@ -29,7 +29,7 @@
 }
 
 /* Header Styling */
-.license-table th {
+.licenseTable th {
   font-weight: bold;
   text-transform: uppercase;
   padding: 14px;
@@ -39,7 +39,7 @@
 }
 
 /* Sliding Bottom Border */
-.license-table th::after {
+.licenseTable th::after {
   content: "";
   display: block;
   width: 100%;
@@ -49,12 +49,12 @@
   transition: transform 0.3s ease-in-out;
 }
 
-.license-table th:hover::after {
+.licenseTable th:hover::after {
   transform: scaleX(1);
 }
 
 /* Table Body */
-.license-table td {
+.licenseTable td {
   padding: 12px 16px;
   border-bottom: 1px solid #ddd;
   text-align: left;
@@ -62,68 +62,68 @@
 }
 
 /* Striped Rows */
-.license-table tbody tr:nth-child(even) {
+.licenseTable tbody tr:nth-child(even) {
   background-color: #f9f9f9;
 }
 
 /* Hover Effect with Glow */
-.license-table tbody tr:hover {
+.licenseTable tbody tr:hover {
   background: rgba(0, 123, 255, 0.1);
   box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.3);
   transition: 0.3s ease-in-out;
 }
 
 /* Scrollbar Styling */
-.table-container::-webkit-scrollbar {
+.tableContainer::-webkit-scrollbar {
   height: 8px;
   width: 8px;
 }
 
-.table-container::-webkit-scrollbar-track {
+.tableContainer::-webkit-scrollbar-track {
   background: #f1f1f1;
   border-radius: 10px;
 }
 
-.table-container::-webkit-scrollbar-thumb {
+.tableContainer::-webkit-scrollbar-thumb {
   background: linear-gradient(135deg, #b0b0b0, #e0e0e0); 
   border-radius: 10px;
 }
 
 /* Responsive Design */
 @media (max-width: 1200px) {
-  .license-table {
+  .licenseTable {
     font-size: 12px;
   }
-  .license-table th,
-  .license-table td {
+  .licenseTable th,
+  .licenseTable td {
     padding: 10px;
   }
 }
 
 @media (max-width: 767px) {
-  .table-container {
+  .tableContainer {
     padding: 10px;
     max-height: 400px;
   }
-  .license-table {
+  .licenseTable {
     font-size: 12px;
   }
-  .license-table th,
-  .license-table td {
+  .licenseTable th,
+  .licenseTable td {
     padding: 8px;
   }
 }
 
 @media (max-width: 480px) {
-  .table-container {
+  .tableContainer {
     padding: 5px;
     max-height: 300px;
   }
-  .license-table {
+  .licenseTable {
     font-size: 9px;
   }
-  .license-table th,
-  .license-table td {
+  .licenseTable th,
+  .licenseTable td {
     padding: 6px;
   }
 }

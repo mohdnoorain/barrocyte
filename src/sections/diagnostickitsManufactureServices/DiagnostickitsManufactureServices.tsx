@@ -1,46 +1,9 @@
 import React, { useState } from "react";
-import "./DiagnostickitsManufactureServices.css";
-import "@/styles/globals.css";
+import styles from "./DiagnostickitsManufactureServices.module.css";
 import Header from "@/components/header/Header";
-import OfferContainer from "@/components/offerContainer/OfferContainer";
-import ValidityInfo from "@/components/validityInfo/ValidityInfo";
-import ImportantDocuments from "@/components/importantDocuments.tsx/ImportantDocuments";
-import HowToApply from "@/components/howToApply/HowToApply";
+
 const DiagnostickitsManufactureServices = () => {
-  const feeData = [
-    {
-      icon: "discount",
-      title: "Fee Involved",
-      description:
-        "Medical device fees vary by risk class. Below is the fee structure for import licenses.",
-    },
-    {
-      icon: "discount",
-      title: "One site Rs5000",
-      description:
-        "Class A & B: Manufacturing license fee – ₹5,000/site, ₹100/product.",
-    },
-    {
-      icon: "discount",
-      title: "One site Rs5000",
-      description:
-        "Class C & D: Manufacturing license fee – ₹50,000/site, ₹1,000/product",
-    },
-  ];
 
-  const validityData = {
-    title: "Validity of Import License",
-    description:
-      "The manufacturing license issued on Form MD 5 or Form MD 9  remains valid in perpetuity i.e., permanently, as long as the payment of license retention fee is done from time to time, as specified in the Second Schedule. The license retention should be paid each time before completion of the period of 5 years from the date of issue of the license unless it is suspended or cancelled by the State Licensing Authority or Central Licensing Authority.",
-  };
-
-  const documentsData = [
-    { icon: "fact_check", label: "Quality Management System Plan" },
-    { icon: "menu_book", label: "Quality Manual" },
-    { icon: "rule", label: "SOP’s" },
-    { icon: "category", label: "Device Master File" },
-    { icon: "apartment", label: "Layout Plan" },
-  ];
 
   const accordionData = [
     {
@@ -139,58 +102,47 @@ The Central Licensing Authority will grant the test license in Form MD-13 or rej
 
   return (
     <section>
-      <div className="DiagnostickitsServices">
+      <div className={styles.DiagnostickitsServices}>
         <div className="container">
           <Header />
-          <h2 className="DiagnostickitsServicesTitle">
+          <h2 className={styles.DiagnostickitsServicesTitle}>
             Diagnostic Kits Manufacturing Service
           </h2>
-          <p className="DiagnostickitsServicesParagraph">
+          <p className={styles.DiagnostickitsServicesParagraph}>
             New Medical Device Rules, 2017 have defined distinct provisions to
-            obtain permission for manufacturing of diagnostic kits in India.
-            Different diagnostic kits have been classified under different
-            categories based upon their use, complexity and the risk involved.
-            Applications for Class A and Class B diagnostic kits are reviewed
-            and granted permission by the State Licensing Authorities. Whereas
-            applications for Class C and Class D medical devices are reviewed
-            and granted license by the Central Licensing Authority. This
-            difference is obviously due to the depth and scale of review
-            involved for different classes of diagnostic kits. CDSCO has also
-            defined different fees for different classes of diagnostic kits.
+            obtain permission for manufacturing of diagnostic kits in India...
           </p>
         </div>
-        <div className="FormsContainer">
+        <div className={styles.FormsContainer}>
           <div className="container">
-            <h2 className="DiagnostickitsServicesTitle">
+            <h2 className={styles.DiagnostickitsServicesTitle}>
               Classification of Diagnostic Kits
             </h2>
-
-            <div className="imagesFormContainer">
-              <div className="imgContainer"></div>
+            <div className={styles.imagesFormContainer}>
+              <div className={styles.imgContainer}></div>
             </div>
           </div>
         </div>
 
-        <div className="FormsContainer">
+        <div className={styles.FormsContainer}>
           <div className="container">
-            <h2 className="DiagnostickitsServicesTitle">
+            <h2 className={styles.DiagnostickitsServicesTitle}>
               Manufacturing License for IVD Kits from SLA/CLAA
             </h2>
-            <div className="bigNotesContainer">
+            <div className={styles.bigNotesContainer}>
               {accordionData.map((item, index) => (
-                <div className="bigNotes" key={index}>
-                  <div className="bigNotesHeading">{item.title}</div>
+                <div className={styles.bigNotes} key={index}>
+                  <div className={styles.bigNotesHeading}>{item.title}</div>
                   <p
-                    className={`bigNotesParagraph ${
-                      expandedIndex === index ? "expanded" : ""
-                    }`}
+                    className={`${styles.bigNotesParagraph} ${expandedIndex === index ? styles.expanded : ""
+                      }`}
                   >
                     {expandedIndex === index
                       ? item.content
                       : item.content.slice(0, 500) + "..."}
                   </p>
                   <button
-                    className="readMoreButton"
+                    className={styles.readMoreButton}
                     onClick={() => toggleExpand(index)}
                   >
                     {expandedIndex === index ? "Read Less" : "Read More"}

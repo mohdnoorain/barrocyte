@@ -1,16 +1,14 @@
 import Head from "next/head";
-import "./styles.css";
-import "./../styles/globals.css";
 
 import Main from "@/sections/main/Main";
 import SanitaryImportPermitService from "@/sections/sanitaryImportPermitService/SanitaryImportPermitService";
 import RegulatorySolutions from "@/sections/regulatorySolutions/RegulatorySolutions";
 import Header from "@/components/header/Header";
 import BloodBankServive from "@/sections/bloodBankService/BloodBankServive";
-import DrugsLicenseServices from "@/sections/drugs/DrugsLicenseServices";
+import DrugsLicenseServices from "@/sections/drugsLicenseServices/DrugsLicenseServices";
 import Footer from "@/sections/footer/Footer";
-
-
+import TestimonialSlider from "@/sections/testimonials/TestimonialSlider";
+import CustomClearanceServices from "@/sections/customClearanceServices/CustomClearanceServices";
 
 export default function Home() {
   return (
@@ -28,10 +26,12 @@ export default function Home() {
       <Header />
       <Main></Main>
       <RegulatorySolutions />
-      <DrugsLicenseServices/>
+      <DrugsLicenseServices />
       <BloodBankServive />
       <SanitaryImportPermitService />
-      <Footer/>
+      <CustomClearanceServices />
+      <TestimonialSlider />
+      <Footer />
     </>
   );
 }

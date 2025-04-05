@@ -1,6 +1,6 @@
 import React from "react";
-// import { licenseData, LicenseData } from "./data";
-import "./LicenseTable.css"; // Import CSS file in the same folder
+import styles from "./LicenseTable.module.css"; // Import CSS Module
+
 export interface LicenseData {
   category: string;
   saleType: string;
@@ -85,27 +85,29 @@ export const licenseData: LicenseData[] = [
 
 const LicenseTable: React.FC = () => {
   return (
-    <div className="table-container">
-      <table className="license-table">
-        <thead>
-          <tr>
-            <th>Category</th>
-            <th>Sale Type</th>
-            <th>Application Form</th>
-            <th>License Form</th>
-          </tr>
-        </thead>
-        <tbody>
-          {licenseData.map((item: LicenseData, index: number) => (
-            <tr key={index}>
-              <td>{item.category}</td>
-              <td>{item.saleType}</td>
-              <td>{item.applicationForm}</td>
-              <td>{item.licenseForm}</td>
+    <div className={styles.tableContainer}>
+      <div className={styles.tableWrapper}>
+        <table className={styles.styledTable}>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Sale Type</th>
+              <th>Application Form</th>
+              <th>License Form</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {licenseData.map((item: LicenseData, index: number) => (
+              <tr key={index}>
+                <td>{item.category}</td>
+                <td>{item.saleType}</td>
+                <td>{item.applicationForm}</td>
+                <td>{item.licenseForm}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };

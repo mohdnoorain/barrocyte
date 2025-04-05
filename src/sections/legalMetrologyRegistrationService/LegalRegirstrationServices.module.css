@@ -1,0 +1,272 @@
+.LegalRegirstrationServicesSection {
+  padding: 3em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  /* margin-top: 40px; */
+  background-color: #edf2fb;
+}
+
+.LegalRegirstrationServicesTitle {
+  font-size: var(--fs-2);
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 30px;
+ 
+  color: var(--primary);
+}
+
+.LegalRegirstrationServicesParagrapgh {
+  color: var(--textDark);
+   line-height: 1.6;
+}
+
+.FormsContainer {
+  padding-top: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+
+
+.licenseFeesContainer {
+  background-color: #f8f9fa;
+  padding-top: 3em;
+}
+
+.tableFormContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.tableContainer {
+  flex: 1;
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-top: var(--bs-gutter-y);
+}
+.importLicenseProcess {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.processContainer {
+  margin-top: 30px;
+}
+
+.imageTitle {
+  font-size: var(--fs-5);
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: var(--secondary);
+}
+.imageParagraph {
+  text-align: left;
+  line-height: 1.4;
+  color: var(--textDark);
+  font-size: var(--fs-regular);
+}
+
+.imageSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.imageBox {
+  flex: 1;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* Image Wrappers */
+.imageWrapper {
+  width: 100%;
+  height: 300px;
+  min-width: 400px;
+  max-width: 500px;
+  border-radius: 25px;
+  background-position: center;
+  background-size: contain; /* Ensure full image visibility */
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+
+/* Assign Background Images */
+.imageOne {
+  background-image: url("./../../../public/barrocyte-importer.png");
+}
+
+.imageTwo {
+  background-image: url("./../../../public/new-diagnostic-kit.png"); /* Change this to your second image */
+}
+.image3{
+   background-image: url("./../../../public/license-manufacturer.png");
+}
+.image4{
+   background-image: url("./../../../public/licesnse-dealer.png");
+}
+.image5{
+   background-image: url("./../../../public/model-approval-process.png");
+}
+.imagesFormContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgContainer {
+  width: 100%;
+  max-width: 400px; /* Ensures it doesn’t stretch too much */
+  /* height: auto; */
+  min-height: 400px; 
+  background-image: url("./../../../public/legal-metrology.png");
+  background-position: center;
+  background-size: contain; /* Ensures full image is visible */
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .imageSection {
+    flex-direction: column;
+  }
+  .imageBox {
+    min-width: 450px;
+  }
+ 
+}
+
+@media (max-width: 480px) {
+  .imageWrapper {
+    height: 200px;
+  }
+  .imageBox {
+    min-width: 250px;
+  }
+
+  .imageTitle {
+    font-size: var(--fs-regular);
+  }
+
+  .imageParagraph {
+    font-size: var(--fs-small);
+  }
+}
+.validityInfoContainer {
+  background: #dee2e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.importantDocumentsContainer {
+  background-color: #f8f9fa;
+}
+
+.TimeLineParagrapgh {
+  text-align: center;
+  color: var(--textDark);
+}
+
+/* responsive design  */
+
+@media (max-width: 991px) {
+  .tableContainer {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .tableFormContainer {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 992px) {
+  .tableContainer {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .imageSection {
+    flex-wrap: nowrap;
+  }
+  .imageWrapper {
+    width: 90%;
+  }
+  .imageBox {
+    min-width: 430px;
+  }
+  .imgContainer {
+    max-width: 90%;
+    min-height: 400px;
+  }
+}
+
+@media (min-width: 768px) {
+  .tableContainer {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .LegalRegirstrationServicesTitle {
+    font-size: var(--fs-3);
+  }
+  .licensingFormContainer {
+    gap: 20px;
+  }
+}
+
+@media (min-width: 576px) {
+  .tableContainer {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .LegalRegirstrationServicesTitle {
+    font-size: var(--fs-4);
+  }
+
+  .LegalRegirstrationServicesParagrapgh {
+    font-size: var(--fs-small);
+  }
+  .TimeLineParagrapgh {
+    font-size: var(--fs-regular);
+  }
+  .imgContainer {
+    max-width: 100%;
+    min-height: 200px;
+  }
+  .imageWrapper {
+  min-width: 300px;
+  }
+}

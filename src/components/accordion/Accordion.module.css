@@ -33,14 +33,14 @@
   padding: 15px;
   font-size: 18px;
   font-weight: bold;
-  color: #1a7431;
-  background: #b7efc5;
+  color:var(--textDark);
+  background: #e1ecf7;
   border: 1px solid #ddd;
   transition: background 0.3s;
 }
 
 .accordionItem.active .accordionHeader {
-  background: #1a7431;
+  background: #0f4c81;
   color: white;
 }
 
@@ -55,7 +55,7 @@
 
 .accordionContent {
   overflow: hidden;
-  background: #6ede8a;
+  background: #cce5ff;
   border: 1px solid #ddd;
   box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
