@@ -37,28 +37,39 @@ export default function SanitaryImportPermitService() {
   return (
     <section>
       <div className={styles.sanitaryImportPermitServiceSection}>
-        <div className="container">
-          <h2 className={styles.sanitaryImportPermitServiceTitle}>
-            Sanitary Import Permit (SIP)
-          </h2>
-          <p className={styles.sanitaryImportPermitServiceParagraph}>
-            Import of meat and meat products of any kind including fresh,
-            chilled and frozen meat, tissue or organs of poultry, sheep, goat;
-            egg & egg powder; milk & milk products; bovine, ovine and caprine
-            embryos, ova or semen; and pet food products of animal origin
-            requires Sanitary Import Permit (SIP) from the Department of Animal
-            Husbandry, Dairying and Fisheries (DAHDF). Sanitary Import Permit
-            (SIP) is a certificate stating the sanitary conditions listed by the
-            Government of India for the importation of livestock and livestock
-            products. It is not a license but a document that informs exporting
-            countries to follow the sanitary conditions listed under the
-            Livestock Importation Act. Traders can import the animal and animal
-            products from the exporting country only through the seaports or
-            airports of Bangalore, Chennai, Delhi, Hyderabad, Kolkata and
-            Mumbai. We at Barrocyte assist you in getting the Sanitary Import
-            Permit (SIP) in the stipulated time manner.
-          </p>
+        <div className={`${styles.FormsContainer} ${styles.howToApply}`}>
+          <div className="container">
+            <h2 className={styles.sanitaryImportPermitServiceTitle}>
+              Sanitary Import Permit (SIP)
+            </h2>
+            <div className={styles.imageSection}>
+              <div className={styles.tableContainer}>
+                <div className="animate__animated animate__bounce">
+                  <h3 className={styles.mainTitle}>Sanitary Import Permit</h3>
+                </div>
+
+                <p className={styles.imageParagraph}>
+                  Sanitary Import Permit (SIP) is a certificate stating the
+                  sanitary conditions listed by the Government of India for the
+                  importation of livestock and livestock products. It is not a
+                  license but a document that informs exporting countries to
+                  follow the sanitary conditions listed under the Livestock
+                  Importation Act. Traders can import the animal and animal
+                  products from the exporting country only through the seaports
+                  or airports of Bangalore, Chennai, Delhi, Hyderabad, Kolkata
+                  and Mumbai. We at Barrocyte assist you in getting the Sanitary
+                  Import Permit (SIP) in the stipulated time manner.
+                </p>
+              </div>
+              <div className={styles.imageBox}>
+                <div
+                  className={`${styles.imageWrapper} ${styles.image3}`}
+                ></div>
+              </div>
+            </div>
+          </div>
         </div>
+
         <div className={styles.sanitaryImportPermitServiceGuidelinesContainer}>
           <div className="container">
             <h2 className={styles.sanitaryImportPermitServiceTitle}>
@@ -85,11 +96,12 @@ export default function SanitaryImportPermitService() {
             </div>
           </div>
         </div>
-        <div
-          className={styles.sanitaryImportPermitServiceGuidelinesContainer}
-        >
+        <div className={styles.sanitaryImportPermitServiceGuidelinesContainer}>
           <div className="container">
-            <ValidityInfo title={validityData.title} description={validityData.content}/>
+            <ValidityInfo
+              title={validityData.title}
+              description={validityData.content}
+            />
           </div>
         </div>
       </div>

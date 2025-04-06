@@ -48,26 +48,36 @@ const DrugsLicenseServices: React.FC = () => {
   return (
     <section>
       <div className={styles.drugsLicenseServiceSection}>
-        <div className="container">
-          <h2 className={styles.drugsLicenseServiceTitle}>
-            Drugs License Service
-          </h2>
-          <p className={styles.drugsLicenseServiceParagraph}>
-            Ensuring fair and equal access to medicines is a primary government
-            concern, but selling drugs requires strict licensing. To regulate
-            this, the government enforces stringent rules for granting drug
-            licenses. At Barrocyte, we assist businesses in obtaining a
-            hassle-free Drug License within the stipulated timeline, ensuring
-            compliance with legal requirements.
-            <br />
-            As per Section 3(b) of the Drugs and Cosmetics Act, 1940, a “drug”
-            includes all medicines and medical devices used for humans and
-            animals, both internally and externally. It also covers substances
-            used for diagnosis, treatment, or disease prevention, insect
-            repellents, pest control substances, and essential components like
-            gelatine capsules.
-          </p>
+        <div className={`${styles.FormsContainer} ${styles.howToApply}`}>
+          <div className="container">
+            <h2 className={styles.drugsLicenseServiceTitle}>
+              Drugs License Service
+            </h2>
+            <div className={styles.imageSection}>
+              <div className={styles.tableContainer}>
+                <div className="animate__animated animate__bounce">
+                  <h3 className={styles.mainTitle}>Drugs License</h3>
+                </div>
+
+                <p className={styles.imageParagraph}>
+                  Ensuring everyone has equal and fair access to drugs and
+                  medicine is the primary concern of government. But the right
+                  to sell drugs and medicines has to be given cautiously. Hence
+                  the government has stringent rules for granting licenses for
+                  the selling of drugs and medicine. We at Barrocyte assist in
+                  getting hustle free grant of Drug License in the stipulated
+                  time line.
+                </p>
+              </div>
+              <div className={styles.imageBox}>
+                <div
+                  className={`${styles.imageWrapper} ${styles.image3}`}
+                ></div>
+              </div>
+            </div>
+          </div>
         </div>
+
         <div className={styles.drugsType}>
           <div className="container">
             <h2 className={styles.drugsLicenseServiceTitle}>
@@ -75,6 +85,9 @@ const DrugsLicenseServices: React.FC = () => {
             </h2>
             <div className={styles.drugsInnnercontainer}>
               <div className={styles.drugsAccordionContainer}>
+                <h3 className={styles.imageTitle}>
+                  Overview of Drug Licensing in India
+                </h3>
                 {drugLicenseAccordionData.map((item, index) => (
                   <Accordion
                     key={index}
@@ -86,6 +99,7 @@ const DrugsLicenseServices: React.FC = () => {
                 ))}
               </div>
               <div className={styles.drugsTypeContainer}>
+                <h3 className={styles.imageTitle}>Forms for Application</h3>
                 <LicenseTable />
               </div>
             </div>
