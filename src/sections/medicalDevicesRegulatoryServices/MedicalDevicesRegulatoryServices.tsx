@@ -1,7 +1,6 @@
 import React from "react";
-import styles from "./MedicalDevicesServicesSection.module.css";
+import styles from "./MedicalDevicesRegulatoryServices.module.css";
 import TableComponent from "@/components/tableComponent/TableComponent";
-import Header from "@/components/header/Header";
 import OfferContainer from "@/components/offerContainer/OfferContainer";
 import ValidityInfo from "@/components/validityInfo/ValidityInfo";
 import ImportantDocuments from "@/components/importantDocuments.tsx/ImportantDocuments";
@@ -166,26 +165,41 @@ const MedicalDevicesRegulatoryServices = () => {
   return (
     <section>
       <div className={styles.MedicalDevicesServicesSection}>
-        <div className="container">
-          <Header />
-          <h2 className={styles.MedicalDevicesServicesTitle}>
-            Medical Device Regulatory Service
-          </h2>
-          <p className={styles.MedicalDevicesServicesParagrapgh}>
-            Medical devices are regulated by the Indian Government, categorized
-            into A, B, C, and D classes based on risk, with licensing governed
-            by central and state authorities.
-            <br />
-            The government has streamlined the application process through the
-            SUGAM portal, making it faster and more efficient. For imports, an
-            authorized Indian agent is required to apply for the license. We
-            assist clients with medical device licensing and application
-            procedures, ensuring a smooth and compliant process.
-          </p>
+        <div className={styles.FormsContainer}>
+          <div className="container">
+            <div className={styles.imageSection}>
+              <div className={styles.tableContainer}>
+                <div className="animate__animated animate__bounce">
+                  <h3 className={styles.mainTitle}>
+                    Medical Device Regulatory
+                  </h3>
+                </div>
+
+                <p className={styles.imageParagraph}>
+                  <b>Medical devices</b> are closely regulated by the Indian
+                  Government due to their growing demand and evolving
+                  technology. Devices are classified into Classes A, B, C, and D
+                  based on risk levels and are overseen by central and state
+                  authorities. The licensing process is simplified based on
+                  these classifications. For imports, an authorized Indian agent
+                  can apply for the necessary licenses as per government
+                  guidelines.
+                </p>
+              </div>
+              <div className={styles.imageBox}>
+                <div
+                  className={`${styles.imageWrapper} ${styles.image3}`}
+                ></div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className={styles.FormsContainer}>
           <div className="container">
+            <h2 className={styles.MedicalDevicesServicesTitle}>
+              Medical Device Regulatory Service
+            </h2>
             <div className={styles.imageSection}>
               <div className={styles.imageBox}>
                 <div
@@ -197,10 +211,12 @@ const MedicalDevicesRegulatoryServices = () => {
                   NEW DEVICE- FIRST TIME IN INDIA
                 </h3>
                 <p className={styles.imageParagraph}>
-                  As per government rules, a medical device which itself or its
-                  predicate hasn’t yet been included in the medical devices list
-                  of CDSCO (Central Drugs Standard Control Organization) is
-                  considered a new medical device...
+                  A medical device which itself or its predicate hasn’t yet been
+                  included in the medical devices list of CDSCO (Central Drugs
+                  Standard Control Organization) is considered a new medical
+                  device. Moreover, already registered devices vying to apply
+                  for new claims with respect to different implementation
+                  factors will also be treated as new devices
                 </p>
               </div>
             </div>
@@ -215,8 +231,12 @@ const MedicalDevicesRegulatoryServices = () => {
                   MEDICAL DEVICE CLASSIFICATION
                 </h3>
                 <p className={styles.imageParagraph}>
-                  Medical device has been classified into A, B, C, and D
-                  categories...
+                  Medical device has been classified into A, B, C and D
+                  categories depending upon the risk involved increases from A
+                  to D. Low risk devices like Thermometers and Blood Pressure
+                  Monitors whereas high risk devices include pacemakers, heart
+                  valves and others. License for class A devices is easy to
+                  obtain permissions as compared to class D devices.
                 </p>
               </div>
               <div className={styles.imageBox}>
@@ -228,7 +248,9 @@ const MedicalDevicesRegulatoryServices = () => {
           </div>
         </div>
 
-        <div className={styles.FormsContainer}>
+        <div
+          className={`${styles.FormsContainer} ${styles.licenseFeesContainer}`}
+        >
           <div className="container">
             <h2 className={styles.MedicalDevicesServicesTitle}>
               Medical Device Licensing Forms

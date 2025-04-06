@@ -5,7 +5,6 @@
   align-items: center;
   flex-direction: column;
   width: 100%;
-  margin-top: 40px;
 }
 
 .DiagnostickitsServicesTitle {
@@ -18,7 +17,7 @@
 
 .DiagnostickitsServicesParagraph {
   color: var(--textDark);
-  line-height: 1.6 ;
+  line-height: 1.6;
 }
 
 .FormsContainer {
@@ -42,6 +41,33 @@
 }
 
 
+.imagesFormContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.mainTitle {
+  font-weight: 600;
+  font-size: var(--fs-2);
+  font-family: var(--headingFF);
+  color: var(--black);
+  margin-bottom: 20px;
+}
+
+.imageParagraph {
+  text-align: left;
+  line-height: 1.4;
+  color: var(--textDark);
+}
 
 .tableContainer {
   flex: 1;
@@ -50,11 +76,18 @@
   padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-top: var(--bs-gutter-y);
 }
-.imagesFormContainer{
+
+.imageBox {
+  flex: 1;
+  min-width: 550px;
+  max-width: 500px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 10px;
 }
+
 .imgContainer {
   width: 100%;
   max-width: 600px; /* Ensures it doesn’t stretch too much */
@@ -68,6 +101,19 @@
   align-items: center;
   justify-content: center;
   border-radius: 10px;
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 300px;
+  background-position: center;
+  background-size: contain; /* Ensure full image visibility */
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+
+.image3{
+   background-image: url("./../../../public/medical-devices-regulatory.png");
 }
 .validityInfoContainer {
   background: #dee2e6;
@@ -104,8 +150,6 @@
   transition: transform 0.3s ease-in-out;
 }
 
-
-
 .bigNotesHeading {
   margin-bottom: 15px;
   text-align: center;
@@ -124,7 +168,7 @@
 }
 
 .bigNotesParagraph.expanded {
-    max-height: 1000px; /* Expand smoothly */
+  max-height: 1000px; /* Expand smoothly */
 }
 
 .readMoreButton {
@@ -164,6 +208,16 @@
     flex: 0 0 50%;
     max-width: 50%;
   }
+
+  .imageSection {
+    flex-wrap: nowrap;
+  }
+  .imageWrapper {
+    width: 90%;
+  }
+  .imageBox {
+    min-width: 430px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -184,6 +238,19 @@
   .imgContainer {
     max-width: 90%;
     min-height: 450px;
+  }
+
+  .imageSection {
+    flex-direction: column;
+  }
+  .imageBox {
+    min-width: 450px;
+  }
+  .imageWrapper {
+    height: 250px;
+  }
+    .mainTitle {
+    font-size: var(--fs-3);
   }
 }
 
@@ -213,6 +280,26 @@
     font-size: var(--fs-7);
   }
   .bigNotesParagraph {
+    font-size: var(--fs-small);
+  }
+   .mainTitle {
+    font-size: var(--fs-4);
+  }
+}
+
+@media (max-width: 480px) {
+  .imageWrapper {
+    height: 200px;
+  }
+  .imageBox {
+    min-width: 250px;
+  }
+
+  .imageTitle {
+    font-size: var(--fs-regular);
+  }
+
+  .imageParagraph {
     font-size: var(--fs-small);
   }
 }
