@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./DiagnostickitsManufactureServices.module.css";
-import Header from "@/components/header/Header";
+
 
 const DiagnostickitsManufactureServices = () => {
 

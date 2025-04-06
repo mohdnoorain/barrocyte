@@ -8,31 +8,43 @@ const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
+ useEffect(() => {
+   const handleScroll = () => {
+     if (window.innerWidth > 700) {
+       setIsScrolled(window.scrollY > 50);
+     } else {
+       setIsScrolled(true);
+     }
+   };
+
+   const handleClickOutside = (event: MouseEvent) => {
+     if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+       setIsMobileMenuOpen(false);
+     }
+   };
+
+   window.addEventListener("scroll", handleScroll);
+   window.addEventListener("resize", handleScroll);
+   document.addEventListener("mousedown", handleClickOutside);
+   handleScroll(); // Initial check
+
+   return () => {
+     window.removeEventListener("scroll", handleScroll);
+     window.removeEventListener("resize", handleScroll);
+     document.removeEventListener("mousedown", handleClickOutside);
+   };
+ }, []);
+
+
+  const [isVibrating, setIsVibrating] = useState(false);
+
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.innerWidth > 500) {
-        setIsScrolled(window.scrollY > 50);
-      } else {
-        setIsScrolled(true);
-      }
-    };
+    const interval = setInterval(() => {
+      setIsVibrating(true);
+      setTimeout(() => setIsVibrating(false), 500); // Vibrate for 0.5s
+    }, 2000); // Every 2 seconds
 
-    const handleClickOutside = (event: MouseEvent) => {
-      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
-        setIsMobileMenuOpen(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    window.addEventListener("resize", handleScroll);
-    document.addEventListener("mousedown", handleClickOutside);
-    handleScroll(); // Initial check
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", handleScroll);
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -42,34 +54,25 @@ const Header: React.FC = () => {
     >
       <div className={`${styles["nav-container"]} container`}>
         <div className={styles.logo}>Barro.</div>
-
-        {/* Mobile Menu Button */}
-        <button
-          className={styles["menu-button"]}
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          {isMobileMenuOpen ? "✖" : "☰"}
-        </button>
-
-        {/* Navigation Links */}
         <ul
           className={`${styles["nav-links"]} ${
             isMobileMenuOpen ? styles.open : ""
           }`}
         >
           <li>
-            <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link href="/about" onClick={() => setIsMobileMenuOpen(false)}>
-              About
-            </Link>
-          </li>
-          <li>
-            <Link href="/services" onClick={() => setIsMobileMenuOpen(false)}>
-              Services
+            <Link
+              href="/about"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className={styles.phoneContainer}
+            >
+              <span
+                className={`material-icons ${styles.icon} ${
+                  isVibrating ? styles.vibrate : ""
+                }`}
+              >
+                phone
+              </span>
+              +91-9266665237
             </Link>
           </li>
         </ul>

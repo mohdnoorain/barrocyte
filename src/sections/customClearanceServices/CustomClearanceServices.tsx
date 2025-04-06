@@ -73,42 +73,39 @@ const CustomClearanceServices = () => {
     <>
       <section>
         <div className={styles.CustomClearanceServicesSection}>
-          <div className={styles.FormsContainer}>
+          <div className={`${styles.FormsContainer} ${styles.howToApply}`}>
             <div className="container">
               <h2 className={styles.CustomClearanceServicesTitle}>
                 Custom Clearance Services
               </h2>
-              <p className={styles.CustomClearanceServicesParagrapgh}>
-                All of the items imported into the country have to be custom
-                cleared. This applies to the items brought in as personal
-                effects and also imported by trade and business establishments
-                including governmental and private sectors. Necessary stipulated
-                duties would have to be paid before the goods are released by
-                Customs.
-                <br />
-                Cargo imported into the country from any point of entry is
-                warehoused at Customs bonded area under customs jurisdiction
-                until it is released after clearance.
-                <br />
-                Customs clearance work involves preparation and submission of
-                documentations required to facilitate export or imports into the
-                country, representing client during customs examination,
-                assessment, payment of duty and co taking delivery of cargo from
-                customs after clearance along with documents.
-                <br />
-                <b> Barrocyte Consultants</b>, will assist you in Custom
-                Clearance Services and safely delivery of your consignment to
-                your warehouse.
-                <br />
-                <br />
-                <b> Barrocyte Consultants</b> handles all trade compliance and
-                processes on your behalf so you can focus on growing your
-                business. Our goodwill and clean business policies help us
-                ensure speedy clearance of consignments which have arrived by
-                air, sea and land.
-              </p>
+              <div className={styles.imageSection}>
+                <div className={styles.tableContainer}>
+                  <div className="animate__animated animate__bounce">
+                    <h3 className={styles.mainTitle}>Custom Clearance</h3>
+                  </div>
+
+                  <p className={styles.imageParagraph}>
+                    All imported items—whether personal or commercial—must
+                    undergo customs clearance, with applicable duties paid
+                    before release. Imported cargo is held in customs-bonded
+                    areas until cleared. The process includes documentation,
+                    duty assessment, and cargo delivery.
+                    <br />
+                    <b>Barrocyte Consultants</b>
+                    ensures smooth and speedy customs clearance for consignments
+                    arriving by air, sea, or land, handling all trade compliance
+                    so you can focus on growing your business.
+                  </p>
+                </div>
+                <div className={styles.imageBox}>
+                  <div
+                    className={`${styles.imageWrapper} ${styles.image3}`}
+                  ></div>
+                </div>
+              </div>
             </div>
           </div>
+        
           <div className={styles.FormsContainer}>
             <div className="container">
               <h2 className={styles.CustomClearanceServicesTitle}>

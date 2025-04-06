@@ -5,19 +5,14 @@ const footerData = {
   quickLinks: [
     { href: "/", label: "Home" },
     { href: "/about", label: "About Us" },
-    { href: "/services", label: "Our Services" },
-    { href: "/contact", label: "Contact" },
+    { href: "/", label: "Our Services" },
   ],
   services: [
     { href: "/medicalDeviceServices", label: "Medical Device Service" },
     { href: "/diagnosticKitsServices", label: "Diagnostic Kits" },
     { href: "/cosmeticsService", label: "Cosmetics Service" },
     { href: "/drugsService", label: "Drugs Service" },
-    { href: "/", label: "Blood Banks Service" },
-    { href: "/tradingLicenseServices", label: "Trading License Service" },
     { href: "/legalMetrologyServices", label: "Legal Metrology Service" },
-    { href: "/customClearanceServices", label: "Custom Clearance Service" },
-    { href: "/", label: "Sanitary Import Permit Service" },
   ],
 };
 

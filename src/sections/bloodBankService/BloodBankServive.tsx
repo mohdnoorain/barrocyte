@@ -37,20 +37,34 @@ export default function BloodBankServive() {
   return (
     <section>
       <div className={styles.bloodBankServiceSection}>
-        <div className="container">
-          <h2 className={styles.bloodBankServiceTitle}> Blood Bank Service</h2>
-          <p className={styles.bloodBankServiceParagrapgh}>
-            Blood Transfusion Services are crucial to healthcare, with no
-            substitute for human blood. Advancements in transfusion technology
-            demand strict quality control. Many countries have well-regulated
-            blood banking systems, with some delegating management to NGOs like
-            the Red Cross. The Indian government, through the Drugs Controller
-            General, enforces stringent regulations under the Drugs & Cosmetics
-            Act, ensuring safe collection, storage, testing, and distribution.
-            Following a Supreme Court directive, amendments are being made to
-            strengthen these laws. As consultants, we assist clients in
-            obtaining blood bank licenses and regulatory approvals.
-          </p>
+        <div className={`${styles.FormsContainer} ${styles.howToApply}`}>
+          <div className="container">
+            <h2 className={styles.bloodBankServiceTitle}>Blood Bank Service</h2>
+            <div className={styles.imageSection}>
+              <div className={styles.tableContainer}>
+                <div className="animate__animated animate__bounce">
+                  <h3 className={styles.mainTitle}>Blood Bank</h3>
+                </div>
+
+                <p className={styles.imageParagraph}>
+                  Blood Transfusion Service is a crucial part of the National
+                  Health Service, with no substitute for human blood and its
+                  components. Advancements in transfusion technology have led to
+                  stricter quality control of blood and its products. While some
+                  countries delegate the management of blood transfusion
+                  services to NGOs like the Red Cross, the government remains
+                  responsible for ensuring high standards. Formulating a
+                  national blood policy with proper regulations is essential to
+                  maintain safe and effective services.
+                </p>
+              </div>
+              <div className={styles.imageBox}>
+                <div
+                  className={`${styles.imageWrapper} ${styles.image3}`}
+                ></div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className={styles.bloodBankLicensingContainer}>

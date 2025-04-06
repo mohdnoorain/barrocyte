@@ -103,3 +103,123 @@
     gap: 30px;
   }
 }
+
+
+.imageSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.tableContainer {
+  flex: 1;
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-top: var(--bs-gutter-y);
+}
+
+.mainTitle {
+  font-weight: 600;
+  font-size: var(--fs-2);
+  font-family: var(--headingFF);
+  color: rgb(239, 35, 60);
+  margin-bottom: 20px;
+}
+
+.imageParagraph {
+  text-align: left;
+  line-height: 1.4;
+  color: var(--textDark);
+}
+
+.imageBox {
+  flex: 1;
+  min-width: 550px;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 300px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+
+.image3 {
+  background-image: url("./../../../public/blood-bank.png");
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+  .tableContainer {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .tableContainer {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .imageSection {
+    flex-wrap: nowrap;
+  }
+
+  .imageWrapper {
+    width: 90%;
+  }
+
+  .imageBox {
+    min-width: 430px;
+  }
+}
+
+@media (max-width: 768px) {
+  .imageSection {
+    flex-direction: column;
+  }
+
+  .imageBox {
+    min-width: 450px;
+  }
+
+  .imageWrapper {
+    height: 250px;
+  }
+
+  .mainTitle {
+    font-size: var(--fs-3);
+  }
+}
+
+@media (max-width: 576px) {
+  .mainTitle {
+    font-size: var(--fs-4);
+  }
+
+  .imageParagraph {
+    font-size: var(--fs-small);
+  }
+}
+
+@media (max-width: 480px) {
+  .imageWrapper {
+    height: 200px;
+  }
+
+  .imageBox {
+    min-width: 250px;
+  }
+}
