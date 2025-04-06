@@ -12,6 +12,7 @@
   font-size: var(--fs-2);
   font-weight: 600;
   text-align: center;
+  font-family: var(--headingFF);
   margin-bottom: 30px;
   color: #333;
 }
@@ -204,6 +205,9 @@
   .bigNotes {
     width: 100%;
   }
+  .mainTitle {
+    display: none;
+  }
 }
 
 @media (min-width: 992px) {
@@ -298,6 +302,7 @@
 
   .imageTitle {
     font-size: var(--fs-regular);
+    font-family: var(--headingFF);
   }
 
   .imageParagraph {

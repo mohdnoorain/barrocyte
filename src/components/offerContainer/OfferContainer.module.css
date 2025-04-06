@@ -3,12 +3,14 @@
   letter-spacing: 3px;
   text-align: center;
   margin-bottom: 1em;
+  font-family: var(--headingFF);
 }
 
 .headingLicenseFees {
   font-size: var(--fs-2);
   font-weight: 700;
   text-align: center;
+  font-family: var(--headingFF);
 }
 
 .feeContainer {
@@ -46,6 +48,7 @@
   font-size: var(--fs-5);
   margin-bottom: 10px;
   font-weight: 700;
+  font-family: var(--headingFF);
 }
 
 .offerParagraph {
@@ -68,6 +71,7 @@
 
 @media (max-width: 768px) {
   .MedicalDevicesServicesTitle {
+    font-family: var(--headingFF);
     font-size: var(--fs-3);
   }
   .feeContainer {

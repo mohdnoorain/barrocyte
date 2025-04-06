@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color : #eee4e1;
+  background-color: #eee4e1;
   width: 100%;
 }
 
@@ -24,6 +24,7 @@
 .sanitaryImportPermitServiceTitle {
   font-size: var(--fs-2);
   font-weight: 600;
+  font-family: var(--headingFF);
   text-align: center;
   margin-bottom: 30px;
   color: #333;
@@ -48,6 +49,13 @@
   margin-right: calc(-0.5 * var(--bs-gutter-x));
   margin-left: calc(-0.5 * var(--bs-gutter-x));
 }
+.imageTitle {
+  font-size: var(--fs-5);
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: var(--headingFF);
+  font-weight: 700;
+}
 
 .SipContainer,
 .ImageContainer {
@@ -62,6 +70,9 @@
 @media (max-width: 768px) {
   .sanitaryImportPermitServiceTitle {
     font-size: var(--fs-3);
+  }
+  .imageTitle {
+    font-size: var(--fs-regular);
   }
 }
 
@@ -88,6 +99,7 @@
     flex: 0 0 auto;
     width: 100%;
   }
+  
 }
 
 @media (min-width: 992px) {
@@ -114,7 +126,6 @@
   margin-top: 10px;
   border-radius: 8px;
 }
-
 
 .imageSection {
   display: flex;
@@ -175,6 +186,10 @@
   .tableContainer {
     flex: 0 0 100%;
     max-width: 100%;
+  }
+
+  .mainTitle {
+    display: none;
   }
 }
 

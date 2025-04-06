@@ -13,6 +13,7 @@
   text-align: center;
   margin-bottom: 30px;
   color: #333;
+  font-family: var(--headingFF);
 }
 
 .DiagnostickitsServicesParagraph {
@@ -201,6 +202,9 @@
   .bigNotes {
     width: 100%;
   }
+  .mainTitle {
+    display: none;
+  }
 }
 
 @media (min-width: 992px) {
@@ -297,6 +301,7 @@
 
   .imageTitle {
     font-size: var(--fs-regular);
+    font-family: var(--headingFF);
   }
 
   .imageParagraph {

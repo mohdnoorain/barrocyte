@@ -215,6 +215,7 @@ const MedicalDevicesManufacturingServices = () => {
               Manufacturing License for Medical Devices from SLA/CLAA
             </h2>
             <div className={styles.bigNotesContainer}>
+              
               {accordionData.map((item, index) => (
                 <div className={styles.bigNotes} key={index}>
                   <div className={styles.bigNotesHeading}>{item.title}</div>

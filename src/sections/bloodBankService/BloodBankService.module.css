@@ -12,6 +12,7 @@
   font-size: var(--fs-2);
   font-weight: 600;
   text-align: center;
+  font-family: var(--headingFF);
   margin-bottom: 30px;
   color: #c30011;
 }
@@ -104,7 +105,6 @@
   }
 }
 
-
 .imageSection {
   display: flex;
   flex-wrap: wrap;
@@ -164,6 +164,9 @@
   .tableContainer {
     flex: 0 0 100%;
     max-width: 100%;
+  }
+  .mainTitle {
+    display: none;
   }
 }
 
