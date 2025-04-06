@@ -295,13 +295,15 @@ const DiagnosticRegulatoryKitsServices = () => {
           <div
             className={`${styles.FormsContainer} ${styles.TimeLineContainer}`}
           >
-            <h3 className={styles.diagnosticRegulatoryKitsServicesTitle}>
-              Timeline to Obtain Form MD-15 from CDSCO
-            </h3>
-            <p className={styles.TimeLineParagrapgh}>
-              The Government Timeline for Import License Form 15 for in-vitro
-              Diagnostic kits is 6-9 months.
-            </p>
+            <div className="container">
+              <h3 className={styles.diagnosticRegulatoryKitsServicesTitle}>
+                Timeline to Obtain Form MD-15 from CDSCO
+              </h3>
+              <p className={styles.TimeLineParagrapgh}>
+                The Government Timeline for Import License Form 15 for in-vitro
+                Diagnostic kits is 6-9 months.
+              </p>
+            </div>
           </div>
         </div>
       </section>

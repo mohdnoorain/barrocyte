@@ -1,7 +1,6 @@
 import RegulatoryCard from "@/components/regulatoryCard/RegulatoryCard";
 import styles from "./RegulatorySolution.module.css";
 
-
 const regulatorySolutions = [
   {
     title: "Medical Device",
@@ -15,7 +14,6 @@ const regulatorySolutions = [
     color: "#d61b5b",
     link: "/diagnosticKitsServices",
   },
-  { title: "Cosmetics", icon: "spa", color: "#f5b800", link: "/cosmetics" },
   { title: "Drugs", icon: "science", color: "#4a4a4a", link: "/drugsService" },
   {
     title: "Blood Banks",
@@ -23,12 +21,7 @@ const regulatorySolutions = [
     color: "#0f495f",
     link: "/blood-banks",
   },
-  {
-    title: "Trading License",
-    icon: "business_center",
-    color: "#f5b800",
-    link: "/trading-license",
-  },
+
   {
     title: "Legal Metrology",
     icon: "gavel",
@@ -53,7 +46,7 @@ export default function RegulatorySolutions() {
   return (
     <section>
       <div className={styles.regulatorySection}>
-       <div className="container">
+        <div className="container">
           <h1 className={styles.regulatoryTitle}>Our Regulatory Solution</h1>
           <div className={styles.regulatoryGrid}>
             {regulatorySolutions.map((solution, index) => (

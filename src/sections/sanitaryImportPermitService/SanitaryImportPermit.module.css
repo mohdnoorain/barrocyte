@@ -72,7 +72,7 @@
     font-size: var(--fs-3);
   }
   .imageTitle {
-    font-size: var(--fs-regular);
+   font-size: var(--fs-large);
   }
 }
 

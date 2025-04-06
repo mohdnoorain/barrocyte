@@ -155,7 +155,7 @@
   }
 
   .imageTitle {
-    font-size: var(--fs-regular);
+    font-size: var(--fs-large);
   }
 
   .imageParagraph {

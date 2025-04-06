@@ -300,7 +300,7 @@
   }
 
   .imageTitle {
-    font-size: var(--fs-regular);
+    font-size: var(--fs-large);
     font-family: var(--headingFF);
   }
 
