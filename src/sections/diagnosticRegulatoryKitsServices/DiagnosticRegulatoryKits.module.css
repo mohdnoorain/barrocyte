@@ -80,7 +80,6 @@
   font-family: var(--headingFF);
   color: var(--black);
   margin-bottom: 20px;
-  /* text-align: center; */
 }
 .imageParagraph {
   text-align: left;

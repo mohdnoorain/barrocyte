@@ -165,25 +165,37 @@ const MedicalDevicesManufacturingServices = () => {
   return (
     <section>
       <div className={styles.MedicalDevicesServicesSection}>
-        <div className="container">
-          <Header />
-          <h2 className={styles.MedicalDevicesServicesTitle}>
-            Medical Device Manufacturing Service
-          </h2>
-          <p className={styles.MedicalDevicesServicesParagrapgh}>
-            New regulations for manufacturing medical devices in India
-            categorize devices into four classes: A, B, C, and D. Licensing
-            authorities vary based on risk classification—Class A & B (low to
-            moderate risk) require approval from the State Licensing Authority,
-            while Class C & D (high to very high risk) are regulated by the
-            Central Licensing Authority.
-            <br />
-            As per the New Medical Rules 2017, manufacturers must apply for a
-            license with CDSCO before selling or distributing medical devices.
-            CDSCO has predefined application fees for different categories.
-            Barrocyte Consultants offers expert guidance to streamline the
-            licensing process and ensure compliance.
-          </p>
+        <div className={`${styles.FormsContainer} ${styles.howToApply}`}>
+          <div className="container">
+            <h2 className={styles.MedicalDevicesServicesTitle}>
+              Medical Device Manufacturing Service
+            </h2>
+            <div className={styles.imageSection}>
+              <div className={styles.tableContainer}>
+                <div className="animate__animated animate__bounce">
+                  <h3 className={styles.mainTitle}>
+                    Medical Device Manufacturing
+                  </h3>
+                </div>
+
+                <p className={styles.imageParagraph}>
+                  New regulations have been introduced for the manufacturing of
+                  medical devices in India. Manufacturers of Class A and B
+                  devices must apply to the State Licensing Authority, while
+                  those producing Class C and D devices are regulated by the
+                  Central Licensing Authority. These classifications are based
+                  on the level of risk associated with each device.
+                  Additionally, CDSCO has outlined specific application fees for
+                  each category to streamline the licensing process.
+                </p>
+              </div>
+              <div className={styles.imageBox}>
+                <div
+                  className={`${styles.imageWrapper} ${styles.image3}`}
+                ></div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className={styles.FormsContainer}>
@@ -207,8 +219,9 @@ const MedicalDevicesManufacturingServices = () => {
                 <div className={styles.bigNotes} key={index}>
                   <div className={styles.bigNotesHeading}>{item.title}</div>
                   <p
-                    className={`${styles.bigNotesParagraph} ${expandedIndex === index ? styles.expanded : ""
-                      }`}
+                    className={`${styles.bigNotesParagraph} ${
+                      expandedIndex === index ? styles.expanded : ""
+                    }`}
                   >
                     {expandedIndex === index
                       ? item.content
