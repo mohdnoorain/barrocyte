@@ -5,7 +5,7 @@
   align-items: center;
   flex-direction: column;
   width: 100%;
-  margin-top: 40px;
+
 }
 
 .diagnosticRegulatoryKitsServicesTitle {
@@ -73,10 +73,19 @@
   margin-bottom: 20px;
   font-weight: 700;
 }
+
+.mainTitle{
+  font-weight: 600;
+  font-size: var(--fs-2);
+  font-family: var(--headingFF);
+  color: var(--black);
+  margin-bottom: 20px;
+}
 .imageParagraph {
-  text-align: center;
+  text-align: left;
   line-height: 1.4;
   color: var(--textDark);
+  /* max-width: 450px; */
 }
 
 .imageSection {
@@ -117,6 +126,10 @@
   background-image: url("./../../../public/new-diagnostic-kit.png"); /* Change this to your second image */
 }
 
+.image3{
+   background-image: url("./../../../public/diagnostic_Kit_Regulatory.png");
+}
+
 .howToApply {
   background-color: #f8f9fa;
 }
@@ -131,6 +144,9 @@
   }
   .imageWrapper {
     height: 250px;
+  }
+  .mainTitle{
+    font-size: var(--fs-3);
   }
 }
 
@@ -227,5 +243,8 @@
   }
   .TimeLineParagrapgh {
     font-size: var(--fs-regular);
+  }
+  .mainTitle{
+     font-size: var(--fs-4);
   }
 }

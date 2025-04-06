@@ -12,16 +12,23 @@ interface TableProps {
   data: TableRow[];
 }
 
+const tableHeadings: { key: keyof TableRow; label: string }[] = [
+  { key: "applicant", label: "Applicant" },
+  { key: "riskClass", label: "Risk/Class" },
+  { key: "type", label: "Type of Licence" },
+  { key: "forms", label: "Forms" },
+];
+
 const TableComponent: React.FC<TableProps> = ({ data }) => {
   return (
     <div className={styles.tableContainer}>
-      <table className={styles.licenseTable}>
+     <div className={styles.tableWrapper}>
+      <table className={styles.styledTable}>
         <thead>
           <tr>
-            <th>Applicant</th>
-            <th>Risk/Class</th>
-            <th>Type of Licence</th>
-            <th>Forms</th>
+            {tableHeadings.map((heading) => (
+              <th key={heading.key}>{heading.label}</th>
+            ))}
           </tr>
         </thead>
         <tbody>
@@ -39,6 +46,7 @@ const TableComponent: React.FC<TableProps> = ({ data }) => {
           ))}
         </tbody>
       </table>
+     </div>
     </div>
   );
 };
