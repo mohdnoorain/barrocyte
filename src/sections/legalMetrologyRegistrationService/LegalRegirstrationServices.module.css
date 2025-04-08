@@ -20,6 +20,7 @@
 
 .LegalRegirstrationServicesParagrapgh {
   color: var(--textDark);
+  text-align: justify;
    line-height: 1.6;
 }
 
@@ -49,8 +50,6 @@
 .tableContainer {
   flex: 1;
   max-width: 100%;
-  padding-right: calc(var(--bs-gutter-x) * 0.5);
-  padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-top: var(--bs-gutter-y);
 }
 .importLicenseProcess {
@@ -76,7 +75,7 @@
   color: var(--secondary);
 }
 .imageParagraph {
-  text-align: left;
+  text-align: justify;
   line-height: 1.4;
   color: var(--textDark);
   font-size: var(--fs-regular);
@@ -193,7 +192,7 @@
 }
 
 .TimeLineParagrapgh {
-  text-align: center;
+  text-align: justify;
   color: var(--textDark);
 }
 
@@ -206,6 +205,9 @@
   }
   .tableFormContainer {
     flex-direction: column;
+  }
+  .imageSection{
+    flex-direction: column-reverse;
   }
 }
 

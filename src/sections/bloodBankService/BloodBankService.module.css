@@ -116,8 +116,6 @@
 .tableContainer {
   flex: 1;
   max-width: 100%;
-  padding-right: calc(var(--bs-gutter-x) * 0.5);
-  padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-top: var(--bs-gutter-y);
 }
 
@@ -130,7 +128,7 @@
 }
 
 .imageParagraph {
-  text-align: left;
+  text-align: justify;
   line-height: 1.4;
   color: var(--textDark);
 }

@@ -65,7 +65,7 @@
 }
 
 .imageParagraph {
-  text-align: left;
+  text-align: justify;
   line-height: 1.4;
   color: var(--textDark);
 }
@@ -73,8 +73,6 @@
 .tableContainer {
   flex: 1;
   max-width: 100%;
-  padding-right: calc(var(--bs-gutter-x) * 0.5);
-  padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-top: var(--bs-gutter-y);
 }
 
@@ -138,7 +136,7 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 30px;
-  padding: 20px;
+ 
   margin-bottom: 30px;
 }
 
@@ -165,6 +163,7 @@
   max-height: 150px; /* Default height */
   overflow: hidden;
   transition: max-height 0.5s ease-in-out;
+  text-align: justify;
   color: #495057;
 }
 
