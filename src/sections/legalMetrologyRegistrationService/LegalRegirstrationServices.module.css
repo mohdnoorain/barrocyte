@@ -14,7 +14,7 @@
   font-weight: 600;
   text-align: center;
   margin-bottom: 30px;
- 
+ font-family: var(--headingFF);
   color: var(--primary);
 }
 
@@ -72,6 +72,7 @@
   text-align: center;
   margin-bottom: 20px;
   font-weight: 700;
+  font-family: var(--headingFF);
   color: var(--secondary);
 }
 .imageParagraph {
@@ -173,7 +174,7 @@
   }
 
   .imageTitle {
-    font-size: var(--fs-regular);
+   font-size: var(--fs-large);
   }
 
   .imageParagraph {

@@ -13,6 +13,7 @@
   text-align: center;
   margin-bottom: 30px;
   color: #333;
+  font-family: var(--headingFF);
 }
 
 .DiagnostickitsServicesParagraph {
@@ -201,6 +202,12 @@
   .bigNotes {
     width: 100%;
   }
+  .mainTitle {
+    display: none;
+  }
+  .imageSection {
+    flex-direction: column-reverse;
+  }
 }
 
 @media (min-width: 992px) {
@@ -240,9 +247,7 @@
     min-height: 450px;
   }
 
-  .imageSection {
-    flex-direction: column;
-  }
+
   .imageBox {
     min-width: 450px;
   }
@@ -296,7 +301,8 @@
   }
 
   .imageTitle {
-    font-size: var(--fs-regular);
+    font-size: var(--fs-large);
+    font-family: var(--headingFF);
   }
 
   .imageParagraph {

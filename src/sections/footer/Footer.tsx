@@ -5,7 +5,6 @@ const footerData = {
   quickLinks: [
     { href: "/", label: "Home" },
     { href: "/about", label: "About Us" },
-    { href: "/", label: "Our Services" },
   ],
   services: [
     { href: "/medicalDeviceServices", label: "Medical Device Service" },

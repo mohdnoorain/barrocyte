@@ -53,15 +53,15 @@ const Header: React.FC = () => {
       ref={menuRef}
     >
       <div className={`${styles["nav-container"]} container`}>
-        <div className={styles.logo}>Barro.</div>
+        <Link href="/"className={styles.logo}>Barro.</Link>
         <ul
           className={`${styles["nav-links"]} ${
             isMobileMenuOpen ? styles.open : ""
           }`}
         >
           <li>
-            <Link
-              href="/about"
+            <a
+              href="tel:+919266665237"
               onClick={() => setIsMobileMenuOpen(false)}
               className={styles.phoneContainer}
             >
@@ -73,7 +73,7 @@ const Header: React.FC = () => {
                 phone
               </span>
               +91-9266665237
-            </Link>
+            </a>
           </li>
         </ul>
       </div>

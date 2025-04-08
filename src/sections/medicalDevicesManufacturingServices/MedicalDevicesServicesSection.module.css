@@ -12,6 +12,7 @@
   font-size: var(--fs-2);
   font-weight: 600;
   text-align: center;
+  font-family: var(--headingFF);
   margin-bottom: 30px;
   color: #333;
 }
@@ -97,6 +98,7 @@
 .imageParagraph {
   text-align: left;
   line-height: 1.4;
+  margin-bottom: 20px;
   color: var(--textDark);
 }
 
@@ -204,6 +206,12 @@
   .bigNotes {
     width: 100%;
   }
+  .mainTitle {
+    display: none;
+  }
+  .imageSection {
+    flex-direction: column-reverse;
+  }
 }
 
 @media (min-width: 992px) {
@@ -237,9 +245,7 @@
   .licensingFormContainer {
     gap: 20px;
   }
-  .imageSection {
-    flex-direction: column;
-  }
+
   .imageBox {
     min-width: 450px;
   }
@@ -297,7 +303,8 @@
   }
 
   .imageTitle {
-    font-size: var(--fs-regular);
+    font-size: var(--fs-large);
+    font-family: var(--headingFF);
   }
 
   .imageParagraph {

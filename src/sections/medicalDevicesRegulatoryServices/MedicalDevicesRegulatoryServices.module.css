@@ -12,6 +12,7 @@
   font-size: var(--fs-2);
   font-weight: 600;
   text-align: center;
+  font-family: var(--headingFF);
   margin-bottom: 30px;
   color: #333;
 }
@@ -55,6 +56,7 @@
   text-align: center;
   margin-bottom: 20px;
   font-weight: 700;
+  font-family: var(--headingFF);
   color: var(--primary);
 }
 
@@ -142,7 +144,7 @@
   }
 
   .imageTitle {
-    font-size: var(--fs-regular);
+    font-size: var(--fs-large);
   }
 
   .imageParagraph {
@@ -174,6 +176,12 @@
   }
   .tableFormContainer {
     flex-direction: column;
+  }
+  .mainTitle {
+    display: none;
+  }
+  .imageSection {
+    flex-direction: column-reverse;
   }
 }
 

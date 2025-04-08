@@ -77,6 +77,9 @@ export default function SanitaryImportPermitService() {
             </h2>
             <div className={styles.sanitaryImportPermitServiceGuidelines}>
               <div className={styles.SipContainer}>
+                <h3 className={styles.imageTitle}>
+                  Required Documents and Application Proces
+                </h3>
                 {accordionData.map((item, index) => (
                   <Accordion
                     key={index}

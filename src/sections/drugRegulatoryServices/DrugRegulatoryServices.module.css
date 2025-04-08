@@ -13,6 +13,7 @@
   font-size: var(--fs-2);
   font-weight: 600;
   text-align: center;
+  font-family: var(--headingFF);
   margin-bottom: 30px;
   color: #333;
 }
@@ -79,6 +80,7 @@
 .imageTitle {
   font-size: var(--fs-5);
   color: var(--primary);
+  font-family: var(--headingFF);
   text-align: center;
   margin-bottom: 20px;
   font-weight: 700;
@@ -153,7 +155,7 @@
   }
 
   .imageTitle {
-    font-size: var(--fs-regular);
+    font-size: var(--fs-large);
   }
 
   .imageParagraph {
@@ -186,6 +188,7 @@
   .tableFormContainer {
     flex-direction: column;
   }
+  
 }
 
 @media (min-width: 992px) {
