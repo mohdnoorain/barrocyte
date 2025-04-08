@@ -183,8 +183,7 @@ const MedicalDevicesManufacturingServices = () => {
                   medical devices in India. Manufacturers of Class A and B
                   devices must apply to the State Licensing Authority, while
                   those producing Class C and D devices are regulated by the
-                  Central Licensing Authority. These classifications are based
-                  on the level of risk associated with each device.
+                  Central Licensing Authority.
                   Additionally, CDSCO has outlined specific application fees for
                   each category to streamline the licensing process.
                 </p>
@@ -215,6 +214,7 @@ const MedicalDevicesManufacturingServices = () => {
               Manufacturing License for Medical Devices from SLA/CLAA
             </h2>
             <div className={styles.bigNotesContainer}>
+              
               {accordionData.map((item, index) => (
                 <div className={styles.bigNotes} key={index}>
                   <div className={styles.bigNotesHeading}>{item.title}</div>

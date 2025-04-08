@@ -2,14 +2,14 @@
   width: 100%;
   max-width: 900px;
   margin: 20px auto;
-  
-  padding: 20px;
+
   text-align: center;
 }
 
 .tableTitle {
   color: #0f4c81; /* Blue shade */
   font-size: 24px;
+  font-family: var(--headingFF);
   margin-bottom: 15px;
   font-weight: bold;
 }

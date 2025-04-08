@@ -70,6 +70,6 @@
   }
 
   .accordionHeader {
-    font-size: var(--fs-large);
+    font-size: var(--fs-regular);
   }
 }

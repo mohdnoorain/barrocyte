@@ -161,6 +161,9 @@ const LegalRegirstrationServices = () => {
                   ></div>
                 </div>
                 <div className={styles.tableContainer}>
+                  <h3 className={styles.imageTitle}>
+                    Overview of Legal Metrology Registrations in India
+                  </h3>
                   {accordionData.map((item, index) => (
                     <Accordion
                       key={index}

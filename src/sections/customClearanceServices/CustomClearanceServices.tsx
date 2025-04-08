@@ -105,7 +105,7 @@ const CustomClearanceServices = () => {
               </div>
             </div>
           </div>
-        
+
           <div className={styles.FormsContainer}>
             <div className="container">
               <h2 className={styles.CustomClearanceServicesTitle}>
@@ -118,6 +118,7 @@ const CustomClearanceServices = () => {
                   ></div>
                 </div>
                 <div className={styles.tableContainer}>
+                  <h2 className={styles.imageTitle}>Trusted for a Reason</h2>
                   {accordionData.map((item, index) => (
                     <Accordion
                       key={index}
