@@ -115,6 +115,9 @@
   .drugsInnnercontainer {
     gap: 30px;
   }
+  .imageSection {
+    flex-direction: column-reverse;
+  }
 }
 
 .imageSection {
@@ -202,9 +205,7 @@
 }
 
 @media (max-width: 768px) {
-  .imageSection {
-    flex-direction: column;
-  }
+  
 
   .imageBox {
     min-width: 450px;

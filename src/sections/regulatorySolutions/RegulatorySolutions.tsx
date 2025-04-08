@@ -19,7 +19,7 @@ const regulatorySolutions = [
     title: "Blood Banks",
     icon: "local_hospital",
     color: "#0f495f",
-    link: "/blood-banks",
+    link: "/",
   },
 
   {
@@ -32,13 +32,13 @@ const regulatorySolutions = [
     title: "Custom Clearance",
     icon: "local_shipping",
     color: "#0f495f",
-    link: "/custom-clearance",
+    link: "/",
   },
   {
     title: "Sanitary Import Permit",
     icon: "fact_check",
     color: "#d61b5b",
-    link: "/sanitary-import-permit",
+    link: "/",
   },
 ];
 

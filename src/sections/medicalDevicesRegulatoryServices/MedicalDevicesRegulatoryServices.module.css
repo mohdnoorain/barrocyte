@@ -180,6 +180,9 @@
   .mainTitle {
     display: none;
   }
+  .imageSection {
+    flex-direction: column-reverse;
+  }
 }
 
 @media (min-width: 992px) {

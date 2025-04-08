@@ -98,6 +98,7 @@
 .imageParagraph {
   text-align: left;
   line-height: 1.4;
+  margin-bottom: 20px;
   color: var(--textDark);
 }
 
@@ -208,6 +209,9 @@
   .mainTitle {
     display: none;
   }
+  .imageSection {
+    flex-direction: column-reverse;
+  }
 }
 
 @media (min-width: 992px) {
@@ -241,9 +245,7 @@
   .licensingFormContainer {
     gap: 20px;
   }
-  .imageSection {
-    flex-direction: column;
-  }
+
   .imageBox {
     min-width: 450px;
   }

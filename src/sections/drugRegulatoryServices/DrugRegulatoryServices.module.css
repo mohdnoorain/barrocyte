@@ -188,6 +188,7 @@
   .tableFormContainer {
     flex-direction: column;
   }
+  
 }
 
 @media (min-width: 992px) {

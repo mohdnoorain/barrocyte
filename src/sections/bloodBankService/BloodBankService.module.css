@@ -168,6 +168,9 @@
   .mainTitle {
     display: none;
   }
+  .imageSection {
+    flex-direction: column-reverse;
+  }
 }
 
 @media (min-width: 992px) {
@@ -190,10 +193,6 @@
 }
 
 @media (max-width: 768px) {
-  .imageSection {
-    flex-direction: column;
-  }
-
   .imageBox {
     min-width: 450px;
   }
