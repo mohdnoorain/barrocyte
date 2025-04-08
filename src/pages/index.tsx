@@ -27,9 +27,16 @@ export default function Home() {
       <Main></Main>
       <RegulatorySolutions />
       <DrugsLicenseServices />
-      <BloodBankServive />
-      <SanitaryImportPermitService />
-      <CustomClearanceServices />
+      <div id="blood-bank-section">
+        <BloodBankServive />
+      </div>
+      <div id="sanitoryImportpermit">
+        <SanitaryImportPermitService />
+      </div>
+      <div id="customClearance">
+        <CustomClearanceServices />
+      </div>
+
       <TestimonialSlider />
       <Footer />
     </>
