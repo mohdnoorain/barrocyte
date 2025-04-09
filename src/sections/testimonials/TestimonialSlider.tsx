@@ -1,5 +1,7 @@
 "use client";
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import { useKeenSlider } from "keen-slider/react";
+import "keen-slider/keen-slider.min.css";
 import styles from "./TestimonialSlider.module.css";
 
 interface Testimonial {
@@ -35,88 +37,47 @@ const testimonials: Testimonial[] = [
   },
 ];
 
-const TestimonialSlider: React.FC = () => {
-  const sliderRef = useRef<HTMLDivElement>(null);
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
+const TestimonialSlider = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
+    loop: true,
+    mode: "snap",
+    rubberband: false,
+    renderMode: "performance",
+    slideChanged(slider) {
+      setCurrentSlide(slider.track.details.rel);
+    },
+    slides: {
+      origin: "auto",
+      perView: 1,
+      spacing: 16,
+    },
+    breakpoints: {
+      "(min-width: 768px)": {
+        slides: {
+          perView: 2,
+          spacing: 16,
+        },
+      },
+      "(min-width: 1024px)": {
+        slides: {
+          perView: 3,
+          spacing: 16,
+        },
+      },
+    },
+  });
 
-  const handleMouseDown = (e: React.MouseEvent) => {
-    setIsDragging(true);
-    setStartX(e.pageX - (sliderRef.current?.offsetLeft || 0));
-    setScrollLeft(sliderRef.current?.scrollLeft || 0);
-  };
-
-  const handleMouseLeave = () => setIsDragging(false);
-  const handleMouseUp = () => setIsDragging(false);
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (!isDragging || !sliderRef.current) return;
-    e.preventDefault();
-    const x = e.pageX - sliderRef.current.offsetLeft;
-    const walk = (x - startX) * 1.5;
-    sliderRef.current.scrollLeft = scrollLeft - walk;
-  };
-
-  // Touch Support
+  // Auto slide every 5 seconds
   useEffect(() => {
-    const slider = sliderRef.current;
-    if (!slider) return;
-
-    let isTouching = false;
-    let startXTouch = 0;
-    let scrollLeftTouch = 0;
-
-    const handleTouchStart = (e: TouchEvent) => {
-      isTouching = true;
-      startXTouch = e.touches[0].pageX - slider.offsetLeft;
-      scrollLeftTouch = slider.scrollLeft;
-    };
-
-    const handleTouchMove = (e: TouchEvent) => {
-      if (!isTouching) return;
-      const x = e.touches[0].pageX - slider.offsetLeft;
-      const walk = (x - startXTouch) * 1.5;
-      slider.scrollLeft = scrollLeftTouch - walk;
-    };
-
-    const handleTouchEnd = () => {
-      isTouching = false;
-    };
-
-    slider.addEventListener("touchstart", handleTouchStart);
-    slider.addEventListener("touchmove", handleTouchMove);
-    slider.addEventListener("touchend", handleTouchEnd);
-
-    return () => {
-      slider.removeEventListener("touchstart", handleTouchStart);
-      slider.removeEventListener("touchmove", handleTouchMove);
-      slider.removeEventListener("touchend", handleTouchEnd);
-    };
-  }, []);
-
-  // Auto Slide Every 5 Seconds
-  useEffect(() => {
-    const slider = sliderRef.current;
-    if (!slider) return;
-
     const interval = setInterval(() => {
-      if (!isDragging) {
-        const cardWidth =
-          slider.querySelector(`.${styles.card}`)?.clientWidth || 0;
-        slider.scrollBy({ left: cardWidth + 20, behavior: "smooth" });
-
-        // Loop back if reached end
-        if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth) {
-          setTimeout(() => {
-            slider.scrollTo({ left: 0, behavior: "smooth" });
-          }, 500); // wait before resetting
-        }
+      if (instanceRef.current) {
+        instanceRef.current.next();
       }
-    }, 5000);
+    }, 5000); // 5 seconds
 
-    return () => clearInterval(interval);
-  }, [isDragging]);
+    return () => clearInterval(interval); // Clean up on unmount
+  }, [instanceRef]);
 
   return (
     <div className={styles.testimonialSection}>
@@ -124,16 +85,9 @@ const TestimonialSlider: React.FC = () => {
         <h2 className={styles.title}>TESTIMONIALS</h2>
         <p className={styles.subtext}>Here’s what our clients say about us.</p>
 
-        <div
-          className={styles.slider}
-          ref={sliderRef}
-          onMouseDown={handleMouseDown}
-          onMouseLeave={handleMouseLeave}
-          onMouseUp={handleMouseUp}
-          onMouseMove={handleMouseMove}
-        >
+        <div ref={sliderRef} className={`keen-slider ${styles.slider}`}>
           {testimonials.map((t, i) => (
-            <div className={styles.card} key={i}>
+            <div key={i} className={`keen-slider__slide ${styles.card}`}>
               <div className={styles.userImage}>
                 <img src={t.image} alt={t.name} />
               </div>
@@ -145,6 +99,19 @@ const TestimonialSlider: React.FC = () => {
               <h4 className={styles.name}>{t.highlight}</h4>
               <p className={styles.role}>{t.role}</p>
             </div>
+          ))}
+        </div>
+
+        <div className={styles.dots}>
+          {testimonials.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => instanceRef.current?.moveToIdx(idx)}
+              className={`${styles.dot} ${
+                currentSlide === idx ? styles.activeDot : ""
+              }`}
+              aria-label={`Go to slide ${idx + 1}`}
+            />
           ))}
         </div>
       </div>

@@ -87,7 +87,6 @@
     font-size: var(--fs-7);
   }
   .offerContainer {
-    flex-direction: column;
     width: 100%;
   }
   .offerParagraph {

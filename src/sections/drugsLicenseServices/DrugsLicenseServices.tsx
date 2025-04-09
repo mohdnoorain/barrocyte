@@ -2,6 +2,7 @@ import LicenseTable from "@/components/LicenseTable/LicenseTable";
 import styles from "./DrugsLicenseServices.module.css"; // Import module CSS
 import React, { useState } from "react";
 import Accordion from "@/components/accordion/Accordion";
+import CustomAccordion from "@/components/customAccordion/CustomAccordion";
 const DrugsLicenseServices: React.FC = () => {
   const drugLicenseAccordionData = [
     {
@@ -88,15 +89,7 @@ const DrugsLicenseServices: React.FC = () => {
                 <h3 className={styles.imageTitle}>
                   Overview of Drug Licensing in India
                 </h3>
-                {drugLicenseAccordionData.map((item, index) => (
-                  <Accordion
-                    key={index}
-                    title={item.title}
-                    content={item.content}
-                    isActive={activeIndex === index}
-                    onClick={() => toggleAccordion(index)}
-                  />
-                ))}
+                <CustomAccordion data={drugLicenseAccordionData} defaultOpenIndex={1} />
               </div>
               <div className={styles.drugsTypeContainer}>
                 <h3 className={styles.imageTitle}>Forms for Application</h3>

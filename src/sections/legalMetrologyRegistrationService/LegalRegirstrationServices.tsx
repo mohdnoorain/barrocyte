@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import styles from "./LegalRegirstrationServices.module.css";
-import Accordion from "@/components/accordion/Accordion";
+import CoolAccordion from "@/components/designedAccordion/CoolAccordion";
+
+
 const LegalRegirstrationServices = () => {
   const tableData1 = [
     {
@@ -59,54 +61,44 @@ const LegalRegirstrationServices = () => {
     },
   ];
 
-  const feeData = [
-    {
-      icon: "discount",
-      title: "Fee Involved",
-      description:
-        "In-Vitro Diagnostic Kits are classified by risk to ensure safety, with specific import license fees",
-    },
-    {
-      icon: "discount",
-      title: "One site $1000",
-      description:
-        "Import license fee for Class A/B In-Vitro Diagnostic Kits: $10 per kit.",
-    },
-    {
-      icon: "discount",
-      title: "One site $3000",
-      description:
-        "Import license fee for Class C/D In-Vitro Diagnostic Kits: $500 per kit.",
-    },
-  ];
+
     
-  const accordionData = [
-    {
-      title: "Registration of Companies",
-      content: `Companies involved in manufacturing, import, or packaging of weighing and measuring instruments must register through the Legal Metrology online portal. 
-    Each Indian state and UT has its respective portal. Where online registration is unavailable, companies must apply offline. 
-    Barrocyte Consultants offers support for smooth Legal Metrology registration.`,
-    },
-    {
-      title: "Registration of Importers",
-      content: `Importers of measuring instruments in India must register to obtain the Certificate of Registration for Import of Weights and Measures. 
-    This is done by applying under Schedule X, Rule 15, Section 19 of the Legal Metrology Act, 2009. 
-    We assist importers in new registrations and renewals of existing licenses.`,
-    },
-    {
-      title: "Registration of Manufacturer, Importer, and Packer",
-      content: `All weighing and measuring instrument labels must comply with Legal Metrology (Packaged Commodities) Rules, 2011 & 2017. 
-    Product labels need updated compliance as per the latest regulations. Companies must register packaging and warehouse details under Rule 27. 
-    Warehouses involved in label affixation must also be registered. 
-    Barrocyte Consultants helps with registration and renewal for manufacturers, importers, and packers.`,
-    },
-  ];
 
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+const accordionData = [
+  {
+    title: "Registration of Companies",
+    content: [
+      "Companies involved in manufacturing, import, or packaging of weighing and measuring instruments must register through the Legal Metrology online portal.",
+      "Each Indian state and UT has its respective portal. Where online registration is unavailable, companies must apply offline.",
+      "Barrocyte Consultants offers support for smooth Legal Metrology registration.",
+    ],
+    borderColor: "#6E85F7",
+    background: "#F6F9FF",
+  },
+  {
+    title: "Registration of Importers",
+    content: [
+      "Importers of measuring instruments in India must register to obtain the Certificate of Registration for Import of Weights and Measures.",
+      "This is done by applying under Schedule X, Rule 15, Section 19 of the Legal Metrology Act, 2009.",
+      "We assist importers in new registrations and renewals of existing licenses.",
+    ],
+    borderColor: "#F86C6B",
+    background: "#FEEDEE",
+  },
+  {
+    title: "Registration of Manufacturer, Importer, and Packer",
+    content: [
+      "All weighing and measuring instrument labels must comply with Legal Metrology (Packaged Commodities) Rules, 2011 & 2017.",
+      "Product labels need updated compliance as per the latest regulations. Companies must register packaging and warehouse details under Rule 27.",
+      "Warehouses involved in label affixation must also be registered.",
+      "Barrocyte Consultants helps with registration and renewal for manufacturers, importers, and packers.",
+    ],
+    borderColor: "#F9A826",
+    background: "#FFF7EB",
+  },
+];
 
-  const toggleAccordion = (index: number) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
+ 
   return (
     <>
       <section>
@@ -164,15 +156,7 @@ const LegalRegirstrationServices = () => {
                   <h3 className={styles.imageTitle}>
                     Overview of Legal Metrology Registrations in India
                   </h3>
-                  {accordionData.map((item, index) => (
-                    <Accordion
-                      key={index}
-                      title={item.title}
-                      content={item.content}
-                      isActive={activeIndex === index}
-                      onClick={() => toggleAccordion(index)}
-                    />
-                  ))}
+                  <CoolAccordion items={accordionData} />
                 </div>
               </div>
             </div>
@@ -231,11 +215,6 @@ const LegalRegirstrationServices = () => {
           <div className={styles.FormsContainer}>
             <div className="container">
               <div className={styles.imageSection}>
-                <div className={styles.imageBox}>
-                  <div
-                    className={`${styles.imageWrapper} ${styles.image4}`}
-                  ></div>
-                </div>
                 <div className={styles.tableContainer}>
                   <h3 className={styles.imageTitle}>License For Dealer</h3>
                   <p className={styles.imageParagraph}>
@@ -251,6 +230,11 @@ const LegalRegirstrationServices = () => {
                     Metrology Division without any problems and unnecessary
                     effort
                   </p>
+                </div>
+                <div className={styles.imageBox}>
+                  <div
+                    className={`${styles.imageWrapper} ${styles.image4}`}
+                  ></div>
                 </div>
               </div>
             </div>

@@ -177,11 +177,6 @@ const DiagnosticRegulatoryKitsServices = () => {
                 Diagnostic Kits Regulatory Service
               </h2>
               <div className={styles.imageSection}>
-                <div className={styles.imageBox}>
-                  <div
-                    className={`${styles.imageWrapper} ${styles.imageOne}`}
-                  ></div>
-                </div>
                 <div className={styles.tableContainer}>
                   <h3 className={styles.imageTitle}>
                     NEW IN-VITRO DIAGNOSTIC DEVICE – INDIA'S FIRST-TIME
@@ -194,6 +189,11 @@ const DiagnosticRegulatoryKitsServices = () => {
                     devices need to gain approval from the Central Licensing
                     Authority for their manufacture or Import in India.
                   </p>
+                </div>
+                <div className={styles.imageBox}>
+                  <div
+                    className={`${styles.imageWrapper} ${styles.imageOne}`}
+                  ></div>
                 </div>
               </div>
             </div>
@@ -247,7 +247,7 @@ const DiagnosticRegulatoryKitsServices = () => {
                     <h3 className={styles.imageTitle}>
                       Import License Process
                     </h3>
-                    <div className={styles.importLicenseProcess}>
+                    <div className={styles.gridContainer}>
                       {importLicenseSteps.map((step, index) => (
                         <LicenseProcessStep
                           key={index}
