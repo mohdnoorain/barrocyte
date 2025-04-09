@@ -19,7 +19,7 @@ const regulatorySolutions = [
     title: "Blood Banks",
     icon: "local_hospital",
     color: "#0f495f",
-    link: "/",
+    targetId: "blood-bank-section",
   },
 
   {
@@ -32,13 +32,13 @@ const regulatorySolutions = [
     title: "Custom Clearance",
     icon: "local_shipping",
     color: "#0f495f",
-    link: "/",
+    targetId: "customClearance",
   },
   {
     title: "Sanitary Import Permit",
     icon: "fact_check",
     color: "#d61b5b",
-    link: "/",
+    targetId: "sanitoryImportpermit",
   },
 ];
 
@@ -55,7 +55,21 @@ export default function RegulatorySolutions() {
                 title={solution.title}
                 icon={solution.icon}
                 color={solution.color}
-                link={solution.link}
+                link={
+                  solution.link && !solution.targetId
+                    ? solution.link
+                    : undefined
+                }
+                onClick={
+                  solution.targetId
+                    ? () => {
+                        const section = document.getElementById(
+                          solution.targetId!
+                        );
+                        section?.scrollIntoView({ behavior: "smooth" });
+                      }
+                    : undefined
+                }
               />
             ))}
           </div>

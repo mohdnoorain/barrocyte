@@ -2,23 +2,40 @@ import React, { useState } from "react";
 import styles from "./SanitaryImportPermit.module.css";
 import Accordion from "@/components/accordion/Accordion";
 import ValidityInfo from "@/components/validityInfo/ValidityInfo";
+import CoolAccordion from "@/components/designedAccordion/CoolAccordion";
 
 const accordionData = [
   {
     title: "Mandatory Documents",
-    content: `Proforma Invoice. Packing List. Product Catalogue. Product Specification. 
-    Microbial Data Sheet. Process Flowchart. Import-Export Certificate.`,
+    content: [
+      "Proforma Invoice.",
+      "Packing List.",
+      "Product Catalogue.",
+      "Product Specification.",
+      "Microbial Data Sheet.",
+      "Process Flowchart.",
+      "Import-Export Certificate.",
+    ],
+    borderColor: "#d8b4a0",
+    background: "#f6ebe7", 
   },
   {
     title: "Application Procedure",
-    content: `The application should be made on SIP portal. Once the welcome page is opened, 
-    the applicants should apply online option and fill in the form A or B and enclose all the mandatory documents. 
-    After the submission of all the documents, the application fee of Rs.300 should be paid through the online payment gateway of the portal. 
-    Requisite documents should be uploaded on the portal. Once the application is processed and after the successful scrutiny, SIP may be granted. 
-    The Department of Animal Husbandry, Dairying and Fisheries would send an email to the registered ID of the applicant in case of any 
-    insufficient information or documents, and the applicant should rectify the error by logging into their account on SIP portal.`,
+    content: [
+      "The application should be made on SIP portal.",
+      "Once the welcome page is opened, the applicants should apply online option and fill in the form A or B and enclose all the mandatory documents.",
+      "After the submission of all the documents, the application fee of Rs.300 should be paid through the online payment gateway of the portal.",
+      "Requisite documents should be uploaded on the portal.",
+      "Once the application is processed and after the successful scrutiny, SIP may be granted.",
+      "The Department of Animal Husbandry, Dairying and Fisheries would send an email to the registered ID of the applicant in case of any insufficient information or documents.",
+      "The applicant should rectify the error by logging into their account on SIP portal.",
+    ],
+    borderColor: "#d8b4a0",
+    background: "#f6ebe7", 
   },
 ];
+
+
 
 const validityData = {
   title: "Validity of the Permit (SIP)",
@@ -80,15 +97,7 @@ export default function SanitaryImportPermitService() {
                 <h3 className={styles.imageTitle}>
                   Required Documents and Application Proces
                 </h3>
-                {accordionData.map((item, index) => (
-                  <Accordion
-                    key={index}
-                    title={item.title}
-                    content={item.content}
-                    isActive={activeIndex === index}
-                    onClick={() => toggleAccordion(index)}
-                  />
-                ))}
+                <CoolAccordion items={accordionData} />
               </div>
               <div className={styles.ImageContainer}>
                 <img

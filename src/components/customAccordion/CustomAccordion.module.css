@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+.wrapper {
+  max-width: 800px;
+  margin: auto;
+  border-left: 2px solid #0f4c81;
+  padding-left: 16px;
+  
+}
+
+.item {
+  padding: 16px 0;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+.item h3 {
+  font-size: 18px;
+  margin: 0;
+  color: #aaa;
+  font-weight: 700;
+  
+}
+
+.item.active h3 {
+  color: #0f4c81;
+  font-weight: 700;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon {
+  font-size: 26px;
+  transition: transform 0.3s ease;
+  color: #006bc3;
+}
+
+.content {
+  overflow: hidden;
+  margin-top: 10px;
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+
+
+.content p {
+  margin: 0;
+  color: var(--textDark);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.item.active .content {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 0 12px;
+  }
+  .item h3 {
+    font-size: 16px;
+  }
+}
+
+@media(max-width:480px){
+    .content p{
+   font-size: 12px;
+  }
+
+  .item h3 {
+    font-size: 14px;
+  }
+}

@@ -9,7 +9,6 @@ const footerData = {
   services: [
     { href: "/medicalDeviceServices", label: "Medical Device Service" },
     { href: "/diagnosticKitsServices", label: "Diagnostic Kits" },
-    { href: "/cosmeticsService", label: "Cosmetics Service" },
     { href: "/drugsService", label: "Drugs Service" },
     { href: "/legalMetrologyServices", label: "Legal Metrology Service" },
   ],

@@ -50,8 +50,6 @@
 .tableContainer {
   flex: 1;
   max-width: 100%;
-  padding-right: calc(var(--bs-gutter-x) * 0.5);
-  padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-top: var(--bs-gutter-y);
 }
 .importLicenseProcess {
@@ -84,7 +82,7 @@
   margin-bottom: 20px;
 }
 .imageParagraph {
-  text-align: left;
+text-align: justify;
   line-height: 1.4;
   color: var(--textDark);
   /* max-width: 450px; */
@@ -254,5 +252,21 @@
   }
   .mainTitle{
      font-size: var(--fs-4);
+  }
+}
+
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* ✅ always 2 per row */
+  gap: 24px;
+  justify-items: center;
+  align-items:center;
+}
+
+/* Responsive (optional) */
+@media (max-width: 600px) {
+  .gridContainer {
+    grid-template-columns: repeat(2, 1fr); /* stack on mobile */
   }
 }

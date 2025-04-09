@@ -201,11 +201,6 @@ const MedicalDevicesRegulatoryServices = () => {
               Medical Device Regulatory Service
             </h2>
             <div className={styles.imageSection}>
-              <div className={styles.imageBox}>
-                <div
-                  className={`${styles.imageWrapper} ${styles.imageOne}`}
-                ></div>
-              </div>
               <div className={styles.tableContainer}>
                 <h3 className={styles.imageTitle}>
                   NEW DEVICE- FIRST TIME IN INDIA
@@ -218,6 +213,11 @@ const MedicalDevicesRegulatoryServices = () => {
                   for new claims with respect to different implementation
                   factors will also be treated as new devices
                 </p>
+              </div>
+              <div className={styles.imageBox}>
+                <div
+                  className={`${styles.imageWrapper} ${styles.imageOne}`}
+                ></div>
               </div>
             </div>
           </div>
