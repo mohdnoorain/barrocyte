@@ -9,6 +9,7 @@ import DrugsLicenseServices from "@/sections/drugsLicenseServices/DrugsLicenseSe
 import Footer from "@/sections/footer/Footer";
 import TestimonialSlider from "@/sections/testimonials/TestimonialSlider";
 import CustomClearanceServices from "@/sections/customClearanceServices/CustomClearanceServices";
+import ContactForm from "@/components/contactForm/ContactForm";
 
 export default function Home() {
   return (
@@ -38,6 +39,7 @@ export default function Home() {
       </div>
 
       <TestimonialSlider />
+      <ContactForm />
       <Footer />
     </>
   );
