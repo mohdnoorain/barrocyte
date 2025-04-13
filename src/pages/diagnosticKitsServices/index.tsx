@@ -4,6 +4,7 @@ import DiagnosticRegulatoryKitsServices from "@/sections/diagnosticRegulatoryKit
 import Footer from "@/sections/footer/Footer";
 import DiagnostickitsManufactureServices from "@/sections/diagnostickitsManufactureServices/DiagnostickitsManufactureServices";
 import Header from "@/components/header/Header";
+import ScrollToTopButton from "@/components/scrollToTopButton/ScrollToTopButton";
 
 const DiagnosticKitsServices = () => {
   return (
@@ -12,6 +13,7 @@ const DiagnosticKitsServices = () => {
       <DiagnosticRegulatoryKitsServices />
       <DiagnostickitsManufactureServices />
       <Footer />
+      <ScrollToTopButton />
     </>
   );
 };
