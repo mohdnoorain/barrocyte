@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import styles from "./ContactForm.module.css";
+import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -19,12 +20,32 @@ const ContactForm = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent | any) => {
     e.preventDefault();
-    console.log(formData);
+    console.log(formData, e);
     // Add email/API integration here
   };
 
+  const handleNSubmit = (e: any) => {
+    e.preventDefault();
+    console.log(e.target);
+    emailjs
+      .sendForm(
+        process.env.NEXT_PUBLIC_SERVICE_KEY || "",
+        process.env.NEXT_PUBLIC_TEMPLATE_KEY || "",
+        e.target,
+        { publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY || "", }
+      )
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error);
+        },
+      );
+  }
+  console.log(process.env.NEXT_PUBLIC_NAME);
   return (
     <div className="container">
       <div className={styles.outerWrapper}>
@@ -96,6 +117,26 @@ const ContactForm = () => {
               <span className="material-icons">arrow_forward</span>
               Get a Solution
             </button>
+          </form>
+
+          <form id="form" onSubmit={handleNSubmit}>
+            <div className="field">
+              <label htmlFor="to_name">to_name</label>
+              <input type="text" name="to_name" id="to_name" />
+            </div>
+            <div className="field">
+              <label htmlFor="from_name">from_name</label>
+              <input type="text" name="from_name" id="from_name" />
+            </div>
+            <div className="field">
+              <label htmlFor="message">message</label>
+              <input type="text" name="message" id="message" />
+            </div>
+            <div className="field">
+              <label htmlFor="reply_to">reply_to</label>
+              <input type="text" name="reply_to" id="reply_to" />
+            </div>
+            <input type="submit" id="button" value="Send Email" />
           </form>
         </div>
       </div>
