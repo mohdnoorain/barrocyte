@@ -4,7 +4,6 @@ import styles from "./Footer.module.css"; // Import module CSS
 const footerData = {
   quickLinks: [
     { href: "/", label: "Home" },
-    { href: "/about", label: "About Us" },
   ],
   services: [
     { href: "/medicalDeviceServices", label: "Medical Device Service" },
