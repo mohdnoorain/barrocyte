@@ -12,6 +12,7 @@
   z-index: 1000;
   text-align: center;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
+  font-family: var(--headingFF);
 }
 
 /* Navbar in Scrolled State */
@@ -31,10 +32,18 @@
 }
 
 /* Logo */
+
+.companylogo{
+ height: 50px;
+  width: 50px;
+}
 .logo {
-  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
   font-weight: bold;
-  color: #333;
+  color: #0081a7;
   transition: 0.3s ease;
   margin-right: auto; /* Push logo to the left */
 }
@@ -85,6 +94,12 @@
     visibility: visible;
     transform: translateY(0);
   }
+  .logo {
+    font-size: 20px;
+  }
+ .nav-links a {
+    font-size: 15px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -95,6 +110,14 @@
     margin-top: 2px;
     font-size: 16px;
   }
+  .logo {
+font-size: 16px;
+
+  }
+  .companylogo{
+ height: 30px;
+  width: 30px;
+}
 }
 
 .phoneContainer {
@@ -134,4 +157,4 @@
   }
 }
 
-/* Navbar when scrolled */
+
