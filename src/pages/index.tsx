@@ -10,6 +10,7 @@ import Footer from "@/sections/footer/Footer";
 import TestimonialSlider from "@/sections/testimonials/TestimonialSlider";
 import CustomClearanceServices from "@/sections/customClearanceServices/CustomClearanceServices";
 import ContactForm from "@/components/contactForm/ContactForm";
+import ScrollToTopButton from "@/components/scrollToTopButton/ScrollToTopButton";
 
 export default function Home() {
   return (
@@ -41,6 +42,7 @@ export default function Home() {
       <TestimonialSlider />
       <ContactForm />
       <Footer />
+      <ScrollToTopButton />
     </>
   );
 }

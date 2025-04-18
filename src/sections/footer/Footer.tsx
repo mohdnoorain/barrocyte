@@ -20,7 +20,14 @@ const Footer = () => {
         <div className={styles.footerContainer}>
           {/* Brand Section */}
           <div className={styles.footerSection}>
-            <h2 className={styles.footerTitle}>Barr.</h2>
+            <div className={styles.footerTitleSection}>
+              <img
+                src="/logo-barraoctye .png"
+                alt=""
+                className={styles.companylogo}
+              />
+              <h2 className={styles.footerTitle}>Barrocyte</h2>
+            </div>
             <p>Your trusted partner for licensing & compliance services.</p>
           </div>
 

@@ -1,0 +1,48 @@
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  color: white;
+  z-index: 9999;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  max-width: 90vw;
+  word-break: break-word;
+}
+
+/* Toast Colors */
+.success {
+  background-color: #28a745;
+}
+
+.error {
+  background-color: #dc3545;
+}
+
+/* Slide-in/out Animation */
+.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.hide {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+/* Responsive for small screens */
+@media (max-width: 480px) {
+  .toast {
+    right: 10px;
+    left: 10px;
+    top: 10px;
+    max-width: calc(100% - 20px);
+    font-size: 12px;
+    padding: 10px 16px;
+  }
+}
