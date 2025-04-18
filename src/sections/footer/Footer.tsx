@@ -2,9 +2,7 @@ import Link from "next/link";
 import styles from "./Footer.module.css"; // Import module CSS
 
 const footerData = {
-  quickLinks: [
-    { href: "/", label: "Home" },
-  ],
+  quickLinks: [{ href: "/", label: "Home" }],
   services: [
     { href: "/medicalDeviceServices", label: "Medical Device Service" },
     { href: "/diagnosticKitsServices", label: "Diagnostic Kits" },
@@ -20,27 +18,16 @@ const Footer = () => {
         <div className={styles.footerContainer}>
           {/* Brand Section */}
           <div className={styles.footerSection}>
-            <div className={styles.footerTitleSection}>
+            <Link href={"/"} className={styles.footerTitleSection}>
               <img
                 src="/logo-barraoctye .png"
-                alt=""
+                alt="logo"
                 className={styles.companylogo}
               />
               <h2 className={styles.footerTitle}>Barrocyte</h2>
-            </div>
-            <p>Your trusted partner for licensing & compliance services.</p>
-          </div>
+            </Link>
 
-          {/* Quick Links */}
-          <div className={styles.footerSection}>
-            <h3>Quick Links</h3>
-            <ul>
-              {footerData.quickLinks.map((link, index) => (
-                <li key={index}>
-                  <Link href={link.href}>{link.label}</Link>
-                </li>
-              ))}
-            </ul>
+            <p>Your trusted partner for licensing & compliance services.</p>
           </div>
 
           {/* Our Services */}
