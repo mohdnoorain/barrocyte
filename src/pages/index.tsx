@@ -40,7 +40,10 @@ export default function Home() {
       </div>
 
       <TestimonialSlider />
-      <ContactForm />
+      <div id="contactForm">
+        <ContactForm />
+      </div>
+
       <Footer />
       <ScrollToTopButton />
     </>

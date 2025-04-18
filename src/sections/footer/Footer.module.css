@@ -17,8 +17,9 @@
 }
 
 .footerSection {
-  flex: 1;
+  /* flex: 1; */
   min-width: 200px;
+  /* max-width: 350px; */
   margin-bottom: 20px;
   margin-right: 12px;
 }
