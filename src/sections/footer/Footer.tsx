@@ -45,21 +45,23 @@ const Footer = () => {
           {/* Contact Information */}
           <div className={styles.footerSection}>
             <h3>Contact Us</h3>
-            <p>
-              Email : &nbsp;
-              <a href="mailto:info@barrocyte.com">
-                info@barrocyte.com
-              </a>
-            </p>
-            <p>Phone : &nbsp;
-              <a href="tel:+91 9266665237">+91 9266665237</a>
-            </p>
-            <p>
-              Address : <br /> Office No.105, First Floor,
-              <br /> CSC Market, Sukhdev Vihar,
-              <br />
-              New Delhi- 110025
-            </p>
+            <ul>
+              <li>
+                Email : &nbsli;
+                <a href="mailto:info@barrocyte.com">
+                  info@barrocyte.com
+                </a>
+              </li>
+              <li>Phone : &nbsp;
+                <a href="tel:+91 9266665237">+91 9266665237</a>
+              </li>
+              <li>
+                Address : <br /> Office No.105, First Floor,
+                <br /> CSC Market, Sukhdev Vihar,
+                <br />
+                New Delhi- 110025
+              </li>
+            </ul>
           </div>
           {/* Map Location */}
           <div className={styles.footerSection}>
