@@ -46,14 +46,16 @@ const Footer = () => {
           <div className={styles.footerSection}>
             <h3>Contact Us</h3>
             <p>
-              Email:
-              <a href="mailto:info@barr.com">
-                barrocyte@gmail.com / info@barrocyte.com
+              Email : &nbsp;
+              <a href="mailto:info@barrocyte.com">
+                info@barrocyte.com
               </a>
             </p>
-            <p>Phone: +91-9266665237</p>
+            <p>Phone : &nbsp;
+              <a href="tel:+91 9266665237">+91 9266665237</a>
+            </p>
             <p>
-              Address: Office No.105, First Floor,
+              Address : <br /> Office No.105, First Floor,
               <br /> CSC Market, Sukhdev Vihar,
               <br />
               New Delhi- 110025
