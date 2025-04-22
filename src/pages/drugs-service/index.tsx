@@ -4,6 +4,7 @@ import Header from "@/components/header/Header";
 import DrugRegulatoryServices from "@/sections/drugRegulatoryServices/DrugRegulatoryServices";
 import DrugsLicenseServices from "@/sections/drugsLicenseServices/DrugsLicenseServices";
 import Footer from "@/sections/footer/Footer";
+import ScrollToTopButton from "@/components/scrollToTopButton/ScrollToTopButton";
 
 const DrugsServiceSection = () => {
   return (
@@ -13,6 +14,7 @@ const DrugsServiceSection = () => {
         <DrugRegulatoryServices />
         <DrugsLicenseServices />
         <Footer />
+        <ScrollToTopButton />
       </div>
     </>
   );

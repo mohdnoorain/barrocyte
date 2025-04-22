@@ -16,9 +16,8 @@
 
   --shadowSm: 0px 0px 3px 1px #0000002e;
 
-  --headingFF: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  --paraFF: monospace, Times, serif;
+  --headingFF: "Poppins", sans-serif;
+  --paraFF: "Poppins", sans-serif;
 
   --fs-1: 40px;
   --fs-2: 28px;
@@ -158,12 +157,13 @@ body {
 }
 
 @media (min-width: 1200px) {
-    .container {
-        max-width: 1140px;
-    }
+  .container {
+    max-width: 1140px;
+  }
 }
+
 @media (min-width: 1400px) {
-    .container {
-        max-width: 1320px;
-    }
+  .container {
+    max-width: 1320px;
+  }
 }

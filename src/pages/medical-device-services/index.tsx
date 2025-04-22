@@ -4,14 +4,16 @@ import MedicalDevicesRegulatoryServices from "@/sections/medicalDevicesRegulator
 import MedicalDevicesManufacturingServices from "@/sections/medicalDevicesManufacturingServices/MedicalDevicesManufacturingServices";
 import Footer from "@/sections/footer/Footer";
 import Header from "@/components/header/Header";
+import ScrollToTopButton from "@/components/scrollToTopButton/ScrollToTopButton";
 
 const MedicalDevicesServices = () => {
   return (
     <div>
-      <Header/>
+      <Header />
       <MedicalDevicesRegulatoryServices />
       <MedicalDevicesManufacturingServices />
       <Footer />
+      <ScrollToTopButton />
     </div>
   );
 };

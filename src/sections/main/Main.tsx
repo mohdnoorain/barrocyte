@@ -1,6 +1,7 @@
 import styles from "./Main.module.css"; // Import module CSS
 
 export default function Main() {
+  const targetId = "contactForm";
   return (
     <main>
       <div className={styles.herosection}>
@@ -24,7 +25,26 @@ export default function Main() {
                   </p>
                 </div>
               </div>
-              <button className={styles.bookNowBtn}>Book Now</button>
+              <button
+                className={styles.bookNowBtn}
+                onClick={
+                  targetId
+                    ? () => {
+                        const section = document.getElementById(targetId);
+                        if (section) {
+                          const yOffset = -100; // scroll up by 80px
+                          const y =
+                            section.getBoundingClientRect().top +
+                            window.pageYOffset +
+                            yOffset;
+                          window.scrollTo({ top: y, behavior: "smooth" });
+                        }
+                      }
+                    : undefined
+                }
+              >
+                Book Now
+              </button>
             </div>
             <div className={styles.secondHalf}></div>
           </div>

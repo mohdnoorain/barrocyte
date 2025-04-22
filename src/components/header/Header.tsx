@@ -8,33 +8,32 @@ const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
- useEffect(() => {
-   const handleScroll = () => {
-     if (window.innerWidth > 700) {
-       setIsScrolled(window.scrollY > 50);
-     } else {
-       setIsScrolled(true);
-     }
-   };
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.innerWidth > 700) {
+        setIsScrolled(window.scrollY > 50);
+      } else {
+        setIsScrolled(true);
+      }
+    };
 
-   const handleClickOutside = (event: MouseEvent) => {
-     if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
-       setIsMobileMenuOpen(false);
-     }
-   };
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setIsMobileMenuOpen(false);
+      }
+    };
 
-   window.addEventListener("scroll", handleScroll);
-   window.addEventListener("resize", handleScroll);
-   document.addEventListener("mousedown", handleClickOutside);
-   handleScroll(); // Initial check
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleScroll);
+    document.addEventListener("mousedown", handleClickOutside);
+    handleScroll(); // Initial check
 
-   return () => {
-     window.removeEventListener("scroll", handleScroll);
-     window.removeEventListener("resize", handleScroll);
-     document.removeEventListener("mousedown", handleClickOutside);
-   };
- }, []);
-
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   const [isVibrating, setIsVibrating] = useState(false);
 
@@ -53,7 +52,14 @@ const Header: React.FC = () => {
       ref={menuRef}
     >
       <div className={`${styles["nav-container"]} container`}>
-        <Link href="/"className={styles.logo}>Barro.</Link>
+        <Link href="/" className={styles.logo}>
+          <img
+            src="/logo-barraoctye .png"
+            alt=""
+            className={styles.companylogo}
+          />
+          Barrocyte
+        </Link>
         <ul
           className={`${styles["nav-links"]} ${
             isMobileMenuOpen ? styles.open : ""

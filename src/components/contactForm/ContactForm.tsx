@@ -1,13 +1,34 @@
 "use client";
-
-import { useState } from "react";
+import emailjs from "@emailjs/browser";
+import { useRef, useState } from "react";
 import styles from "./ContactForm.module.css";
+import Toast from "../toast/Toast";
 
 const ContactForm = () => {
+
+const serviceOptions = [
+  { label: "Select...", value: "" },
+  { label: "Medical Device", value: "Medical" },
+  { label: "Diagnostic Kits", value: "Diagnostic" },
+  { label: "Drugs", value: "Drugs" },
+  { label: "Blood Banks", value: "Blood" },
+  { label: "legal Metrology", value: "legal" },
+  { label: "Custom Clearance", value: "Custom" },
+  { label: "Sanitary Import Permit", value: "Sanitary" },
+
+  { label: "Other", value: "other" },
+];
+
+
+  const [toast, setToast] = useState<{
+    message: string;
+    type: "success" | "error";
+  } | null>(null);
+  const formRef = useRef<HTMLFormElement | null>(null);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    industry: "",
+    services: "",
     message: "",
   });
 
@@ -21,8 +42,39 @@ const ContactForm = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (
+      !formData.name ||
+      !formData.email ||
+      !formData.services ||
+      !formData.message
+    ) {
+      setToast({
+        message: "Please fill in all the fields.",
+        type: "error",
+      });
+      return;
+    }
+
+    const serviceId = "service_erbtxhi";
+    const templateId = "template_19cszhu";
+    const publicKey = "mSvmlMZzxtogSgK-5";
     console.log(formData);
-    // Add email/API integration here
+    if (!formRef.current) return;
+
+    emailjs.sendForm(serviceId, templateId, formRef.current, publicKey).then(
+      () => {
+        setToast({ message: "Message sent successfully!", type: "success" });
+        setFormData({ name: "", email: "", services: "", message: "" });
+      },
+      (error) => {
+        setToast({
+          message: "Failed to send message. Try again.",
+          type: "error",
+        });
+        console.error(error);
+      }
+    );
   };
 
   return (
@@ -52,7 +104,11 @@ const ContactForm = () => {
           </div>
 
           {/* Right Side */}
-          <form onSubmit={handleSubmit} className={styles.formCard}>
+          <form
+            ref={formRef}
+            onSubmit={handleSubmit}
+            className={styles.formCard}
+          >
             <input
               name="name"
               type="text"
@@ -72,18 +128,19 @@ const ContactForm = () => {
               required
             />
             <select
-              name="industry"
+              name="services"
               className={styles.input}
               onChange={handleChange}
-              value={formData.industry}
+              value={formData.services}
               required
             >
-              <option value="">Select...</option>
-              <option value="pharma">Pharmaceutical</option>
-              <option value="agri">Agriculture</option>
-              <option value="food">Food</option>
-              <option value="other">Other</option>
+              {serviceOptions.map((option) => (
+                <option key={option.value} value={option.value}>
+                  {option.label}
+                </option>
+              ))}
             </select>
+
             <textarea
               name="message"
               placeholder="Type your message"
@@ -96,6 +153,13 @@ const ContactForm = () => {
               <span className="material-icons">arrow_forward</span>
               Get a Solution
             </button>
+            {toast && (
+              <Toast
+                message={toast.message}
+                type={toast.type}
+                onClose={() => setToast(null)}
+              />
+            )}
           </form>
         </div>
       </div>
