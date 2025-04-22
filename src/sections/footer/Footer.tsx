@@ -4,10 +4,10 @@ import styles from "./Footer.module.css"; // Import module CSS
 const footerData = {
   quickLinks: [{ href: "/", label: "Home" }],
   services: [
-    { href: "/medicalDeviceServices", label: "Medical Device Service" },
-    { href: "/diagnosticKitsServices", label: "Diagnostic Kits" },
-    { href: "/drugsService", label: "Drugs Service" },
-    { href: "/legalMetrologyServices", label: "Legal Metrology Service" },
+    { href: "/medical-device-services", label: "Medical Device Service" },
+    { href: "/diagnostic-kits-services", label: "Diagnostic Kits" },
+    { href: "/drugs-service", label: "Drugs Service" },
+    { href: "/legal-metrology-services", label: "Legal Metrology Service" },
   ],
 };
 
