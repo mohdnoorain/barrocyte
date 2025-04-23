@@ -20,7 +20,7 @@ const Footer = () => {
           <div className={styles.footerSection}>
             <Link href={"/"} className={styles.footerTitleSection}>
               <img
-                src="/logo-barraoctye .png"
+                src="/logo-barraoctye.png"
                 alt="logo"
                 className={styles.companylogo}
               />
@@ -47,7 +47,7 @@ const Footer = () => {
             <h3>Contact Us</h3>
             <ul>
               <li>
-                Email : &nbsli;
+                Email : &nbsp;
                 <a href="mailto:info@barrocyte.com">
                   info@barrocyte.com
                 </a>
