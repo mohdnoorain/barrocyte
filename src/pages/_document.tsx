@@ -4,9 +4,7 @@ export default function Document() {
     return (
         <Html>
             <Head>
-                <title>Barrocyte</title>
                 <meta name="Barrocyte" content="Medical consultancy" />
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/logo-barraoctye.ico" />
                 <link
                     rel="stylesheet"

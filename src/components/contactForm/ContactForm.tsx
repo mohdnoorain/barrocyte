@@ -56,9 +56,9 @@ const ContactForm = () => {
       return;
     }
 
-    const serviceId = "service_erbtxhi";
-    const templateId = "template_19cszhu";
-    const publicKey = "mSvmlMZzxtogSgK-5";
+    const serviceId = process.env.NEXT_PUBLIC_SERVICE_KEY || "";
+    const templateId = process.env.NEXT_PUBLIC_TEMPLATE_KEY || "";
+    const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY || "";
     console.log(formData);
     if (!formRef.current) return;
 
