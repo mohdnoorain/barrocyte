@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import styles from "./SanitaryImportPermit.module.css";
 import Accordion from "@/components/accordion/Accordion";
@@ -17,7 +18,7 @@ const accordionData = [
       "Import-Export Certificate.",
     ],
     borderColor: "#d8b4a0",
-    background: "#f6ebe7", 
+    background: "#f6ebe7",
   },
   {
     title: "Application Procedure",
@@ -31,7 +32,7 @@ const accordionData = [
       "The applicant should rectify the error by logging into their account on SIP portal.",
     ],
     borderColor: "#d8b4a0",
-    background: "#f6ebe7", 
+    background: "#f6ebe7",
   },
 ];
 

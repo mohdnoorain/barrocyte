@@ -41,6 +41,8 @@
 }
 
 .logo {
+  text-transform: uppercase;
+  font-weight: bolder;
   display: flex;
   justify-content: center;
   align-items: center;

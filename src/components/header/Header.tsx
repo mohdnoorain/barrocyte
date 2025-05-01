@@ -66,7 +66,7 @@ const Header: React.FC = () => {
         >
           <li>
             <a
-              href="tel:+919266665237"
+              href="tel:+917838883608"
               onClick={() => setIsMobileMenuOpen(false)}
               className={styles.phoneContainer}
             >
@@ -76,7 +76,7 @@ const Header: React.FC = () => {
               >
                 phone
               </span>
-              +91 9266665237
+              +91 7838883608
             </a>
           </li>
         </ul>
