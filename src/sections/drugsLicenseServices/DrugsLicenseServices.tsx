@@ -1,3 +1,4 @@
+"use client";
 import LicenseTable from "@/components/LicenseTable/LicenseTable";
 import styles from "./DrugsLicenseServices.module.css"; // Import module CSS
 import React, { useState } from "react";

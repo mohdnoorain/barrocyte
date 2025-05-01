@@ -6,18 +6,18 @@ import Toast from "../toast/Toast";
 
 const ContactForm = () => {
 
-const serviceOptions = [
-  { label: "Select...", value: "" },
-  { label: "Medical Device", value: "Medical" },
-  { label: "Diagnostic Kits", value: "Diagnostic" },
-  { label: "Drugs", value: "Drugs" },
-  { label: "Blood Banks", value: "Blood" },
-  { label: "legal Metrology", value: "legal" },
-  { label: "Custom Clearance", value: "Custom" },
-  { label: "Sanitary Import Permit", value: "Sanitary" },
+  const serviceOptions = [
+    { label: "Service type", value: "" },
+    { label: "Medical Device", value: "Medical" },
+    { label: "Diagnostic Kits", value: "Diagnostic" },
+    { label: "Drugs", value: "Drugs" },
+    { label: "Blood Banks", value: "Blood" },
+    { label: "legal Metrology", value: "legal" },
+    { label: "Custom Clearance", value: "Custom" },
+    { label: "Sanitary Import Permit", value: "Sanitary" },
 
-  { label: "Other", value: "other" },
-];
+    { label: "Other", value: "other" },
+  ];
 
 
   const [toast, setToast] = useState<{
@@ -95,11 +95,11 @@ const serviceOptions = [
             </p>
             <div className={styles.contactRow}>
               <span className="material-icons">email</span>
-              <a href="mailto:someone@example.com">info@barr.com</a>
+              <a href="mailto:someone@example.com">barrocyte@gmail.com</a>
             </div>
             <div className={styles.contactRow}>
               <span className="material-icons">phone</span>
-              <a href="tel:+91-9266665237">+91-9266665237</a>
+              <a href="tel:+91-7838883608">+91-7838883608</a>
             </div>
           </div>
 

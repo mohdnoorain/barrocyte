@@ -56,7 +56,7 @@ const MedicalDevicesManufacturingServices = () => {
 
     Foreign applicants must have an Indian agent’s manufacturing license. Barrocyte Consultants provides pan-India support for filing applications. 
 
-    For more information, contact us at barrocyte@gmail.com or +91-9266665237.
+    For more information, contact us at barrocyte@gmail.com or +91-7838883608.
   `,
     },
     {
@@ -71,7 +71,7 @@ const MedicalDevicesManufacturingServices = () => {
 
     Barrocyte Consultants simplifies this complex process with expert guidance and support. 
 
-    For more information, contact us at barrocyte@gmail.com or +91-9266665237.
+    For more information, contact us at barrocyte@gmail.com or +91-7838883608.
   `,
     },
     {
@@ -83,7 +83,7 @@ const MedicalDevicesManufacturingServices = () => {
 
     Barrocyte Consultants ensures a seamless application process with expert guidance. 
 
-    For more information, contact us at barrocyte@gmail.com or +91-9266665237.
+    For more information, contact us at barrocyte@gmail.com or +91-7838883608.
   `,
     },
     {
@@ -98,7 +98,7 @@ const MedicalDevicesManufacturingServices = () => {
 
     Barrocyte Consultants ensures a smooth filing process with expert guidance.
 
-    For more information, contact us at barrocyte@gmail.com or +91-9266665237.
+    For more information, contact us at barrocyte@gmail.com or +91-7838883608.
   `,
     },
     {
@@ -113,7 +113,7 @@ const MedicalDevicesManufacturingServices = () => {
 
     Barrocyte Consultants assists clients in preparing and submitting complete applications to ensure a smooth approval process.
 
-    For more information, contact us at barrocyte@gmail.com or +91-9266665237.
+    For more information, contact us at barrocyte@gmail.com or +91-7838883608.
   `,
     },
   ];
@@ -214,14 +214,13 @@ const MedicalDevicesManufacturingServices = () => {
               Manufacturing License for Medical Devices from SLA/CLAA
             </h2>
             <div className={styles.bigNotesContainer}>
-              
+
               {accordionData.map((item, index) => (
                 <div className={styles.bigNotes} key={index}>
                   <div className={styles.bigNotesHeading}>{item.title}</div>
                   <p
-                    className={`${styles.bigNotesParagraph} ${
-                      expandedIndex === index ? styles.expanded : ""
-                    }`}
+                    className={`${styles.bigNotesParagraph} ${expandedIndex === index ? styles.expanded : ""
+                      }`}
                   >
                     {expandedIndex === index
                       ? item.content

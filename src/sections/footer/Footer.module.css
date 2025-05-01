@@ -40,6 +40,7 @@
   font-size: 28px;
   font-weight: bold;
   font-family: var(--headingFF);
+  text-transform: uppercase;
 }
 
 .footerSection h3 {
