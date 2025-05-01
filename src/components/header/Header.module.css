@@ -114,6 +114,9 @@
 }
 
 @media (max-width: 480px) {
+  .container{
+    padding: 0;
+  }
   .nav-links a {
     font-size: 13px;
   }

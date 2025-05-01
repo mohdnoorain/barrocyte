@@ -52,11 +52,7 @@ const Header: React.FC = () => {
       ref={menuRef}
     >
       <div
-        className={`${styles["nav-container"]} ${
-          typeof window !== "undefined" && window.innerWidth < 480
-            ? ""
-            : "container"
-        }`}
+        className={`${styles["nav-container"]} ${styles["container"]} container`}
       >
         <Link href="/" className={styles.logo}>
           <img
