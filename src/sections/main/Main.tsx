@@ -30,20 +30,20 @@ export default function Main() {
                 onClick={
                   targetId
                     ? () => {
-                        const section = document.getElementById(targetId);
-                        if (section) {
-                          const yOffset = -100; // scroll up by 80px
-                          const y =
-                            section.getBoundingClientRect().top +
-                            window.pageYOffset +
-                            yOffset;
-                          window.scrollTo({ top: y, behavior: "smooth" });
-                        }
+                      const section = document.getElementById(targetId);
+                      if (section) {
+                        const yOffset = -100; // scroll up by 80px
+                        const y =
+                          section.getBoundingClientRect().top +
+                          window.pageYOffset +
+                          yOffset;
+                        window.scrollTo({ top: y, behavior: "smooth" });
                       }
+                    }
                     : undefined
                 }
               >
-                Book Now
+                Enquire Now
               </button>
             </div>
             <div className={styles.secondHalf}></div>

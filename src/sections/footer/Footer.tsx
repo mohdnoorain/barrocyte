@@ -48,12 +48,12 @@ const Footer = () => {
             <ul>
               <li>
                 Email : &nbsp;
-                <a href="mailto:info@barrocyte.com">
-                  info@barrocyte.com
+                <a href="mailto:barrocyte@gmail.com">
+                  barrocyte@gmail.com
                 </a>
               </li>
               <li>Phone : &nbsp;
-                <a href="tel:+91 9266665237">+91 9266665237</a>
+                <a href="tel:+91 7838883608">+91 7838883608</a>
               </li>
               <li>
                 Address : <br /> Office No.105, First Floor,
