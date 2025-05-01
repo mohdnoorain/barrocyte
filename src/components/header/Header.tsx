@@ -51,7 +51,9 @@ const Header: React.FC = () => {
       className={`${styles.navbar} ${isScrolled ? styles.scrolled : ""}`}
       ref={menuRef}
     >
-      <div className={`${styles["nav-container"]} container`}>
+      <div
+        className={`${styles["nav-container"]} ${styles["container"]} container`}
+      >
         <Link href="/" className={styles.logo}>
           <img
             src="/logo-barraoctye.png"
@@ -61,8 +63,9 @@ const Header: React.FC = () => {
           Barrocyte
         </Link>
         <ul
-          className={`${styles["nav-links"]} ${isMobileMenuOpen ? styles.open : ""
-            }`}
+          className={`${styles["nav-links"]} ${
+            isMobileMenuOpen ? styles.open : ""
+          }`}
         >
           <li>
             <a
@@ -71,8 +74,9 @@ const Header: React.FC = () => {
               className={styles.phoneContainer}
             >
               <span
-                className={`material-icons ${styles.icon} ${isVibrating ? styles.vibrate : ""
-                  }`}
+                className={`material-icons ${styles.icon} ${
+                  isVibrating ? styles.vibrate : ""
+                }`}
               >
                 phone
               </span>

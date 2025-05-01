@@ -48,11 +48,10 @@ const Footer = () => {
             <ul>
               <li>
                 Email : &nbsp;
-                <a href="mailto:barrocyte@gmail.com">
-                  barrocyte@gmail.com
-                </a>
+                <a href="mailto:barrocyte@gmail.com">barrocyte@gmail.com</a>
               </li>
-              <li>Phone : &nbsp;
+              <li>
+                Phone : &nbsp;
                 <a href="tel:+91 7838883608">+91 7838883608</a>
               </li>
               <li>
@@ -83,7 +82,9 @@ const Footer = () => {
 
         {/* Footer Bottom Section */}
         <div className={styles.footerBottom}>
-          <p>&copy; {new Date().getFullYear()} Barr. All Rights Reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} Barrocyte. All Rights Reserved.
+          </p>
         </div>
       </div>
     </footer>
