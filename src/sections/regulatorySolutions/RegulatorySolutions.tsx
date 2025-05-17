@@ -6,19 +6,19 @@ const regulatorySolutions = [
     title: "Medical Device",
     icon: "medical_services",
     color: "#96ae39",
-    link: "/medical-device-services",
+    link: "/medical-device-services.html",
   },
   {
     title: "Diagnostic Kits",
     icon: "biotech",
     color: "#1a66ab",
-    link: "/diagnostic-kits-services",
+    link: "/diagnostic-kits-services.html",
   },
   {
     title: "Legal Metrology",
     icon: "gavel",
     color: "#0f495f",
-    link: "/legal-metrology-services",
+    link: "/legal-metrology-services.html",
   },
   { title: "Drugs", icon: "science", color: "#676767", link: "/drugs-service" },
   {
